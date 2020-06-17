@@ -8,37 +8,69 @@
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider({auto:true});
+		});
+	</script>
 	<style>
 		/*header*/
-		.headerTop{
-			width: 1200px; height:127px; 
+		.header{
+			width: 1200px; height: 123px;
 			margin: 0 auto;
-			background-color: skyblue;
+			background-color: #fff;
+			position:relative;
 		}
-		.logo{float:left;}
-		.gnbMenu{width: 540px; margin: 0 auto;}
-		.gnb li{float:left; width: 140px;}
-		.login{float:right;}
+		.header h1.logo{text-align: left; line-height: 123px;}
 
-		/*slider*/
-		.slider{height: 770px; background-color: orange;}
+		.nav{
+			width: 600px; 
+			background-color: skyblue;
+			position:absolute; top:0;
+			left:30%; margin-left:-30px;
+		}
+
+		.nav>ul>li{float:left; width: 20%;}
+		.nav>ul>li>a{
+			display: block;
+			text-align: center;
+			line-height: 123px;
+		}
+		.login{
+			width: 230px;
+			background-color: red; right:0;
+			position:absolute; right:0; top: 0;
+		}
+
+		/*visual*/
+		.visual{width: 1200px;height: 770px; margin: 0 auto;}
+		.slider{}
+
+
 
 		/*sub*/
-		.subWrap{background-color: #f8f9ff;}
-		.sub{width: 1200px; height: 270px; margin: 0 auto;}
+		.sub{
+			width: 1200px; height: 280px;
+			margin: 0 auto;
+			background-color: #f8f9ff;}
+		.sub h2{text-align: center; position: relative;}
+		.sub p{text-align: center; color:#666; margin-bottom: 25px;}
 
-		/*card*/
-		.cardWrap{background-color:yellow;}
-		.leftSide{width: 1200px;height: 940px;}
+		/*content*/
+		.content{
+			width: 1200px; height: 935px;
+			margin: 0 auto;
+			background-color: #fff;}
+
 	</style>
 </head>
 <body>
-	<div class="headerTop clearfix">
-		<div class="logo"><a href="#">logo</a></div>
-		<div class="gnbMenu">
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">How it Works</a></li>
+	<div class="header">
+		<h1 class="logo"><a href="#">chavy</a></h1>
+		<div class="nav">
+			<ul class="clearfix">
+				<li><a href="#">home</a></li>
+				<li><a href="#">How It Works</a></li>
 				<li><a href="#">Company</a></li>
 				<li><a href="#">Career</a></li>
 			</ul>
@@ -47,57 +79,42 @@
 			<ul>
 				<li><a href="#">Sign in</a></li>
 				<li><a href="#">Register</a></li>
+			</ul>			
+		</div>
+	</div>
+
+	<div class="visual">
+		<ul class="slider">
+			<li><img src="images/slider-1.png" alt="이미지1"></li>
+			<li><img src="images/slider-1.png" alt="이미지2"></li>
+			<li><img src="images/slider-1.png" alt="이미지3"></li>
+		</ul>
+		<div class="txt">
+			<h1>Financial plans for every person and everywhere.</h1>
+			<p>If you believe you can do it go out there and do it cause that is the only way you are gonna get it!</p>
+			<a href="#">Request Demo</a>
+		</div>
+	</div>
+
+	<div class="sub">
+		<h2>Save money & money will save you.</h2>
+		<p>I will tell you how to become a rich. Close the doors. Be fearful when othere are greedy.</p>
+	</div>
+
+	<div class="content">
+		<h3>The proper guide that helps you to unlock the real potential.</h3>
+		<p>I will tell you how to become a rich. Close the doors. Be fearful when othere are greedy.I will tell you how to become a rich. </p>
+		<div class="btn"><a href="#">Request Demo</a></div>
+		<div class="card">
+			<ul>
+				<li class="card1">
+					<a href="#">
+						<img src="" alt="아이콘1">
+						<p>Registration Guide</p>
+					</a>
+				</li>
 			</ul>
 		</div>
-	</div>
-
-	<div class="slider"></div>
-
-	<div class="subWrap">
-		<div class="sub">
-			<h3>Save money & money will save you.</h3>
-			<p>I will tell you how to become a rich. Close the doors. Be fearful<br>
-			when others are greedy.</p>
-		</div>
-	</div>
-
-	<div class="cardWrap">
-		<div class="leftSide">
-			<h4>The proper guide that helps<br>
-				you to unlock the real<br>
-				potential.
-			</h4>
-			<p>I will tell you how to become a rich. Close the doors.<br>
-				Be fearful when others are greedy. I will tell you how<br>
-				to become a rich.
-			</p>
-			<div class="btn">Request Demo</div>
-		</div>
-		<div class="rightSide">
-			<div class="card">
-				<ul>
-					<li><img src="" alt=""></li>
-					<li><img src="" alt=""></li>
-					<li><img src="" alt=""></li>
-					<li><img src="" alt=""></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-
-	<div class="product"></div>
-
-	<div class="employer"></div>
-
-	<div class="question">
-		<h5>Frequently Asked Question.</h3>
-		<p>Don't be satisfied with stories, how things have gone with others. Unfold your own myth.</p>
-		<ol>
-			<li><a href="#">1.Does it work?</a></li>
-			<li><a href="#">2.Does it work?</a></li>
-			<li><a href="#">3.Does it work?</a></li>
-			<li><a href="#">4.Does it work?</a></li>
-		</ol>
 	</div>
 </body>
 </html>
