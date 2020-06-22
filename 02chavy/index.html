@@ -25,7 +25,6 @@
 
 		.nav{
 			width: 600px; 
-			background-color: skyblue;
 			position:absolute; top:0;
 			left:30%; margin-left:-30px;
 		}
@@ -37,16 +36,21 @@
 			line-height: 123px;
 		}
 		.login{
-			width: 230px;
-			background-color: red; right:0;
-			position:absolute; right:0; top: 0;
+			width: 230px; 
+			position:absolute; right:0; top: 30px;
 		}
 
 		/*visual*/
-		.visual{width: 1200px;height: 770px; margin: 0 auto;}
-		.slider{}
-
-
+		.visual .view{width: 1200px; position:relative; height: 770px; margin: 0 auto;}
+		.visual .slider li{overflow: hidden;}
+		.visual .slider img.img{position: absolute; left:50%;}
+		.visual .txt{position: absolute; top: 150px; width: 500px;}
+		.visual .txt h3{font-size:2.5em; margin-bottom: 20px;}
+		.visual .txt p{margin-bottom: 30px;}
+		.visual .txt a{
+			display: block; width: 200px;height: 60px; background: purple;
+			color:white; border-radius: 40px;	text-align: center; line-height: 60px;
+		}
 
 		/*sub*/
 		.sub{
@@ -85,15 +89,35 @@
 
 	<div class="visual">
 		<ul class="slider">
-			<li><img src="images/slider-1.png" alt="이미지1"></li>
-			<li><img src="images/slider-1.png" alt="이미지2"></li>
-			<li><img src="images/slider-1.png" alt="이미지3"></li>
+			<li> <!-- w100% -->
+				<div class="view">
+					<img src="images/slider-1.jpg" alt="이미지1" class="img">
+					<div class="txt">
+						<h3>Financial plans for every person and everywhere.</h3>
+						<p>If you believe you can do it go out there and do it cause that is the only way you are gonna get it!</p>
+						<a href="#" class="btnA">Request Demo</a>
+				</div>
+			</li>
+			<li> <!-- w100% -->
+				<div class="view">
+					<img src="images/slider-1.jpg" alt="이미지1" class="img">
+					<div class="txt">
+						<h3>Financial plans for every person and everywhere.</h3>
+						<p>If you believe you can do it go out there and do it cause that is the only way you are gonna get it!</p>
+						<a href="#" class="btnA">Request Demo</a>
+				</div>
+			</li>
+			<li> <!-- w100% -->
+				<div class="view">
+					<img src="images/slider-1.jpg" alt="이미지1" class="img">
+					<div class="txt">
+						<h3>Financial plans for every person and everywhere.</h3>
+						<p>If you believe you can do it go out there and do it cause that is the only way you are gonna get it!</p>
+						<a href="#" class="btnA">Request Demo</a>
+				</div>
+			</li>
 		</ul>
-		<div class="txt">
-			<h1>Financial plans for every person and everywhere.</h1>
-			<p>If you believe you can do it go out there and do it cause that is the only way you are gonna get it!</p>
-			<a href="#">Request Demo</a>
-		</div>
+		
 	</div>
 
 	<div class="sub">
