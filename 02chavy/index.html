@@ -45,20 +45,34 @@
 		.visual .slider li{overflow: hidden;}
 		.visual .slider img.img{position: absolute; left:50%;}
 		.visual .txt{position: absolute; top: 150px; width: 500px;}
-		.visual .txt h3{font-size:2.5em; margin-bottom: 20px;}
-		.visual .txt p{margin-bottom: 30px;}
+		.visual .txt h3{font-size:3.5em; margin-bottom: 50px;}
+		.visual .txt p{margin-bottom: 70px;}
 		.visual .txt a{
-			display: block; width: 200px;height: 60px; background: purple;
+			display: block; width: 200px;height: 60px; background: #2c2c96;
 			color:white; border-radius: 40px;	text-align: center; line-height: 60px;
 		}
 
 		/*sub*/
+		.subWrap{width: 100%; background-color: #f8f9ff;}
 		.sub{
-			width: 1200px; height: 280px;
-			margin: 0 auto;
-			background-color: #f8f9ff;}
-		.sub h2{text-align: center; position: relative;}
-		.sub p{text-align: center; color:#666; margin-bottom: 25px;}
+			width: 1200px; height: 280px; margin: 0 auto;
+			position:relative;
+			}
+		.sub h2{
+			text-align: center;
+			font-size: 2.5em;
+			position: absolute; left: 50%; top: 70px;  /*50%로 넣고나서 마진으로 조정해줌*/
+			margin-left: -600px; margin-top: -54px;
+			color:#000;
+		}
+		.sub p{
+			text-align: center;
+			position: absolute; left: 50%; top: 50%;
+			margin-left: -600px; margin-top: -54px;
+			color:#6b6c6e;
+		}
+
+
 
 		/*content*/
 		.content{
@@ -93,7 +107,7 @@
 				<div class="view">
 					<img src="images/slider-1.jpg" alt="이미지1" class="img">
 					<div class="txt">
-						<h3>Financial plans for every person and everywhere.</h3>
+						<h3>Financial plans for<br>every person and<br>everywhere.</h3>
 						<p>If you believe you can do it go out there and do it cause that is the only way you are gonna get it!</p>
 						<a href="#" class="btnA">Request Demo</a>
 				</div>
@@ -117,12 +131,13 @@
 				</div>
 			</li>
 		</ul>
-		
 	</div>
 
-	<div class="sub">
-		<h2>Save money & money will save you.</h2>
-		<p>I will tell you how to become a rich. Close the doors. Be fearful when othere are greedy.</p>
+	<div class="subWrap">
+		<div class="sub">
+			<h2>Save money & money will save you.</h2>
+			<p>I will tell you how to become a rich. Close the doors. Be fearful when othere are greedy.</p>
+		</div>
 	</div>
 
 	<div class="content">
