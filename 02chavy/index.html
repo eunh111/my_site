@@ -28,21 +28,22 @@
 			position:absolute; top:0;
 			left:30%; margin-left:-30px;
 		}
-
 		.nav>ul>li{float:left; width: 20%;}
 		.nav>ul>li>a{
 			display: block;
 			text-align: center;
 			line-height: 123px;
 		}
-		.login{
-			width: 230px; 
-			position:absolute; right:0; top: 30px;
-		}
 
+		.login{width: 240px; 
+			position:absolute; top:0;
+			left:80%; margin-left:-30px;
+		}
+		.login a{float:left; width: 50%; line-height: 123px;}
 		.login .btnF{
 			display: block; width: 120px;height: 50px;
-			background: #2c2c96;
+			background: #2c2c96; 
+			position:absolute; top:35px; right:20px;
 			color:white; border-radius: 25px;
 			text-align: center; line-height: 50px;
 		}
@@ -61,6 +62,7 @@
 			text-align: center; line-height: 58px;
 		}
 
+
 		/*sub*/
 		.subWrap{width: 100%; background-color: #f8f9ff;}
 		.sub{
@@ -78,20 +80,41 @@
 		.sub p{
 			width: 1200px;
 			text-align: center;
-			font-size: 2.5em;
+			font-size: 1.2em;
+			font-weight: bold;
 			position: absolute; left: 50%; top: 160px;
 			margin-left:-600px;
 			color:#6b6c6e;
 		}
 
-
-
 		/*content*/
-		.content{
-			width: 1200px; height: 935px;
-			margin: 0 auto;
-			background-color: #fff;}
+		.contentWrap{width: 1200px; height: 940px; margin: 0 auto;
+			position: relative;}
+		.content{position: absolute; top: 288px; width: 527px;}
+		.content h3{font-size:2.5em; margin-bottom: 50px;}
+		.content p{margin-bottom: 70px;}
+		.content .btnA{
+			display: block; width: 185px;height: 58px;
+			background: #2c2c96;
+			color:white; border-radius: 29px;
+			text-align: center; line-height: 58px;
+		}
 
+		.cardWrap{float:left; margin-left: 720px; }
+		.card{
+			width: 210px; height: 240px;
+			border-radius: 5px;
+			box-shadow: 5px 5px 15px #eee;
+			position: relative;
+		}
+		.card li{text-align: center; padding:30px;}  
+		.card img{margin-top: 20px;margin-bottom:15px;}
+		.card p{font-size:1.5em;  color:#333;}
+
+		.card li:nth-child(1){margin-top:160px;}
+		.card li:nth-child(2){}
+		.card li:nth-child(3){}
+		.card li:nth-child(4){}
 	</style>
 </head>
 <body>
@@ -105,7 +128,7 @@
 				<li><a href="#">Career</a></li>
 			</ul>
 		</div>
-		<div class="login">
+		<div class="login clearfix">
 			<ul>
 				<li><a href="#">Sign in</a></li>
 				<li><a href="#" class="btnF">Register</a></li>
@@ -148,24 +171,46 @@
 	<div class="subWrap">
 		<div class="sub">
 			<h2>Save money & money will save you.</h2>
-			<p>I will tell you how to become a rich. Close the doors. Be fearful when othere are greedy.</p>
+			<p>I will tell you how to become a rich. Close the doors. Be fearful <br>when othere are greedy.</p>
 		</div>
 	</div>
 
-	<div class="content">
-		<h3>The proper guide that helps you to unlock the real potential.</h3>
-		<p>I will tell you how to become a rich. Close the doors. Be fearful when othere are greedy.I will tell you how to become a rich. </p>
-		<div class="btn"><a href="#">Request Demo</a></div>
-		<div class="card">
-			<ul>
-				<li class="card1">
+	<div class="contentWrap">
+		<div class="content">
+			<h3>The proper guide that helps you to unlock the real potential.</h3>
+			<p>I will tell you how to become a rich. Close the doors. Be fearful when othere are greedy.I will tell you how to become a rich. </p>
+			<a href="#" class="btnA">Request Demo</a>
+		</div>
+		<div class="cardWrap">
+			<ul class="card">
+				<li>
 					<a href="#">
-						<img src="" alt="아이콘1">
-						<p>Registration Guide</p>
+					<img src="images/icon-01.png" alt="아이콘1">
+					<p>Registration<br>Guide</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+					<img src="images/icon-02.png" alt="아이콘2">
+					<p>Registration<br>Guide</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+					<img src="images/icon-03.png" alt="아이콘3">
+					<p>Registration<br>Guide</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+					<img src="images/icon-04.png" alt="아이콘4">
+					<p>Registration<br>Guide</p>
 					</a>
 				</li>
 			</ul>
 		</div>
 	</div>
+
+
 </body>
 </html>
