@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>chavy new</title>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="jquery.bxslider.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<style>
+		body{font-family: 'Source Sans Pro', sans-serif;}
+
+		/*common*/
+		.bgColorOne{background: #f8f9ff;}
+		.fontColorOne{color:#2c2c96;}
+		.header,
+		.slider,
+		.conOne,
+		.conTwo,
+		.conThree{width: 1200px; margin: 0 auto;}
+
+		/*header*/
+		.header{height: 140px; padding:38px 0; background: orange;}
+		.logo{}
+		.logo h1{font-size:3em; float:left;}
+
+		.nav{
+			width: 545px; margin: 0 auto; background: white;
+			margin-top:20px;	
+		}
+		.nav ul{}
+		.nav li{
+			display: block; width: 136.25px;
+			float:left;
+			font-size:1.2em; text-align: center; color:#333;}
+
+		.login{width: 240px; margin: 0 auto; background: white;}
+		.login ul{}
+		.login li{
+			display: block; width: 136.25px;
+			float:left;
+			font-size:1.2em; text-align: center; color:#333;
+		}
+		.login li a{}
+		.login li a:hover{
+			display: block; width: 120px; height: 50px;
+			background: #2c2c96; color:white;
+			border-radius: 25px; text-align: center; line-height: 50px;
+		}
+
+		/*slider*/
+		.slider{height: 770px; background: gray;}   
+		/*임의로 잡아놓음*/
+
+		/*conOne*/
+		.conOne{padding:70px 0;text-align: center;}
+		.conOne h2{font-size:2.5em; margin-bottom:45px;}
+		.conOne p{}
+
+		/*conTwo*/
+		.conTwo{padding:260px 0;}
+		.txtBox{width: 535px;height: 370px; float:left;}
+		.txtBox h3{font-size:2em; margin-bottom:45px; margin-bottom: 50px;}
+		.txtBox p{margin-bottom: 60px;}
+		.txtBox a{
+			display: block; width: 185px; height: 60px;
+			background: #2c2c96; color:white;
+			border-radius: 30px; text-align: center; line-height: 60px;
+		}
+
+		.iconBox{float:right;}
+		.iconBox ul{}
+		.iconBox li{
+			float:left;
+			width: 206px; height: 240px; background: gray; 
+			text-align: center; border-radius: 5px;
+		}
+		.iconBox img{}
+		.iconBox p{}
+
+		/*conThree*/
+
+
+	</style>
+</head>
+<body>
+	<!-- header -->
+	<header>
+		<div class="header clearfix">
+			<div class="logo ">
+				<h1><a href="#">chavy</a></h1>
+			</div>
+			<div class="nav">
+				<ul class="clearfix">
+					<li><a href="#">menu1</a></li>
+					<li><a href="#">menu2</a></li>
+					<li><a href="#">menu3</a></li>
+					<li><a href="#">menu4</a></li>
+				</ul>			
+			</div>
+			<div class="login">
+				<ul class="clearfix">
+					<li><a href="#">login1</a></li>
+					<li><a href="#">login2</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+	<!-- slider -->
+	<div class="slider">
+		<div class="txtBox">
+			<h2>Lorem ipsum dolor sit amet, consectetur.</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo unde, labore modi incidunt eum ea.</p>
+			<a href="#" class="btn">Request Demo</a>
+		</div>
+	</div>
+
+	<!-- conOne -->
+	<div class="wrap bgColorOne">   <!-- 100% -->
+		<div class="conOne">    <!-- 1200px -->
+			<h2>Lorem ipsum dolor <span class="fontColorOne">sit amet, consectetur.</span></h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> Enim ad, non, doloribus voluptatem sint at.</p>
+		</div>
+	</div>
+
+	<!-- conTwo -->
+	<div class="conTwo clearfix">
+		<div class="txtBox">
+			<h3>Lorem ipsum dolor <span class="fontColorOne">sit amet, consectetur.</span></h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> Enim ad, non, doloribus voluptatem sint at.</p>
+			<a href="#">Request Demo</a>
+		</div>
+		<div class="iconBox clearfix">
+			<ul>
+				<li>
+					<img src="images/icon01_01.jpg" alt="icon">
+					<p>Lorem<br> ipsum</p>
+				</li>
+				<li>
+					<img src="images/icon01_02.jpg" alt="icon">
+					<p>Lorem<br> ipsum</p>
+				</li>
+				<li>
+					<img src="images/icon01_03.jpg" alt="icon">
+					<p>Lorem<br> ipsum</p>
+				</li>
+				<li>
+					<img src="images/icon01_04.jpg" alt="icon">
+					<p>Lorem<br> ipsum</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- conThree -->
+	<div class="conThree">
+		
+	</div>
+</body>
+</html>
