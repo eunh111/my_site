@@ -1,6 +1,40 @@
 @charset "utf-8";
+/*common*/
+.headerTop,
+.headerBott{width: 1200px; margin: 0 auto;}
+
+
 /*header*/
-header#header{height: 160px;}
+.wrapHeaderTop{height: 40px; background: #0044af;}
+.headerTop .tab{width:366px;height: 40px; float:left;}
+.headerTop .tab li{
+	width: 120px;height: 40px; float:left;
+	background: #fff ;color:#000;
+	text-align: center; line-height: 40px;
+	margin-right: 2px;
+}
+.headerTop .tab li:nth-child(2),
+.headerTop .tab li:nth-child(3){background: #00163b; color:white;}
+/*탭 두개만 선택되는거 어떻게 표현해야할 지 모르겠음.*/
+
+.headerTop .subMenu{width: 290px; float:right; background: orange;}
+.headerTop .subMenu li{
+	height: 40px; float:left; 
+	color:#000; text-align: center; line-height: 40px; font-size: 12px;
+	margin-left: 2px;
+}
+
+.headerBott{height: 120px; padding:25px 0;}
+.headerBott .logo img{float:left;}
+
+.headerBott .nav{float:left;}
+.headerBott .nav li{
+	float:left;
+}
+
+.headerBott .toggle{}
+.headerBott .toggle .quick{}
+.headerBott .toggle .mypage{}
 
 
 /*contents*/

@@ -6,7 +6,7 @@
 	<title>chavy new</title>
 	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="jquery.bxslider.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/jquery.bxslider.js"></script>
 	<style>
@@ -22,78 +22,104 @@
 		.conThree{width: 1200px; margin: 0 auto;}
 
 		/*header*/
-		.header{height: 140px; padding:38px 0; background: orange;}
-		.logo{}
-		.logo h1{font-size:3em; float:left;}
+		.header{height: 140px; padding:38px 0; background: orange; position: relative;}
+		.header .logo h1{font-size:3em; float:left;}
 
-		.nav{
-			width: 545px; margin: 0 auto; background: white;
-			margin-top:20px;	
+		.header .nav{
+			width: 545px; margin: 0 auto; margin-top:20px;	
 		}
-		.nav ul{}
-		.nav li{
+		.header .nav li{
 			display: block; width: 136.25px;
 			float:left;
 			font-size:1.2em; text-align: center; color:#333;}
 
-		.login{width: 240px; margin: 0 auto; background: white;}
-		.login ul{}
-		.login li{
+		.header .login{width: 240px; position: absolute; right: 0;top: 40px;}
+		.header .login li{
 			display: block; width: 136.25px;
-			float:left;
 			font-size:1.2em; text-align: center; color:#333;
 		}
-		.login li a{}
-		.login li a:hover{
+		.header .login li a{}
+		.header .login li a:hover{
 			display: block; width: 120px; height: 50px;
 			background: #2c2c96; color:white;
 			border-radius: 25px; text-align: center; line-height: 50px;
 		}
 
-		/*slider*/
-		.slider{height: 770px; background: gray;}   
-		/*임의로 잡아놓음*/
+		/*visual*/
+		.visual .view{width: 1100px;position: relative;height: 700px;margin: 0 auto}
+		.visual .slider li{overflow: hidden;}
+		.visual .slider img.img{position: absolute;left:50%;}
+		.visual .visualTxt{position: absolute;top:150px;width: 500px;}
+		.visual .visualTxt h2{font-size:2.5em;margin-bottom:20px;}
+		.visual .visualTxt p{margin-bottom:30px;}
+		.visual .visualTxt a{display: block;width: 200px;height: 60px;background: #2c2c96; color:white;border-radius:40px;text-align: center;line-height: 60px;}
+		.bx-wrapper {
+		    -moz-box-shadow: none;
+		    -webkit-box-shadow: none;
+		    box-shadow: none;
+		    border: 0 none;
+		    background: #fff;
+		    margin-bottom:0;
+		}
+		.vColor{color:#2c2c96;}
 
 		/*conOne*/
 		.conOne{padding:70px 0;text-align: center;}
 		.conOne h2{font-size:2.5em; margin-bottom:45px;}
-		.conOne p{}
 
 		/*conTwo*/
 		.conTwo{padding:260px 0;}
-		.txtBox{width: 535px;height: 370px; float:left;}
-		.txtBox h3{font-size:2em; margin-bottom:45px; margin-bottom: 50px;}
-		.txtBox p{margin-bottom: 60px;}
-		.txtBox a{
+		.conTwo .txtBox{width: 535px;height: 370px; float:left;}
+		.conTwo .txtBox h3{font-size:2em; margin-bottom:45px;}
+		.conTwo .txtBox p{margin-bottom: 60px;}
+		.conTwo .txtBox a{
 			display: block; width: 185px; height: 60px;
 			background: #2c2c96; color:white;
 			border-radius: 30px; text-align: center; line-height: 60px;
 		}
 
-		.iconBox{float:right;}
-		.iconBox ul{}
-		.iconBox li{
-			float:left;
-			width: 206px; height: 240px; background: gray; 
-			text-align: center; border-radius: 5px;
+		.conTwo .iconBox{
+			width: 460px; height: 510px; float:right;
+			margin-right: 100px;
 		}
-		.iconBox img{}
-		.iconBox p{}
+		.conTwo .iconBox li{
+			float:left; width: 206px; height: 240px;
+			_background: gray; margin-bottom: 40px; text-align: center;
+			padding-top: 50px; border-radius: 5px;
+			transition: 0.3s; cursor:pointer;
+		}
+		.conTwo .iconBox li:hover{box-shadow: 0 0 15px #ddd;}
+		.conTwo .iconBox li:nth-child(1),
+		.conTwo .iconBox li:nth-child(3){margin-right: 40px;}
+		.conTwo .iconBox li img{margin-bottom: 15px;}
 
 		/*conThree*/
-
-
+		.conThree{padding:255px 0; position: relative;}
+		.conThree .txtBox{width: 535px;}
+		.conThree .txtBox h3{font-size:2em; margin-bottom:45px;}
+		.conThree .txtBox p{margin-bottom: 60px;}
+		.conThree .txtBox a{
+			display: block; width: 185px; height: 60px;
+			background: #2c2c96; color:white;
+			border-radius: 30px; text-align: center; line-height: 60px;
+		}
+		.conThree img{position: absolute;right: 0;top: 110px;}
 	</style>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider({pager:false});
+		}); 
+	</script>
 </head>
 <body>
 	<!-- header -->
 	<header>
 		<div class="header clearfix">
-			<div class="logo ">
+			<div class="logo">
 				<h1><a href="#">chavy</a></h1>
 			</div>
 			<div class="nav">
-				<ul class="clearfix">
+				<ul>
 					<li><a href="#">menu1</a></li>
 					<li><a href="#">menu2</a></li>
 					<li><a href="#">menu3</a></li>
@@ -101,7 +127,7 @@
 				</ul>			
 			</div>
 			<div class="login">
-				<ul class="clearfix">
+				<ul>
 					<li><a href="#">login1</a></li>
 					<li><a href="#">login2</a></li>
 				</ul>
@@ -109,13 +135,40 @@
 		</div>
 	</header>
 
-	<!-- slider -->
-	<div class="slider">
-		<div class="txtBox">
-			<h2>Lorem ipsum dolor sit amet, consectetur.</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo unde, labore modi incidunt eum ea.</p>
-			<a href="#" class="btn">Request Demo</a>
-		</div>
+	<!-- visual -->
+	<div class="visual">
+		<ul class="slider">
+			<li>    <!-- w100% -->
+				<div class="view">
+					<img src="images/bg01.jpg" alt="" class="img">
+					<div class="visualTxt">
+						<h2>Lorem ipsum dolor sit amet, consectetur.</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo unde, labore modi incidunt eum ea.</p>
+						<a href="#" class="btnA">Request Demo</a>
+					</div>
+				</div>
+			</li>
+			<li>    <!-- w100% -->
+				<div class="view">
+					<img src="images/bg01.jpg" alt="" class="img">
+					<div class="visualTxt">
+						<h2>Lorem ipsum dolor sit amet, consectetur.</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo unde, labore modi incidunt eum ea.</p>
+						<a href="#" class="btnA">Request Demo</a>
+					</div>
+				</div>
+			</li>
+			<li>    <!-- w100% -->
+				<div class="view">
+					<img src="images/bg01.jpg" alt="" class="img">
+					<div class="visualTxt">
+						<h2>Lorem ipsum dolor sit amet, consectetur.</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo unde, labore modi incidunt eum ea.</p>
+						<a href="#" class="btnA">Request Demo</a>
+					</div>
+				</div>
+			</li>
+		</ul>
 	</div>
 
 	<!-- conOne -->
@@ -129,9 +182,9 @@
 	<!-- conTwo -->
 	<div class="conTwo clearfix">
 		<div class="txtBox">
-			<h3>Lorem ipsum dolor <span class="fontColorOne">sit amet, consectetur.</span></h2>
+			<h3>Lorem ipsum dolor <span class="fontColorOne">sit amet, consectetur.</span></h3>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> Enim ad, non, doloribus voluptatem sint at.</p>
-			<a href="#">Request Demo</a>
+			<a href="#" class="shadow">Request Demo</a>
 		</div>
 		<div class="iconBox clearfix">
 			<ul>
@@ -156,8 +209,16 @@
 	</div>
 
 	<!-- conThree -->
-	<div class="conThree">
-		
+	<div class="warp bgColorOne">
+		<div class="conThree">
+			<div class="txtBox">
+				<h3>Lorem ipsum dolor <span class="fontColorOne">sit amet.</span></h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> Enim ad, non, doloribus voluptatem sint at.</p>
+				<a href="#" class="shadow">Request Demo</a>
+			</div>
+			<img src="images/img03_01.jpg" alt="" class="img">
+			</div>		
+		</div>
 	</div>
 </body>
 </html>
