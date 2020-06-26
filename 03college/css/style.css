@@ -5,36 +5,60 @@
 
 
 /*header*/
-.wrapHeaderTop{height: 40px; background: #0044af;}
-.headerTop .tab{width:366px;height: 40px; float:left;}
-.headerTop .tab li{
-	width: 120px;height: 40px; float:left;
-	background: #fff ;color:#000;
-	text-align: center; line-height: 40px;
-	margin-right: 2px;
+/*header top*/
+.headerTopWrap{background: #0044af;}
+.headerTop .tab{}
+.headerTop .tab ul{float:left;}
+.headerTop .tab ul>li{
+	float:left; width: 120px; margin-right: 2px; background: #00163b;}
+.headerTop .tab ul>li>a{
+	display: block; line-height: 40px;
+	text-align: center; color: #fff; font-weight: bold;
 }
-.headerTop .tab li:nth-child(2),
-.headerTop .tab li:nth-child(3){background: #00163b; color:white;}
-/*탭 두개만 선택되는거 어떻게 표현해야할 지 모르겠음.*/
+.headerTop .tab ul>li>a.active{background: #fff; color:#6e6e6e;}
 
-.headerTop .subMenu{width: 290px; float:right; background: orange;}
-.headerTop .subMenu li{
-	height: 40px; float:left; 
-	color:#000; text-align: center; line-height: 40px; font-size: 12px;
-	margin-left: 2px;
+.headerTop .subMenu ul{float:right;}
+.headerTop .subMenu ul>li{float:left; font-size: 0.8em;}
+.headerTop .subMenu ul>li>a{
+	display: block; line-height: 40px; color:#fff; padding:0 5px;
+}
+.headerTop .subMenu li.sizeBtn a{
+	float:left; background: #fff; padding:0;
+	margin-right: 2px; color:#9a9a9a;  
+	width: 16px; height: 16px; line-height: 14px; text-align: center;
+	margin-top: 10px; font-weight: bold; text-indent: -2px;
+}
+.headerTop .subMenu li:last-child a{padding-right: 0;}
+
+/*header bottom*/
+.headerBott{
+	width: 1200px; margin: 0 auto; padding:30px 0;
+	position: relative;     /*.headerBott .navWrap의 poa 때문에*/
+	_background:#ddd;
+}
+.headerBott h1{
+	width: 212px; height: 53px; 
+	background:red url(../images/main_logo.jpg) no-repeat;
+}
+.headerBott h1 a{display: block; line-height: 53px; text-indent: -9999px;}
+
+.headerBott .navWrap{width: 760px; position: absolute; right: 0; top: 36px;}
+.headerBott .navWrap ul.nav{float:left;}
+.headerBott .navWrap ul.nav li{float:left;}  /*한줄로 늘려쓰기위해*/
+.headerBott .navWrap ul.nav li a{
+	display: block; color:#464646; font-size: 1.2em;
+	width: 130px; line-height: 45px; font-weight: bold;
 }
 
-.headerBott{height: 120px; padding:25px 0;}
-.headerBott .logo img{float:left;}
-
-.headerBott .nav{float:left;}
-.headerBott .nav li{
+.headerBott .navWrap .btnToggle{float:right;}
+.headerBott .navWrap .btnToggle a{
+	display: block; width: 45px; height: 45px;
 	float:left;
+	background-image: url(../images/toggle_btn.gif);
+	background-repeat: no-repeat; text-indent: -9999px;
 }
-
-.headerBott .toggle{}
-.headerBott .toggle .quick{}
-.headerBott .toggle .mypage{}
+.headerBott .navWrap .btnToggle .toggle{background-position: 0 0;}
+.headerBott .navWrap .btnToggle .my{background-position: -45px 0;}
 
 
 /*contents*/
@@ -46,20 +70,38 @@
 	background-size: auto, cover;    /*높이에 의해서 w를 책정.무슨 뜻인지 모르겠음*/
 	}
 #contents .title{
-	width: 1200px; height: 260px; background: gray; margin: 0 auto;
+	width: 1200px; height: 260px; margin: 0 auto;
+	padding:80px 0;
 }
+#contents .title .titleTxt{float:left;}
+#contents .title .titleTxt p{color:#fff;}
+#contents .title .titleTxt p:nth-child(1){font-size: 2em;}
+#contents .title .titleTxt p:nth-child(2){font-size: 3em; font-weight: bold;}
+
+#contents .title .iconWrap{}
+#contents .title .iconWrap ul.icon{float:right;}
+#contents .title .iconWrap ul.icon li{
+	float:left; width: 110px; height: 40px;
+}
+#contents .title .iconWrap ul.icon a{display: block; text-align: center;}
+#contents .title .iconWrap ul.icon p{color:white;}
+
+
+
+
+
 #contents .container{width: 1200px; margin: 0 auto;}
-#contents .container li{float:left; width: 25%; height: 225px;}
+#contents .container>ul>li{float:left; width: 25%; height: 225px;}
 /*레이어 잡기 편해서 float left 사용. gutter도 없으니까 */
 
-#contents .container li:nth-child(1){background: #f00; width: 75%;height: 450px;}
-#contents .container li:nth-child(2){background: #ff0; width: 25%;height: 450px;}
-#contents .container li:nth-child(3){background: #0ff;}
-#contents .container li:nth-child(4){background: #00f;}
-#contents .container li:nth-child(5){background: #f0f;}
-#contents .container li:nth-child(6){background: skyblue;}
-#contents .container li:nth-child(7){background: orange; width: 25%;}
-#contents .container li:nth-child(8){background: aqua; width: 75%;}
+#contents .container>ul>li:nth-child(1){background: #f00; width: 75%;height: 450px;}
+#contents .container>ul>li:nth-child(2){background: #ff0; width: 25%;height: 450px;}
+#contents .container>ul>li:nth-child(3){background: #0ff;}
+#contents .container>ul>li:nth-child(4){background: #00f;}
+#contents .container>ul>li:nth-child(5){background: #f0f;}
+#contents .container>ul>li:nth-child(6){background: skyblue;}
+#contents .container>ul>li:nth-child(7){background: orange; width: 25%;}
+#contents .container>ul>li:nth-child(8){background: aqua; width: 75%;}
 
 
 

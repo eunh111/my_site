@@ -13,56 +13,88 @@
 <body>
 	<!-- header -->
 	<header id="header">
-			<div class="wrapHeaderTop clearfix">
-				<div class="headerTop">
-					<div class="tab">
-						<ul>
-							<li><a href="#">대학교</a></li>
-							<li><a href="#">입학안내</a></li>
-							<li><a href="#">대학원</a></li>
-						</ul>
-					</div>
-					<div class="subMenu">
-						<ul class="clearfix">
-							<li><a href="#">글자크기</a></li>
-							<li><a href="#">찾아오시는길</a></li>
-							<li><a href="#">ENGLISH</a></li>
-							<li><a href="#">사이트맵</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="headerBott clearfix">
-				<div class="logo">
-					<img src="images/logo.jpg" alt="">
-				</div>
-				<div class="nav">
-					<ul>
-						<li><a href="#">menu1</a></li>
-						<li><a href="#">menu2</a></li>
-						<li><a href="#">menu3</a></li>
-						<li><a href="#">menu4</a></li>
-						<li><a href="#">menu5</a></li>
+		<div class="headerTopWrap">   <!-- 100% blue -->
+			<div class="headerTop clearfix">  <!-- 1200px, m0a -->
+				<div class="tab">  <!-- float:left -->
+					<ul class="clearfix">
+						<li><a href="#" class="active">대학교</a></li>
+						<li><a href="#">입학안내</a></li>
+						<li><a href="#">대학원</a></li>
 					</ul>
 				</div>
-				<div class="toggle">
-					<div class="quick">
-						
-					</div>
-					<div class="mypage">
-						<img src="" alt="">
-					</div>
+				<div class="subMenu">   <!-- float:right -->
+					<ul class="clearfix">
+						<li><a href="#">글자크기</a></li>
+						<li class="sizeBtn">
+							<a href="#">-</a>
+							<a href="#">+</a>
+						</li>
+						<li><a href="#">찾아오시는길</a></li>
+						<li><a href="#">ENGLISH</a></li>
+						<li><a href="#">사이트맵</a></li>
+					</ul>
 				</div>
 			</div>
+		</div>
+		<div class="headerBott">   <!-- 1200 m0a -->
+			<h1 class="logo"><a href="#">한국대학교</a></h1>
+			<div class="navWrap clearfix">   <!-- poa -->
+				<ul class="nav clearfix">   <!-- float:left -->
+					<li><a href="#">대학소개</a></li>
+					<li><a href="#">학과소개</a></li>
+					<li><a href="#">학사안내</a></li>
+					<li><a href="#">대학생활</a></li>
+					<li><a href="#">학생지원센터</a></li>
+				</ul>
+				<div class="btnToggle clearfix">   <!-- float:right, 스프라이트이미지 -->
+					<a href="#" class="toggle">toggle</a>
+					<a href="#" class="my">toggle</a>
+				</div>
+			</div>
+		</div>
 
 	</header>
 
 	<!-- contents -->
 	<div id="contents">
-		<section class="title">
-			<p>함께 나누며 세상을 이끌어</p>
-			<h2>세계로 향하는 한국대학교</h2>
+		<section class="title clearfix">
+			<div class="titleTxt">
+				<p>함께 나누며 세상을 이끌어</p>
+				<p>세계로 향하는 한국대학교</p>
+			</div>
+			<div class="iconWrap clearfix">
+				<ul class="icon clearfix">
+					<li>
+						<a href="#">
+							<img src="images/icon-01.png" alt="">
+							<p>입학절차안내</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/icon-02.png" alt="">
+							<p>입학설명회</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/icon-03.png" alt="">
+							<p>장학제도</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/icon-04.png" alt="">
+							<p>증명서발급</p>
+						</a>
+					</li>
+				</ul>
+			</div>
 		</section>
+		
+
+
+
 		<div class="container">
 			<ul class="clearfix">
 				<li>
