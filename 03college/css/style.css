@@ -86,23 +86,76 @@
 #contents .title .iconWrap ul.icon a{display: block; text-align: center;}
 #contents .title .iconWrap ul.icon p{color:white;}
 
-
-
-
-
 #contents .container{width: 1200px; margin: 0 auto;}
 #contents .container>ul>li{float:left; width: 25%; height: 225px;}
 /*레이어 잡기 편해서 float left 사용. gutter도 없으니까 */
 
 #contents .container>ul>li:nth-child(1){background: #f00; width: 75%;height: 450px;}
 #contents .container>ul>li:nth-child(2){background: #ff0; width: 25%;height: 450px;}
-#contents .container>ul>li:nth-child(3){background: #0ff;}
-#contents .container>ul>li:nth-child(4){background: #00f;}
-#contents .container>ul>li:nth-child(5){background: #f0f;}
+#contents .container>ul>li:nth-child(3){background: #00163b;}
+/*#contents .container>ul>li:nth-child(4){background: #1651b7;}*/
+/*#contents .container>ul>li:nth-child(5){background: #f0f;}*/
 #contents .container>ul>li:nth-child(6){background: skyblue;}
 #contents .container>ul>li:nth-child(7){background: orange; width: 25%;}
 #contents .container>ul>li:nth-child(8){background: aqua; width: 75%;}
 
+
+/*slider*/
+.viewSlider{}
+.viewSlider .sliderTxt{
+	position: absolute; left: 80px; top: 80px;
+	font-size:3em;_font-weight: bold;color:#1550b6;
+}
+.viewSlider .sliderTxt p{margin-bottom: 30px;}
+.viewSlider .sliderTxt a{
+	display: block; width: 160px; line-height: 40px;
+	font-size:initial;text-align: center;
+	background: #182c4d; color:white;
+}
+
+.bx-wrapper {
+		    -moz-box-shadow:none;
+		    -webkit-box-shadow:none;
+		    box-shadow:none;
+		    border:0 none;
+		    margin-bottom:0;
+		}
+
+.sliderTwo .bx-wrapper .bx-pager {
+    bottom: 190px;
+    width: 150px;
+    right:0;
+	}
+
+/*box*/
+.boxTwo{position:relative;}
+.boxTwo .appTxt{position:absolute; left: 40px; top: 65px;}
+.boxTwo .appTxt p:nth-child(1){margin-bottom: 25px; color:white; font-size: 37px;}
+.boxTwo .appTxt p:nth-child(2){margin-bottom: 25px; color:white; font-size: 15px;}
+.boxTwo .appTxt a{
+	display: block; width: 160px; line-height: 40px;
+	font-size:initial;text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	color:white; border: 1px solid #ddd;
+}
+
+.boxThree{padding:20px;}
+.boxThree h5{font-size:25px; font-weight:bold; color:white; margin-bottom: 35px;}
+.boxThree .subIcon li{float:left; text-align: center; margin-right: 30px;}
+.boxThree .subIcon li:last-child{margin-right: 0px;}
+.boxThree .subIcon p{font-size:13px;color:white;}
+
+.boxFour{padding:20px; background-color: #1651b7;}
+.boxFour h5{font-size:25px; font-weight:bold; color:white; margin-bottom: 35px;}
+.boxFour h5:after{}
+.boxFour li{float:left; text-align: center; margin-right: 30px; margin-bottom: 15px;}
+.boxFour p{font-size:13px;color:white;}
+
+.boxFive{padding:20px; background-color: #fff; position: relative;}
+.boxFive h5{font-size:25px; font-weight:bold; color:white; margin-bottom: 20px; color:#081945;}
+.boxFive .smallUniv{float:left;}
+.boxFive p{float:right; font-size:13px;color:#000;}
+.boxFive .smallSns{position:absolute; bottom: 20px; right: 20px;}
 
 
 /*footer*/

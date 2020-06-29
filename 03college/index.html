@@ -9,6 +9,12 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".vSlider").bxSlider({pager:false});
+			$(".bSlider").bxSlider({controls:false,auto:true});
+		});
+	</script>
 </head>	
 <body>
 	<!-- header -->
@@ -91,29 +97,109 @@
 				</ul>
 			</div>
 		</section>
-		
-
-
-
 		<div class="container">
 			<ul class="clearfix">
-				<li>
-					<img src="images/con_01.jpg" alt="">
+				<li class="boxOne">
+					<ul class="vSlider">
+						<li class="viewSlider">
+							<img src="images/box1_01.jpg" alt="">
+							<div class="sliderTxt">
+								<p>한국에서<br>시작하는<br>새로운꿈</p>
+								<a href="#">자세히보기</a>
+							</div>
+						</li>
+						<li class="viewSlider">
+							<img src="images/box1_01.jpg" alt="">
+							<div class="sliderTxt">
+								<p>한국에서<br>시작하는<br>새로운꿈</p>
+								<a href="#">자세히보기</a>
+							</div>
+						</li>
+						<li class="viewSlider">
+							<img src="images/box1_01.jpg" alt="">
+							<div class="sliderTxt">
+								<p>한국에서<br>시작하는<br>새로운꿈</p>
+								<a href="#">자세히보기</a>
+							</div>
+						</li>
+					</ul>
 				</li>
-				<li>
+				<li class="boxTwo">
 					<img src="images/con_02.jpg" alt="">
+					<div class="appTxt">
+						<p><strong>APP</strong>으로<br><strong>스마트도서관</strong><br>바로이용하자!</p>
+						<p>모바일 열람증은<br>도서관 자료실/도서대출 등에<br>사용할 수 있습니다.</p>
+						<a href="">자세히보기</a>
+					</div>
 				</li>
-				<li>03</li>
-				<li>04</li>
-				<li>05</li>
+				<li class="boxThree">
+					<h5>HOT LINK</h5>
+					<div class="subIcon clearfix">
+						<ul>
+							<li>
+								<a href="#">
+									<img src="images/sicon-01.jpg" alt="">
+									<p>국제교류<br>센터</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="images/sicon-02.jpg" alt="">
+									<p>원격지원<br>시스템</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="images/sicon-03.jpg" alt="">
+									<p>예산/결산<br>공고</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="boxFour">
+					<h5>공지사항</h5>
+					<ul>
+						<li>
+							<a href="#">
+								<p>[공지]한국대학교 웹진...2016-06-12</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<p>[공지]한국대학교 웹진...2016-06-12</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<p>[공지]한국대학교 웹진...2016-06-12</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<p>[공지]한국대학교 웹진...2016-06-12</p>
+							</a>
+						</li>
+						
+					</ul>
+				</li>
+				<li class="boxFive clearfix">
+					<h5>SNS NEWS</h5>
+					<div class="smallUniv"><img src="images/boxfive-01.jpg" alt=""></div>
+					<p>한국 대학교는<br>2017학년도 신입생<br>입학식을 3월 2일(목)<br>본교 종합체육관 ...</p>
+					<div class="smallSns"><img src="images/boxfive-02.jpg" alt=""></div>
+				</li>
 				<li>
 					<img src="images/con_03.jpg" alt="">
 				</li>
 				<li>
 					<img src="images/con_04.jpg" alt="">
 				</li>
-				<li>
-					<img src="images/con_05.jpg" alt="">
+				<li class="sliderTwo">
+					<div class="bSlider">
+						<div><img src="images/banner01_01.jpg" alt=""></div>
+						<div><img src="images/banner01_01.jpg" alt=""></div>
+					</div>
 				</li>
 			</ul>
 		</div>
