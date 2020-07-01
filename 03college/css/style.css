@@ -2,7 +2,8 @@
 /*common*/
 .headerTop,
 .headerBott,
-.status{width: 1200px; margin: 0 auto;}
+.status,
+#footer{width: 1200px; margin: 0 auto;}
 
 
 /*header*/
@@ -128,6 +129,7 @@
     right:0;
 	}
 
+.sliderTwo {margin-bottom: 20px;}
 .sliderTwo .bSliderMom{position: relative;}
 .sliderTwo .sliderTwoBtn{position:absolute; left: 40px; bottom: 30px;}
 .sliderTwo a{
@@ -136,6 +138,7 @@
 	background-color: rgba(222, 35, 0, 0.8);
 	color:white; border: 1px solid #ddd;
 }
+
 
 /*box*/
 .boxTwo{position:relative;}
@@ -188,7 +191,27 @@
 }
 
 
+#contents .status .statusLeft{background: #fff; width: 25%;height: 60px; float:left;}
+#contents .status .statusRight{background: #fff; width: 75%;height: 60px; float:right;}
+
+.status .statusLeft{padding: 0 20px; 
+	border-right: 1px solid #000; line-height: 60px;}
+.status .statusLeft p{float:left;}
+.status .statusLeft a{float:left;}
+
+
+.statusRight{}
+.statusRight .cSlider{}
+.statusRight .cSlider li{}
+.statusRight .cSlider li .title{}
+.statusRight .cSlider li p{float:left;}
+
+
+
 /*footer*/
 footer#footer{
-	height: 200px;
-}
+	height: 200px;}
+
+#footer .last_menu{}
+#footer .last_menu ul{}
+#footer .last_menu ul li{float:left;}

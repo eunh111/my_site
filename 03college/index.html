@@ -13,6 +13,18 @@
 		$(document).ready(function(){
 			$(".vSlider").bxSlider({pager:false});
 			$(".bSlider").bxSlider({controls:false,auto:true});
+			$(".cSlider").bxSlider({
+				mode: 'vertical',
+				auto:true,
+				controls:false, //pre next 버튼 사용안함
+				pager:false //하단 이동버튼 사용안함
+			});
+			$(".upBtn").click(function(){
+				mySlider.goToNextSlide();
+			});
+			$(".downBtn").click(function(){
+				mySlider.goToPrevSlide();
+			});
 		});
 	</script>
 </head>	
@@ -222,24 +234,47 @@
 			</ul>
 		</div>
 		<div class="status">
-			<div class="statusLeft">
+			<div class="statusLeft clearfix">
 				<p>학사일정</p>
-				<div class="date">
-					<a href="#"><</a>
-					<p>2016 07</p>
-					<a href="#">></a>
-				</div>
+				<a href="#" class="date"> < 2016 07 > </a>
 			</div>
 			<div class="statusRight">
-				<p>2016-1학기 성적 열람 및 상담 신청</p>
-				<p>성적열람및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이 ...</p>
+				<ul class="cSlider">
+					<li class="clearfix">
+						<div>2016-1학기 성적 열람 및 상담 신청</div>
+						<p>성적열람및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이 ...</p>
+					</li>
+					<li class="clearfix">
+						<div>2016-1학기 성적 열람 및 상담 신청</div>
+						<p>성적열람및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이 ...</p>
+					</li>
+					<div class="upBtn">   <!-- poa -->
+					<img src="images/upbtn.jpg" alt="">
+					</div>
+					<div class="downBtn">   <!-- poa -->
+						<img src="images/downbtn.jpg" alt="">
+					</div>
+				</ul>
+				
 			</div>
 		</div>
 	</div>
 
 	<!-- footer -->
 	<footer id="footer">
-		
+		<div class="last_menu">
+			<ul class="clearfix">
+				<li>회사소개</li>
+				<li>한국대학교</li>
+				<li>개인정보</li>
+				<li>취급방침</li>
+				<li>이용정책</li>
+				<li>입점/제휴문의 및 광고</li>
+				<li>이메일 무단수집 거부</li>
+			</ul>
+		</div>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam beatae ratione consequuntur vitae, vel, rerum, dignissimos magni enim architecto necessitatibus velit reiciendis error vero tenetur quibusdam incidunt dolor. Voluptatum, ducimus.</p>
+
 	</footer>
 </body>
 </html>
