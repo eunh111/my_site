@@ -194,19 +194,22 @@
 #contents .status .statusLeft{background: #fff; width: 25%;height: 60px; float:left;}
 #contents .status .statusRight{background: #fff; width: 75%;height: 60px; float:right;}
 
-.status .statusLeft{padding: 0 20px; 
+.status .statusLeft{
+	text-align: center;
 	border-right: 1px solid #000; line-height: 60px;}
+.status .statusLeft .dateTxt{}
 .status .statusLeft p{float:left;}
-.status .statusLeft a{float:left;}
+.status .statusLeft a{}
 
 
-.statusRight{}
-.statusRight .cSlider{}
-.statusRight .cSlider li{}
-.statusRight .cSlider li .title{}
-.statusRight .cSlider li p{float:left;}
+.statusRight{position: relative; }
+.statusRight>.cSlider{}
+.statusRight>.cSlider>li{background-color: #f00;}
+.statusRight>.cSlider>li>div{font-size: 1.2em; font-weight: bold;}
+.statusRight>.cSlider>li>p{}
 
-
+.statusRight>.upBtn{position: absolute; top: 0; right: 0;}
+.statusRight>.downBtn{position: absolute; bottom: -4px;right: 0;}
 
 /*footer*/
 footer#footer{

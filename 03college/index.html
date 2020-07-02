@@ -13,7 +13,7 @@
 		$(document).ready(function(){
 			$(".vSlider").bxSlider({pager:false});
 			$(".bSlider").bxSlider({controls:false,auto:true});
-			$(".cSlider").bxSlider({
+			var mySlider = $(".cSlider").bxSlider({
 				mode: 'vertical',
 				auto:true,
 				controls:false, //pre next 버튼 사용안함
@@ -235,27 +235,28 @@
 		</div>
 		<div class="status">
 			<div class="statusLeft clearfix">
-				<p>학사일정</p>
-				<a href="#" class="date"> < 2016 07 > </a>
+				<div class="dateTxt clearfix">
+					<p>학사일정</p>
+					<a href="#" class="date"> < 2016 07 > </a>
+				</div>
 			</div>
 			<div class="statusRight">
 				<ul class="cSlider">
-					<li class="clearfix">
+					<li>
 						<div>2016-1학기 성적 열람 및 상담 신청</div>
 						<p>성적열람및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이 ...</p>
 					</li>
-					<li class="clearfix">
+					<li>
 						<div>2016-1학기 성적 열람 및 상담 신청</div>
 						<p>성적열람및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이 ...</p>
 					</li>
-					<div class="upBtn">   <!-- poa -->
-					<img src="images/upbtn.jpg" alt="">
-					</div>
-					<div class="downBtn">   <!-- poa -->
-						<img src="images/downbtn.jpg" alt="">
-					</div>
 				</ul>
-				
+				<div class="upBtn">   <!-- poa -->
+					<img src="images/upbtn.jpg" alt="">
+				</div>
+				<div class="downBtn">   <!-- poa -->
+					<img src="images/downbtn.jpg" alt="">
+				</div>
 			</div>
 		</div>
 	</div>

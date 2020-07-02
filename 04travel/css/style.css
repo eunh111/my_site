@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+/*header*/
+.headerWrap{
+	height: 90px;
+	background-color:#0870a7;
+	background-image:url(../images/header.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+}
+.header{
+	width: 980px; margin: 0 auto; padding: 25px 0;
+	position: relative;
+	}
+.header .logo{float:left;}
+
+
+.header .search{
+	width: 290px; height: 30px; border-radius:15px;
+	background: #fff;
+	position: absolute; left: 50%; top: 50%;
+	transform:translate(-50%,-50%);
+}
+
+
+.contact{float:right;}
+.contact .number{
+	float:left; color:#fff; font-weight: bold
+}
+.contact .sns{}
+.contact .sns li{float:left; margin-left: 6px;}
