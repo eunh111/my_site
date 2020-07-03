@@ -1,10 +1,12 @@
 @charset "utf-8";
+body{font-family: 'Nanum Gothic', sans-serif;}
 
 /*header*/
+/*headerWrap*/
 .headerWrap{
 	height: 90px;
 	background-color:#0870a7;
-	background-image:url(../images/header.jpg);
+	background-image:url(../images/headerair.jpg);
 	background-repeat:no-repeat;
 	background-position:center;
 }
@@ -12,20 +14,49 @@
 	width: 980px; margin: 0 auto; padding: 25px 0;
 	position: relative;
 	}
-.header .logo{float:left;}
-
+.header .logo{float:left; margin-left: 0;}
 
 .header .search{
 	width: 290px; height: 30px; border-radius:15px;
 	background: #fff;
-	position: absolute; left: 50%; top: 50%;
-	transform:translate(-50%,-50%);
+	position: absolute; left:280px; top:30px;
 }
-
+.header .search .search_one{
+	float: left; width: 80px; font-size: 15px; line-height: 30px;
+	text-align: center;
+	font-weight: bold; color:#333c41;
+}
+.header .search .search_two{
+	float: left; font-size: 13px; line-height: 30px;
+	font-weight: bold; color:#6e7376;
+}
+.header .search img{float:right; margin-right: 20px; margin-top: 8px; }
 
 .contact{float:right;}
 .contact .number{
-	float:left; color:#fff; font-weight: bold
+	float:left; font-size:25px; color:#fff;
+	font-weight: bold; margin-right:20px; 
 }
-.contact .sns{}
+.contact .sns{float:left;}
 .contact .sns li{float:left; margin-left: 6px;}
+
+/*menuWrap*/
+.menuWrap{
+	height: 64px;
+	background-image:url(../images/menu.jpg);
+	border-bottom: 5px solid #0e73a7;
+}
+.menuWrap .menu{width: 980px; margin: 0 auto;}
+.menuWrap .menu ul{}
+.menuWrap .menu ul li{
+	float:left; width:163.3333px; border-right: 1px solid #ececec;
+	line-height: 59px;
+}
+.menuWrap .menu ul li:first-child{border-left:1px solid #ececec;}
+.menuWrap .menu ul li a{
+	display: block; text-align: center; 
+	font-weight: bold; font-size: 18px;
+}
+
+/*section*/
+
