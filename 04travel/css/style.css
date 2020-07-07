@@ -1,6 +1,8 @@
 @charset "utf-8";
 html,body{height: 100%;}
 body{font-family: 'Nanum Gothic', sans-serif;}
+fieldset{border:0 none;}
+legend{display: block; position: absolute; left: 0; top: -9999px;}
 
 /*header*/
 /*headerWrap*/
@@ -86,6 +88,61 @@ body{font-family: 'Nanum Gothic', sans-serif;}
 .main_top{position: relative;}
 .main_top .main_left{float:left;}
 .main_left .main_search{width: 482px; height: 300px; background: yellow;}
+
+
+/*section----form*/
+.search_tab01{}
+.search_tab01 .tab01{
+	width: 132px; height: 75px; background: #fff;
+	float:left; line-height: 75px; text-align: center; font-weight: bold;
+	cursor: pointer;
+}
+
+.formLayer{width: 350px; height: 300px; background: #fff; margin: 0 auto;
+	padding: 23px 35px; float:right;
+
+}
+.formLayer fieldset{margin-bottom: 10px;}
+.formLayer li{margin-bottom: 15px;}
+.formLayer label{display: block; padding: 5px 0; font-size: 0.8em;
+	font-weight: bold;
+}
+.formLayer select{
+	width: 100%; height: 30px; font-size: 0.8em;
+	text-indent: 5px; border-radius: 5px;
+	color:#c4c4c4; border: 2px solid #ededed;
+}
+
+.formLayer .left,.formLayer .right{float:left; width: 130px;}
+.formLayer .left{margin-right: 20px;}
+.formLayer .left input,.formLayer .right input{
+	width: 100%; height: 30px; font-size: 0.8em;
+	text-indent: 5px; border-radius: 5px; 
+	color:#c4c4c4; border: 2px solid #ededed;
+}
+
+.formLayer .grade,.formLayer .age{float:left; width: 130px;}
+.formLayer .grade{margin-right: 20px;}
+.formLayer .grade input,.formLayer .age input{
+	width: 100%; height: 30px; font-size: 0.8em;
+	text-indent: 5px; border-radius: 5px; 
+	color:#c4c4c4; border: 2px solid #ededed;
+}
+.formLayer .age input{width: 66px; height: 30px; margin-right: 5px;}
+
+
+.formLayer .tBtn{width: 100%; height: 40px;
+	border: 0 none; cursor: pointer;
+	background: #ea4f1f; color: #fff;
+	font-weight: bold; font-size: 1em;
+	border-radius: 5px;
+}
+
+
+
+
+
+
 .main_left .main_result{}
 .main_left .main_result ul{}
 .main_left .main_result ul li{
@@ -116,6 +173,29 @@ body{font-family: 'Nanum Gothic', sans-serif;}
 }
 .main_sub ul li:nth-child(4),
 .main_sub ul li:nth-child(8){margin-right: 0;}
+
+
+.card05{position: relative;}
+.card05 img{width: 100%; height: 100%; }
+.card05 .bg{}
+.card05 .bg h3{}
+.card05 .bg p{}
+
+.card05 .bg .wrap{width: 30px; height: 30px; border: 3px solid #fff;
+	border-radius: 15px; box-sizing: border-box;
+	position: absolute; left: 50%; top: 50%;
+	transform: translate(-50%,-50%);
+	transition: 0.3s;	
+}
+.card05 .bg .wrap .bar1,
+.card05 .bg .wrap .bar2{width: 15px; height: 3px; background: #fff;
+	border-radius: 2px;
+	position: absolute; left: 50%; top: 50%;
+	transform: translate(-50%,-50%); 	
+}
+.card05 .bg .wrap .bar2{transform: translate(-50%,-50%) rotate(90deg);}
+.card05 .bg .color{}
+
 
 
 /*footer*/
