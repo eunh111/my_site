@@ -91,19 +91,21 @@ legend{display: block; position: absolute; left: 0; top: -9999px;}
 
 
 /*section----form*/
+
+
 .search_tab01{}
 .search_tab01 .tab01{
 	width: 132px; height: 75px; background: #fff;
 	float:left; line-height: 75px; text-align: center; font-weight: bold;
 	cursor: pointer;
 }
-
 .formLayer{width: 350px; height: 300px; background: #fff; margin: 0 auto;
 	padding: 23px 35px; float:right;
-
 }
 .formLayer fieldset{margin-bottom: 10px;}
-.formLayer li{margin-bottom: 15px;}
+.formLayer li>.left,
+.formLayer li>.right{margin:10px 0;}
+.formLayer li>.right{float:right;}
 .formLayer label{display: block; padding: 5px 0; font-size: 0.8em;
 	font-weight: bold;
 }
@@ -123,25 +125,24 @@ legend{display: block; position: absolute; left: 0; top: -9999px;}
 
 .formLayer .grade,.formLayer .age{float:left; width: 130px;}
 .formLayer .grade{margin-right: 20px;}
+
 .formLayer .grade input,.formLayer .age input{
 	width: 100%; height: 30px; font-size: 0.8em;
 	text-indent: 5px; border-radius: 5px; 
 	color:#c4c4c4; border: 2px solid #ededed;
 }
-.formLayer .age input{width: 66px; height: 30px; margin-right: 5px;}
 
+.formLayer .age input{width: 60px; height: 30px;}
+.formLayer .age .adult{float:left;}
+.formLayer .age .kids{float:right;}
 
 .formLayer .tBtn{width: 100%; height: 40px;
 	border: 0 none; cursor: pointer;
 	background: #ea4f1f; color: #fff;
 	font-weight: bold; font-size: 1em;
 	border-radius: 5px;
+	margin-top: 15px;
 }
-
-
-
-
-
 
 .main_left .main_result{}
 .main_left .main_result ul{}
@@ -166,36 +167,201 @@ legend{display: block; position: absolute; left: 0; top: -9999px;}
 	margin-top: 15px;}
 
 .main_sub{}
-.main_sub ul{}
-.main_sub ul li{float: left; width: 233px; height: 240px; 
+.main_sub ul{}  
+.main_sub ul>li{float: left; width: 233px; height: 240px; 
 	margin-right: 16px; margin-top: 16px;
 	background: pink;
 }
-.main_sub ul li:nth-child(4),
-.main_sub ul li:nth-child(8){margin-right: 0;}
+.main_sub ul>li:nth-child(4),
+.main_sub ul>li:nth-child(8){margin-right: 0;}
 
 
-.card05{position: relative;}
-.card05 img{width: 100%; height: 100%; }
-.card05 .bg{}
-.card05 .bg h3{}
-.card05 .bg p{}
 
-.card05 .bg .wrap{width: 30px; height: 30px; border: 3px solid #fff;
-	border-radius: 15px; box-sizing: border-box;
-	position: absolute; left: 50%; top: 50%;
-	transform: translate(-50%,-50%);
-	transition: 0.3s;	
+
+
+/*card03*/
+.card03{position: relative;}
+.card03 .card_img p{text-align: center; color: #fff; 
+	font-weight: bold; font-size:1.2em;
+	position: absolute; left: 50%; top: 8%;
+	transform:translate(-50%,-8%); 
 }
-.card05 .bg .wrap .bar1,
-.card05 .bg .wrap .bar2{width: 15px; height: 3px; background: #fff;
-	border-radius: 2px;
-	position: absolute; left: 50%; top: 50%;
-	transform: translate(-50%,-50%); 	
+.card03 .card_img img{}
+.card03 .card_txt{width: 233px; height: 65px; background: #2c2836; opacity: 80%;
+	position: absolute; left: 0; bottom: 0;color: #fff;
+	padding:14px 18px;
 }
-.card05 .bg .wrap .bar2{transform: translate(-50%,-50%) rotate(90deg);}
-.card05 .bg .color{}
+.card03 .card_txt h5{}
+.card03 .card_txt p{font-size: 0.8em; margin-top: 3px;}
 
+/*card04*/
+.card04{position: relative; background-color: #f5f3f4 !important;}
+.card04 .card_img{position: relative; } 
+.card04 .card_img img{
+	width: 80%;
+	position: absolute; top: 28px; right: 0;
+}
+.card04 .card_img p{
+	color: #484848; 
+	font-weight: bold; font-size:0.9em;
+	position: absolute; left: 23px; top:27px;
+}
+.card04 .card_img .txt_star{
+	color:#446199; margin-top: 60px;
+}
+.card04 .card_img .stars01{
+	width: 67px; height: 12px;
+	position: absolute; left: 23px; top:110px;
+}
+.card04 .card_txt{width: 233px; height: 65px; background: #44619d;
+	position: absolute; left: 0; bottom: 0;color: #fff;
+	padding:14px 18px;
+}
+.card04 .card_txt h4{}
+.card04 .card_txt p{font-size: 0.8em; margin-top: 3px;}
+
+/*card05*/
+.card05{position: relative; overflow: hidden;
+}
+.card05 img{
+	width: 100%; height: 100%;
+	position: absolute; left: 50%; top: 50%;
+	transform:translate(-50%,-50%) scale(1.2);
+	transition: 0.3s;
+}
+.card05 .txt{width: 233px; color:#2d3371; 
+	text-align: center; 
+	position: absolute; top: 30px;
+	font-weight: bold;
+	z-index: 1
+}
+.card05 .txt h4{font-size: 1.2em;}
+.card05 .txt p{font-size: 0.9em; margin-top: 5px;}
+.card05 .bg{width: 100%; height: 100%; background: #27a5c9;
+	position: relative; opacity: 0;
+}
+.card05 .wrap{width: 30px; height: 30px; border: 3px solid #fff;
+			border-radius: 15px; box-sizing: border-box;
+			position: absolute; left: 50%; top: 50%;
+			transform:translate(-50%,-50%);
+			transition: 0.3s;
+			z-index:1;
+		}
+.card05 .wrap .bar1,.wrap .bar2{width: 13px; height: 3px; 
+	background-color: #fff; border-radius: 2px;
+	position: absolute; left: 50%; top: 50%;
+	transform:translate(-50%,-50%);
+}
+.card05 .wrap .bar2{transform:translate(-50%,-50%) rotate(90deg);}
+.card05:hover img{transform:translate(-50%,-50%) scale(1.4);}
+.card05:hover .txt{color:#fff;}
+.card05:hover .wrap{transform:translate(-50%,-50%) rotate(180deg);}
+.card05:hover .bg{opacity: 0.4;}
+
+/*card06*/
+.card06{position: relative;	overflow: hidden;}
+.card06 img{
+	height: 100%;
+	position: absolute; left: 50%; top: 50%;
+	transform:translate(-50%,-50%);
+}
+.card06 .txt{width: 233px; color:#fff; 
+	text-align: center; 
+	position: absolute; bottom: 30px;
+	font-weight: bold;
+	z-index: 1;
+}
+.card06 .txt h4{font-size: 1.2em;}
+.card06 .txt p{font-size: 0.9em; margin-top: 5px;}
+.card06 .bg{width: 100%; height: 100%; background: #000;
+	position: relative; opacity: 0.6; top:60%; transition: 0.3s;
+}
+.card06 .wrap{width: 30px; height: 30px; border: 3px solid #fff;
+			border-radius: 15px; box-sizing: border-box;
+			position: absolute; left: 50%; top: 50%;
+			transform:translate(-50%,-50%);
+			transition: 0.3s;
+			z-index:1;
+		}
+.card06 .wrap .bar1,.wrap .bar2{width: 13px; height: 3px; 
+	background-color: #fff; border-radius: 2px;
+	position: absolute; left: 50%; top: 50%;
+	transform:translate(-50%,-50%);
+}
+.card06 .wrap .bar2{transform:translate(-50%,-50%) rotate(90deg);}
+.card06:hover .wrap{transform:translate(-50%,-50%) rotate(180deg);}
+.card06:hover .bg{top:0;}
+
+/*card07*/
+.card07{position: relative; overflow: hidden;}
+.card07 img{height: 100%; 
+	position: absolute; left: 50%; top: 50%;
+	transform:translate(-50%,-50%);
+}
+.card07 .txt{width: 233px; color: #fff;
+	text-align: center;
+	position: absolute; bottom: 30px;
+	font-weight: bold;
+	z-index: 1;
+}
+.card07 .txt h4{font-size: 1.2em;}
+.card07 .txt p{font-size: 0.9em; margin-top: 5px;}
+.card07 .wrap{width: 30px; height: 30px; border: 3px solid #fff;
+			border-radius: 15px; box-sizing: border-box;
+			position: absolute; left: 50%; top: 50%;
+			transform:translate(-50%,-50%);
+			transition: 0.3s;
+			z-index:1;
+}
+.card07 .bg{width: 100%; height: 100%; background: #000;
+	position: relative; opacity: 0.6; top:60%; transition: 0.3s;
+}		
+.card07 .wrap .bar1,.wrap .bar2{width: 13px; height: 3px; 
+	background-color: #fff; border-radius: 2px;
+	position: absolute; left: 50%; top: 50%;
+	transform:translate(-50%,-50%);
+}
+.card07 .wrap .bar2{transform:translate(-50%,-50%) rotate(90deg);}
+.card07:hover .wrap{transform:translate(-50%,-50%) rotate(180deg);}
+.card07:hover .bg{top:0;}
+
+/*card08*/
+.card08{position: relative; overflow: hidden;
+}
+.card08 img{
+	width: 100%; height: 100%;
+	position: absolute; left: 50%; top: 50%;
+	transform:translate(-50%,-50%) scale(1.2);
+	transition: 0.3s;
+}
+.card08 .txt{width: 233px; color:#359b70; 
+	text-align: center; 
+	position: absolute; top: 30px;
+	font-weight: bold;
+	z-index: 1
+}
+.card08 .txt h4{font-size: 1.2em;}
+.card08 .txt p{font-size: 0.9em; margin-top: 5px;}
+.card08 .bg{width: 100%; height: 100%; background: #359b70;
+	position: relative; opacity: 0;
+}
+.card08 .wrap{width: 30px; height: 30px; border: 3px solid #fff;
+			border-radius: 15px; box-sizing: border-box;
+			position: absolute; left: 50%; top: 50%;
+			transform:translate(-50%,-50%);
+			transition: 0.3s;
+			z-index:1;
+		}
+.card08 .wrap .bar1,.wrap .bar2{width: 13px; height: 3px; 
+	background-color: #fff; border-radius: 2px;
+	position: absolute; left: 50%; top: 50%;
+	transform:translate(-50%,-50%);
+}
+.card08 .wrap .bar2{transform:translate(-50%,-50%) rotate(90deg);}
+.card08:hover img{transform:translate(-50%,-50%) scale(1.4);}
+.card08:hover .txt{color:#fff;}
+.card08:hover .wrap{transform:translate(-50%,-50%) rotate(180deg);}
+.card08:hover .bg{opacity: 0.4;}
 
 
 /*footer*/
