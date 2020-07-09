@@ -87,20 +87,36 @@ legend{display: block; position: absolute; left: 0; top: -9999px;}
 .section_bg .section_wrap{width: 980px; margin: 0 auto;}
 .main_top{position: relative;}
 .main_top .main_left{float:left;}
-.main_left .main_search{width: 482px; height: 300px; background: yellow;}
+.main_left .main_search{width: 482px; height: 300px; position: relative;}
+.main_search .bx-pager{
+	position: absolute; left: 0; top: 0; 
+	width: 132px; height: 75px; 
+}
+.main_search .sliderWrap{position: absolute; top: 0; right: 0;}
 
-
-/*section----form*/
-
-
-.search_tab01{}
-.search_tab01 .tab01{
-	width: 132px; height: 75px; background: #fff;
-	float:left; line-height: 75px; text-align: center; font-weight: bold;
+.main_search .bx-pager a{
+	display: block;
+	line-height: 75px;
+	text-align: center;
+ 	background: #006599;
+ 	color:#fff;
+	font-weight: bold;
 	cursor: pointer;
 }
-.formLayer{width: 350px; height: 300px; background: #fff; margin: 0 auto;
-	padding: 23px 35px; float:right;
+.main_search .bx-pager a.active{background-color:#fff; color:#414141;}
+.main_search .bx-wrapper {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0 none;
+    margin-bottom: 0;
+}
+
+/*section----form*/
+.formLayer{
+	width: 350px; height: 300px;
+	background: #fff; margin: 0 auto;
+	padding: 23px 35px;
 }
 .formLayer fieldset{margin-bottom: 10px;}
 .formLayer li>.left,
@@ -144,6 +160,8 @@ legend{display: block; position: absolute; left: 0; top: -9999px;}
 	margin-top: 15px;
 }
 
+
+/*section----main_left----*/
 .main_left .main_result{}
 .main_left .main_result ul{}
 .main_left .main_result ul li{
@@ -151,16 +169,17 @@ legend{display: block; position: absolute; left: 0; top: -9999px;}
 	margin-right: 16px; margin-top: 16px; background: green;
 	position: relative;
 }
-.main_left .main_result ul li .txtbox{width: 233px; height: 50px; 
+.main_left .main_result ul>li .txtbox{width: 233px; height: 50px; 
 	background: #152630;
 	position: absolute; left: 0; bottom: 0;
 	line-height: 50px; padding:0 20px;
 }
-.main_left .main_result ul li .txtbox p{float:left;}
-.main_left .main_result ul li .txtbox p:nth-child(1){font-size:bold; color:#fff;}
-.main_left .main_result ul li .txtbox p:nth-child(2){font-size:bold; color:#6fc667;}
-.main_left .main_result ul li .txtbox a{color:#9faaae;}
+.main_left .main_result ul>li .txtbox p{float:left;}
+.main_left .main_result ul>li .txtbox p:nth-child(1){font-size:bold; color:#fff;}
+.main_left .main_result ul>li .txtbox p:nth-child(2){font-size:bold; color:#6fc667;}
+.main_left .main_result ul>li .txtbox a{color:#9faaae;}
 
+/*section----main_right----*/
 .main_top .main_right{position: absolute; left: 523px; top: 15px; }
 .main_right h2{font-size: 4em; font-weight: bold; color:#142630;}
 .main_right p{font-size: 1.8em; font-weight: bold; color:#142630;
@@ -177,6 +196,18 @@ legend{display: block; position: absolute; left: 0; top: -9999px;}
 
 
 
+/*card01*/
+.card01{position: relative;}
+.card01 .card_img p{text-align: center; color: #fff; 
+	font-weight: bold; font-size:1.2em;
+	position: absolute; left: 50%; top: 8%;
+	transform:translate(-50%,-8%); 
+}
+.card01 .card_txt{width: 233px; height: 65px; background: #529353;
+	position: absolute; left: 0; bottom: 0;color: #fff;
+	padding:14px 18px;
+}
+
 
 
 /*card03*/
@@ -186,12 +217,10 @@ legend{display: block; position: absolute; left: 0; top: -9999px;}
 	position: absolute; left: 50%; top: 8%;
 	transform:translate(-50%,-8%); 
 }
-.card03 .card_img img{}
 .card03 .card_txt{width: 233px; height: 65px; background: #2c2836; opacity: 80%;
 	position: absolute; left: 0; bottom: 0;color: #fff;
 	padding:14px 18px;
 }
-.card03 .card_txt h5{}
 .card03 .card_txt p{font-size: 0.8em; margin-top: 3px;}
 
 /*card04*/
@@ -246,7 +275,7 @@ legend{display: block; position: absolute; left: 0; top: -9999px;}
 			transform:translate(-50%,-50%);
 			transition: 0.3s;
 			z-index:1;
-		}
+}
 .card05 .wrap .bar1,.wrap .bar2{width: 13px; height: 3px; 
 	background-color: #fff; border-radius: 2px;
 	position: absolute; left: 50%; top: 50%;
@@ -369,4 +398,11 @@ legend{display: block; position: absolute; left: 0; top: -9999px;}
 .footer_wrap .footer{width: 980px; margin: 0 auto; }
 .footer_wrap .footer ul{}
 .footer_wrap .footer li{float:left;}
-address{margin-top: 15px; font-size: 0.7em;}
+.footer_wrap .footer li a{display: block; padding-right:20px;
+	font-size:0.9em;
+}
+address{
+	font-style:normal; 
+	margin-top: 15px; color:#707070;
+	font-size: 0.8em; line-height: 20px;
+}
