@@ -20,12 +20,26 @@
 				mode:"vertical",
 				touchEnabled:false       //이걸 넣어야 스와이프 빠짐
 			});
-			$(".modal").colorbox({rel:"modal"});
-			$(".youtube").colorbox({
-				iframe:true,
-				innerWidth:600,
-				innerHeight:337
+			var slider02 = $(".slider02").bxSlider({
+				controls:false,
+				touchEnabled:false
 			});
+			$(".nextBtn").click(function(){
+				slider02.goToNextSlide();
+			});
+			$(".prevBtn").click(function(){
+				slider02.goToPrevSlide();
+			});
+			var slider03 = $(".slider03").bxSlider({
+				controls:false,
+				touchEnabled:false
+			});
+			$(".nextBtn02").click(function(){
+				slider03.goToNextSlide();
+			});
+			$(".prevBtn02").click(function(){
+				slider03.goToPrevSlide();
+			});					
 		});
 	</script>
 </head>
@@ -34,7 +48,7 @@
 	<header>
 		<div class="headerWrap">   <!-- 100% -->
 			<div class="header clearfix">   <!-- 980 -->
-				<h1 class="logo"><img src="images/logo.jpg" alt=""></h1>
+				<a href=""><h1 class="logo"><img src="images/logo.jpg" alt=""></h1></a>
 				<div class="form_wrap">
 					<form action="#" method="get">
 						<label for="searchTxt" class="searchTitle">searchtitle</label>
@@ -42,14 +56,13 @@
 						<button type="submit" class="searchBtn">search</button>
 					</form>
 				</div>
-
 				<div class="contact clearfix">
 					<p class="number"><strong>+82</strong> 02 1234 5678</p>
 					<ul class="sns clearfix">
 						<li><a href="#"><img src="images/sns01.jpg" alt=""></a></li>
 						<li><a href="#"><img src="images/sns02.jpg" alt=""></a></li>
 						<li><a href="#"><img src="images/sns03.jpg" alt=""></a></li>
-						<li><a href="#"><img src="images/sns04.jpg" alt=""></a></li>						
+						<li><a href="#"><img src="images/sns04.jpg" alt=""></a></li>					
 					</ul>
 				</div>
 			</div>
@@ -72,6 +85,7 @@
 	<!-- section -->
 	<section>
 		<div class="section_bg">  <!-- 구름 -->
+			<img src="images/reallyAir.png" alt="" class="img00">
 			<div class="section_wrap"><!-- w890 -->
 				<div class="main_top clearfix">
 					<div class="main_left">
@@ -271,7 +285,7 @@
 										</form>
 									</li>
 								</ul>
-							</div>  
+							</div>
 							<div class="bx-pager">
 								<a href="#" data-slide-index="0">공항예약</a>
 								<a href="#" data-slide-index="1">호텔예약</a>
@@ -279,8 +293,6 @@
 								<a href="#" data-slide-index="3">휴양지</a>
 							</div>
 						</div> <!-- 검색창 end -->
-						
-
 						<div class="main_result">
 							<ul class="clearfix">
 								<li>
@@ -305,26 +317,73 @@
 					<div class="main_right">
 						<h2>TRAVEL GO</h2>
 						<p>지금, 여행이 떠나고 싶다면?<br>하이미디어와 여행을 떠나자!</p>
+						<img src="images/content2.png" alt="" class="img01">
 					</div>
 				</div>
-				<div class="main_sub">
+				<div class="main_bottom">
 					<ul class="clearfix">
 						<li class="card01">
-							<ul>
-								<li>
-									<div class="card_img">
-										<img src="images/03여행03.jpg" alt="">
+							<ul class="slider02">
+								<li class="sliderLi">
+									<img src="images/03여행03.jpg" alt="" class="card_img">
+									<div class="card_txt">
+										<h4>HILLTON HOTEL (PARIS)</h4>
+										<img src="images/stars02.jpg" alt="별모양" class="stars02">
 									</div>
+								</li>
+								<li class="sliderLi">
+									<img src="images/03여행03.jpg" alt="" class="card_img">
+									<div class="card_txt">
+										<h4>HILLTON HOTEL (PARIS)</h4>
+										<img src="images/stars02.jpg" alt="별모양" class="stars02">
+									</div>
+								</li>
+								<li class="sliderLi">
+									<img src="images/03여행03.jpg" alt="" class="card_img">
 									<div class="card_txt">
 										<h4>HILLTON HOTEL (PARIS)</h4>
 										<img src="images/stars02.jpg" alt="별모양" class="stars02">
 									</div>
 								</li>
 							</ul>
+							<div class="prevBtn">   <!-- poa -->
+								<img src="images/pager01.png" alt="">
+							</div>
+							<div class="nextBtn">   <!-- poa -->
+								<img src="images/pager02.png" alt="">
+							</div>
 						</li>
-
-						
-						<li>2</li>
+						<li class="card02">
+							<ul class="slider03">
+								<li class="sliderLi">
+									<img src="images/03여행02.jpg" alt="" class="card_img">
+									<div class="card_txt">
+										<h4>관광명소(디즈니랜드)</h4>
+										<img src="images/stars03.jpg" alt="별모양" class="stars03">
+									</div>
+								</li>
+								<li class="sliderLi">
+									<img src="images/03여행02.jpg" alt="" class="card_img">
+									<div class="card_txt">
+										<h4>관광명소(디즈니랜드)</h4>
+										<img src="images/stars03.jpg" alt="별모양" class="stars03">
+									</div>
+								</li>
+								<li class="sliderLi">
+									<img src="images/03여행02.jpg" alt="" class="card_img">
+									<div class="card_txt">
+										<h4>관광명소(디즈니랜드)</h4>
+										<img src="images/stars03.jpg" alt="별모양" class="stars03">
+									</div>
+								</li>
+							</ul>
+							<div class="prevBtn02">   <!-- poa -->
+								<img src="images/pager01.png" alt="">
+							</div>
+							<div class="nextBtn02">   <!-- poa -->
+								<img src="images/pager02.png" alt="">
+							</div>
+						</li>
 						<li class="card03">
 							<div class="card_img">
 								<img src="images/03trip05.jpg" alt="">
@@ -407,8 +466,8 @@
 						</li>
 					</ul>
 				</div>
-			</div>
-			
+			</div>    <!-- section_wrap end -->
+
 			<!-- footer -->
 			<footer class="footer_wrap">
 				<div class="footer">

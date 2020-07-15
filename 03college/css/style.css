@@ -211,6 +211,12 @@
 .statusRight>.upBtn{position: absolute; top: 0; right: 0;}
 .statusRight>.downBtn{position: absolute; bottom: -4px;right: 0;}
 
+
+
+/*company*/
+.subContWrap
+
+
 /*footer*/
 footer#footer{
 	height: 200px;}
