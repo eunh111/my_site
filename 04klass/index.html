@@ -116,14 +116,13 @@
 		font-weight: 800; font-size: 1.1em;color:#1f2442;
 		margin-bottom: 20px; 
 	}
-	.sec02 .cards ul li .txt .tutorPrice{}
-	.sec02 .cards ul li .txt .tutor{
+	.sec02 .cards ul li .txt p{
 		float:left; color:#1f2442; font-weight: 600; font-size: 1em;
 		margin-bottom: 20px;
 	}
-	.sec02 .cards ul li .txt .price{
-		float:right; color:#ff7d59; font-weight: 800; font-size: 1.1em;
-		margin-bottom: 20px;
+	.sec02 .cards ul li .txt span{
+		position: absolute; right: 25px; color:#ff7d59; font-weight: 800; 
+		font-size: 1.1em; 
 	}
 	.sec02 .cards ul li .txt a{
 		display: block; width: 126px; height: 14px;
@@ -205,8 +204,7 @@
 							</div>				
 							<div class="txt clearfix">
 								<h4>Complete Python Bootcamp:Go<br> from zero to here.</h4>
-								<p class="tutor">Brad Traversy</p>
-								<p class="price">$15.9</p>
+								<p>Brad Traversy<span>$15.9</span></p>
 								<a href="#">View Course -></a>
 							</div>
 						</li>
@@ -216,9 +214,8 @@
 								<h4>Python<br>Bootcamp</h4>
 							</div>				
 							<div class="txt">
-								<h4>Complete Python Bootcamp:Go from zero to here.</h4>
-								<p class="tutor">Brad Traversy</p>
-								<p class="price">$15.9</p>
+								<h4>Complete Python Bootcamp:Go<br> from zero to here.</h4>
+								<p>Brad Traversy<span>$15.9</span></p>
 								<a href="#">View Course -></a>
 							</div>
 						</li>
@@ -228,9 +225,8 @@
 								<h4>Python<br>Bootcamp</h4>
 							</div>				
 							<div class="txt">
-								<h4>Complete Python Bootcamp:Go from zero to here.</h4>
-								<p class="tutor">Brad Traversy</p>
-								<p class="price">$15.9</p>
+								<h4>Complete Python Bootcamp:Go<br> from zero to here.</h4>
+								<p>Brad Traversy<span>$15.9</span></p>
 								<a href="#">View Course -></a>
 							</div>
 						</li>
@@ -241,7 +237,7 @@
 
 <style>
 	.sec03{width: 1200px; margin: 0 auto;}
-	.sec03 .video{width: 453px; height: 437px; background: blue;}
+	.sec03 .video{float:left; width: 453px; height: 437px; background: blue;}
 	.sec03 .video img{}
 	.sec03 .video a{width: 100px; height: 65px; background: orange;}
 
@@ -251,7 +247,7 @@
 
 
 </style>
-			<div class="sec03">
+			<div class="sec03 clearfix">
 				<div class="video">
 					<img src="" alt="#">
 					<a href="#">버튼</a>
