@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>travel</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/colorbox.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script src="js/jquery.colorbox-min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider({
+				controls:false,          //왼쪽 오른쪽 방향버튼 없애기
+				pagerCustom:".bx-pager", //원하는 형태로 커스텀
+				mode:"vertical",
+				touchEnabled:false       //이걸 넣어야 스와이프 빠짐
+			});
+			var slider02 = $(".slider02").bxSlider({
+				controls:false,
+				touchEnabled:false
+			});
+			$(".nextBtn").click(function(){
+				slider02.goToNextSlide();
+			});
+			$(".prevBtn").click(function(){
+				slider02.goToPrevSlide();
+			});
+			var slider03 = $(".slider03").bxSlider({
+				controls:false,
+				touchEnabled:false
+			});
+			$(".nextBtn02").click(function(){
+				slider03.goToNextSlide();
+			});
+			$(".prevBtn02").click(function(){
+				slider03.goToPrevSlide();
+			});					
+		});
+	</script>
+</head>
+<body>
+	<!-- header -->
+	<header>
+		<div class="headerWrap">   <!-- 100% -->
+			<div class="header clearfix">   <!-- 980 -->
+				<a href="index.html"><h1 class="logo"><img src="images/logo.jpg" alt=""></h1></a>
+				<div class="form_wrap">
+					<form action="#" method="get">
+						<label for="searchTxt" class="searchTitle">searchtitle</label>
+						<input type="text" id="searchTxt" name="search" placeholder="검색어를 입력하세요" class="searchInp">
+						<button type="submit" class="searchBtn">search</button>
+					</form>
+				</div>
+				<div class="contact clearfix">
+					<p class="number"><strong>+82</strong> 02 1234 5678</p>
+					<ul class="sns clearfix">
+						<li><a href="#"><img src="images/sns01.jpg" alt=""></a></li>
+						<li><a href="#"><img src="images/sns02.jpg" alt=""></a></li>
+						<li><a href="#"><img src="images/sns03.jpg" alt=""></a></li>
+						<li><a href="#"><img src="images/sns04.jpg" alt=""></a></li>					
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="menuWrap">  <!-- 100% -->
+			<nav class="menu">   <!-- 980 -->
+				<ul class="clearfix">
+					<li><a href="#">여행도시</a></li>
+					<li><a href="#">호텔예약</a></li>
+					<li><a href="#">렌트카</a></li>
+					<li><a href="#">여행TIP</a></li>
+					<li><a href="sub.html">회사소개</a>
+						<ul class="company clearfix">
+							<li><a href="#">회사소개</a></li>
+							<li><a href="#">사업영역</a></li>
+							<li><a href="#">조직도</a></li>
+							<li><a href="#">채용정보</a></li>
+							<li><a href="#">오시는길</a></li>
+						</ul>
+					</li>
+					<li><a href="#">커뮤니티</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	
+	<!-- sub_company -->
+	<div class="contentWrap">
+		<div class="contentTop">
+			<div class="txt">
+				<h2>COMPANY</h2>
+				<img src="images/img_earth.png" alt="">
+				<p><span>회사소개</span> 하이미디어와 여행을 떠나세요</p>
+			</div>
+		</div>
+		<div class="content">
+			<img src="images/sub_contents.jpg" alt="">
+		</div>
+	</div>  <!--  sub_company END -->
+
+		<!-- footer -->
+		<footer class="footer_wrap">
+			<div class="footer">
+				<ul class="clearfix">
+					<li><a href="#">이용약관</a></li>
+					<li><a href="#"><strong>개인정보취급방침</strong></a></li>
+					<li><a href="#">사이트맵</a></li>
+					<li><a href="#">고객센터</a></li>
+					<li><a href="#">광고 및 제휴문의</a></li>
+				</ul>
+				<address>
+				<p>
+					123-456 서울특별시 구로구 구로동 (주)하이미디어&nbsp;&nbsp;&nbsp;  
+					사업자등록번호 : 123-45-678910&nbsp;&nbsp;&nbsp;
+					대표이사:홍길동&nbsp;&nbsp;&nbsp;
+					대표번호:02-1234-5678<br>
+					COPYRIGHT(C)2020 HIMEDIA TOUR. ALL RIGHTS RESERVED.
+				</p>
+				</address>
+			</div>
+		</footer>	
+</body>
+</html>
