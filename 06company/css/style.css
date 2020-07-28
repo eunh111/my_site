@@ -5,7 +5,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 
 /*------------header start--------------*/
 /*header_top*/
-#header{position: relative;}
+#header{position: relative; margin-bottom: 150px;}
 #header.main{height: 1950px;}
 #header_top{
 	width: 1334px; height: 98px; position: absolute; 
@@ -75,15 +75,15 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 
 
 /*------------content start--------------*/
-#header .content{width: 1344px; height: 1344px; position: absolute;
+#header .content{width: 1344px; position: absolute;
 	left: 50%; transform: translateX(-50%); background-color: #fff;
-	top: 744px;
+	top: 744px; 
 }
+.content>ul{margin-bottom: 150px;}
 .content>ul>li{float: left; width: 25%; height: 336px;
 }
-.content>ul>li:nth-child(2n){background: skyblue;}  /*2n = 짝수*/
 
-/*box01*/
+/*box01----모든제품 완료*/
 .content>ul>li.box01{background: #0058ab;position: relative;}
 .content>ul>li.box01 a{position: absolute; top: 50%; left: 50%;
 	transform: translate(-50%,-50%);
@@ -93,7 +93,21 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	font-weight: 500; color:#fff;
 }
 
-/*box04*/
+/*box02---- 영상 모달 달고 호버값 넣기*/
+.content>ul>li.box02{background: url(../img/box02.jpg) no-repeat; position: relative;}
+.content>ul>li.box02 a{position: absolute; top: 50%; left: 50%;
+	transform: translate(-50%,-50%);
+}
+.content>ul>li.box02 a>img{width: 123px; height: 123px; margin-bottom: 5px; margin: 0 auto;}
+.content>ul>li.box02 a>p{width: 336px; text-align: center; font-size: 1.4em;
+	font-weight: 500; color:#fff;
+}
+.content>ul>li.box02 a:hover{width: 336px; height: 336px; background: #000; opacity: 0.5;}
+
+
+/*box3----슬라이드넣기*/
+
+/*box04------공간*/
 .content>ul>li.box04{background: #fbd914;position: relative;}
 .content>ul>li.box04 a{position: absolute; top: 50%; left: 50%;
 	transform: translate(-50%,-50%);
@@ -103,7 +117,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	font-weight: 500; color:#000;
 }
 
-/*box05*/
+/*box05------아이디어*/ 
 .content>ul>li.box05{background: #0058ab;position: relative;}
 .content>ul>li.box05 a{position: absolute; top: 50%; left: 50%;
 	transform: translate(-50%,-50%);
@@ -113,17 +127,52 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	font-weight: 500; color:#fff;
 }
 
-/*box06*/
-.content>ul>li.box06{background: #0058ab;position: relative;}
-.content>ul>li.box06 a{position: absolute; top: 50%; left: 50%;
-	transform: translate(-50%,-50%);
+/*box06----더 낮은 가격*/
+.content>ul>li.box06{width: 672px; height: 336px; 
+	background:url(../img/box06.jpg) no-repeat; position: relative;}
+.content>ul>li.box06 a{position: absolute; left: 45px; top: 40px;
 }
-.content>ul>li.box06 a>img{width: 123px; height: 123px; margin-bottom: 5px;}
-.content>ul>li.box06 a>p{text-align: center; font-size: 1.4em;
+.content>ul>li.box06 a>p{text-align: left; font-size: 1.4em;
 	font-weight: 500; color:#fff;
 }
+.content>ul>li.box06 a>p:after{content:""; display: block; 
+	width: 50px; height: 3px; background: #fff; margin:10px 0;
+}
+.content>ul>li.box06 a>h4{text-align: left; font-size: 2.5em;
+	font-weight: 700; color:#fff;
+}
 
-/*box09*/
+/*box07----라이프앳홈*/
+.content>ul>li.box07{width: 336px; height: 672px; 
+	background:url(../img/box07.jpg) no-repeat; position: relative;}
+.content>ul>li.box07 a{position: absolute; left: 45px; top: 40px;
+}
+.content>ul>li.box07 a>p{text-align: left; font-size: 1.4em;
+	font-weight: 500; color:#fff;
+}
+.content>ul>li.box07 a>p:after{content:""; display: block; 
+	width: 50px; height: 3px; background: #fff; margin:10px 0;
+}
+.content>ul>li.box07 a>h4{text-align: left; font-size: 2.5em;
+	font-weight: 700; color:#fff;
+}
+
+/*box08----청량함가득*/
+.content>ul>li.box08{width: 672px; height: 336px; 
+	background:url(../img/box08.jpg) no-repeat; position: relative;}
+.content>ul>li.box08 a{position: absolute; left: 45px; bottom: 40px;
+}
+.content>ul>li.box08 a>p{text-align: left; font-size: 1.4em;
+	font-weight: 500; color:#fff;
+}
+.content>ul>li.box08 a>p:after{content:""; display: block; 
+	width: 50px; height: 3px; background: #fff; margin:10px 0;
+}
+.content>ul>li.box08 a>h4{text-align: left; font-size: 2.5em;
+	font-weight: 700; color:#fff;
+}
+
+/*box09----매장안내*/
 .content>ul>li.box09{background: #fbd914;position: relative;}
 .content>ul>li.box09 a{position: absolute; top: 50%; left: 50%;
 	transform: translate(-50%,-50%);
@@ -133,7 +182,105 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	font-weight: 500; color:#000;
 }
 
+/*box10----이케아 푸드*/
+.content>ul>li.box10{width: 336px; height: 336px; 
+	background:url(../img/box10.jpg) no-repeat; position: relative;}
+.content>ul>li.box10 a{position: absolute; left: 45px; top: 40px;
+}
+.content>ul>li.box10 a>p{text-align: left; font-size: 1.4em;
+	font-weight: 700; color:#000; 
+}
+.content>ul>li.box10 a>p:after{content:""; display: block; 
+	width: 50px; height: 3px; background: #000; margin:10px 0;
+}
 
+/*box11----카탈로그*/
+.content>ul>li.box11{width: 672px; height: 336px; 
+	background:url(../img/box11.jpg) no-repeat; position: relative;}
+.content>ul>li.box11 a{position: absolute; right: 45px; bottom: 40px; 
+}
+.content>ul>li.box11 a>p{text-align: right; font-size: 1.4em;
+	font-weight: 500; color:#fff; position: relative;
+}
+.content>ul>li.box11 a>p:after{content:""; display: block; 
+	width: 50px; height: 3px; background: #fff; margin:10px 0; position: absolute; right: 0;
+}
+.content>ul>li.box11 a>h4{text-align: right; font-size: 2.5em;
+	font-weight: 700; color:#fff; margin-top: 10px;
+}
+
+
+
+/*------------section start--------------*/
+/*space------hover 할때 파란색 올라오는거 해야함*/
+section .space{width:100%; height: 1080px; padding:150px 0; margin: 0 auto;}
+.space ul>li{width: 25%; height: 780px; float:left; position: relative;}
+.space ul>li:last-child{margin-right:0;}
+.space ul>li>a{position: absolute; left: 45px; bottom: 40px;}
+.space ul>li>a>p{text-align: left; font-size: 1.4em;
+	font-weight: 500; color:#fff; position: relative;
+}
+.space ul>li>a>h3{text-align: left; font-size: 2.5em;
+	font-weight: 700; color:#fff; margin-top: 10px;
+}
+.space ul>li:nth-child(1){background: url(../img/space01.jpg) no-repeat;}
+.space ul>li:nth-child(2){background: url(../img/space02.jpg) no-repeat;}
+.space ul>li:nth-child(3){background: url(../img/space03.jpg) no-repeat;}
+.space ul>li:nth-child(4){background: url(../img/space04.jpg) no-repeat;}
+/*hover 파란색 0058ab*/
+
+
+/*service*/
+section .service{width: 1344px; margin: 0 auto 150px; background:pink;}
+.service .family{width: 50%; height: 336px; background: #fbd914; float:left; 
+	position: relative;
+}
+.service .family .txt{position: absolute; left: 45px; top: 40px;}
+.service .family h4{text-align: left; font-size: 2.5em;
+	font-weight: 700; color:#000; margin-top: 10px; font-family: Montserrat;
+	margin-bottom: 10px;
+}
+.service .family p{text-align: left; font-size: 1.4em;
+	font-weight: 500; color:#000; margin-bottom: 40px;
+}
+.service .family a{display: block; width: 270px; height: 64px; background: #000;
+	text-align: center; line-height: 64px; border-radius: 32px; color: #fff;
+	font-weight: 500; 
+
+}
+.service .family img{position: absolute; bottom: 60px; right: 48px;}
+
+/*customer*/
+section .service{width: 1344px; margin: 0 auto 150px;}
+.service .customer{width: 50%; height: 336px; background: url(../img/customer.jpg) no-repeat;
+	float:left; position: relative;
+}
+.service .customer .txt{position: absolute; right: 45px; top: 40px; position: relative;}
+.service .customer h4{text-align: right; font-size: 2.5em;
+	font-weight: 700; color:#000; margin-top: 10px; font-family: 'Montserrat', 'Noto Sans KR';
+	margin-bottom: 10px;
+}
+.service .customer p{text-align: right; font-size: 1.4em;
+	font-weight: 500; color:#000; margin-bottom: 40px;
+}
+.service .customer a{display: block; width: 170px; height: 64px; background: #000;
+	text-align: center; line-height: 64px; border-radius: 32px; color: #fff;
+	font-weight: 500; position: absolute; right: 0;
+
+}
+
+/*footer*/
+#footer{width: 100%; height: 472px; background: #f5f5f5;}
+#footer .wrap{width: 1344px; margin: 0 auto 150px;}
+
+.top .socialMediaLinks{}
+.top .socialMediaLinks ul{}
+.top .socialMediaLinks ul>li{}
+.top .socialMediaLinks ul>li>a{}
+
+.top:after{content:""; display: block; width: 1334px; height: 1px; margin: 0 auto;
+background: #bbb;
+}
 
 
 
