@@ -213,6 +213,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 
 /*------------section start--------------*/
 /*space------hover 할때 파란색 올라오는거 해야함*/
+section{position: relative;}
 section .space{width:100%; height: 1080px; padding:150px 0; margin: 0 auto;}
 .space ul>li{width: 25%; height: 780px; float:left; position: relative;}
 .space ul>li:last-child{margin-right:0;}
@@ -231,7 +232,9 @@ section .space{width:100%; height: 1080px; padding:150px 0; margin: 0 auto;}
 
 
 /*service*/
-section .service{width: 1344px; margin: 0 auto 150px; background:pink;}
+
+section .service{width: 1344px; position: absolute; left: 50%; 
+	transform: translateX(-50%); background:pink;}
 .service .family{width: 50%; height: 336px; background: #fbd914; float:left; 
 	position: relative;
 }
@@ -251,7 +254,6 @@ section .service{width: 1344px; margin: 0 auto 150px; background:pink;}
 .service .family img{position: absolute; bottom: 60px; right: 48px;}
 
 /*customer*/
-section .service{width: 1344px; margin: 0 auto 150px;}
 .service .customer{width: 50%; height: 336px; background: url(../img/customer.jpg) no-repeat;
 	float:left; position: relative;
 }
