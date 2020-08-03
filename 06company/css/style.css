@@ -232,7 +232,6 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 
 
 /*service*/
-
 #section .service{width: 1344px; height: 636px;
 	position: absolute; left: 50%; transform: translateX(-50%);}
 .service .family{width: 50%; height: 336px; background: #fbd914; float:left; 
