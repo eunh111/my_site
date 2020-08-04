@@ -12,8 +12,33 @@
 	<script src="js/jquery.bxslider.js"></script>
 	<script>
 		$(document).ready(function(){
-			$(".slider").bxSlider();
+			var mainSlider = $(".slider").bxSlider({
+				auto:true,
+				controls:false,
+			});
+			$(".nextBtnMain").click(function(){
+				mainSlider.goToNextSlide();
+			});
+			$(".prevBtnMain").click(function(){
+				mainSlider.goToPrevSlide();
+			});
+
+
+			var slider02 = $(".sliderSub").bxSlider({
+				controls:false,
+				touchEnabled:false,
+				pager:false
+			});
+			$(".nextBtnSub").click(function(){
+				slider02.goToNextSlide();
+			});
+			$(".prevBtnSub").click(function(){
+				slider02.goToPrevSlide();
+			});
+
+
 		});
+
 	</script>
 </head>
 <body>
@@ -52,6 +77,12 @@
 					</div>
 				</li>
 			</ul>
+			<div class="nextBtnMain">
+				<img src="img/nextBtn-main.png" alt="">
+			</div>
+			<div class="prevBtnMain">
+				<img src="img/prevBtn-main.png" alt="">
+			</div>
 		</div>   <!-- slider_wrap end -->
 		
 		<div class="content">
@@ -68,23 +99,49 @@
 						<p>어느 가족의 숨겨진 침실,<br>그 비밀은?</p>
 					</a>
 				</li>
-				<li class="box03">
-					<ul>
-						<li>
-							<p>이달의 제품</p>
-							<p>SKURUP 스쿠루프</p>
-							<p>펜던트등, 38cm</p>
-							<p>￦ 29,900</p>
+
+				<li class="box03 clearfix">
+					<ul class="sliderSub">
+						<li class="sliderLi">
+							<img src="img/eventProduct01.jpg" alt="" class="card_img">
+							<div class="card_txt">
+								<h4>이달의 제품</h4>
+								<p>SKURUP 스쿠루프</p>
+								<p>펜던트등, 38cm</p>
+								<p class="price">￦ 29,900</p>
+							</div>
+						</li>
+						<li class="sliderLi">
+							<img src="img/eventProduct02.jpg" alt="" class="card_img">
+							<div class="card_txt">
+								<h4>이달의 제품</h4>
+								<p>FEJKA 페이카</p>
+								<p>인조식물, 헬레보루스 9cm</p>
+								<p class="price">￦ 2,900</p>
+							</div>
+						</li>
+						<li class="sliderLi">
+							<img src="img/eventProduct01.jpg" alt="" class="card_img">
+							<div class="card_txt">
+								<h4>이달의 제품</h4>
+								<p>SKURUP 스쿠루프</p>
+								<p>펜던트등, 38cm</p>
+								<p class="price">￦ 29,900</p>
+							</div>
 						</li>
 					</ul>
-					<div class="prevBtn">
-						<img src="img/prevBtn.png" alt="prevBtn">
-					</div>
-					<div class="nextBtn">
-						<img src="img/nextBtn.png" alt="nextBtn">
+					<div class="btnSubWrap clearfix">
+						<div class="prevBtnSub">  
+							<img src="img/prevBtn.png" alt="">
+						</div>
+						<div class="nextBtnSub">   <!-- poa -->
+							<img src="img/nextBtn.png" alt="">
+						</div>
 					</div>
 				</li>
-				<li><a href="#">슬라이드이용</a></li>
+
+
+
 				<li class="box04">
 					<a href="#">
 						<img src="img/icon-showroom.png" alt="#">
@@ -142,26 +199,29 @@
 					<a href="#">
 						<p>245개 제품</p>
 						<h3>침실</h3>
-						<div class="bg"></div>
 					</a>
+					<div class="bg"></div>
 				</li>
 				<li>
 					<a href="#">
 						<p>205개 제품</p>
-						<h3>거실</h3>
+						<h3>거실</h3>						
 					</a>
+					<div class="bg"></div>
 				</li>
 				<li>
 					<a href="#">
 						<p>155개 제품</p>
 						<h3>주방</h3>
 					</a>
+					<div class="bg"></div>
 				</li>
 				<li>
 					<a href="#">
 						<p>75개 제품</p>
 						<h3>욕실</h3>
 					</a>
+					<div class="bg"></div>
 				</li>
 			</ul>
 		</div>

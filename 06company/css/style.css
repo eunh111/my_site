@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-serif;}
+body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-serif; min-width: 1334px;}
 
 
 /*------------header start--------------*/
@@ -41,7 +41,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 
 
 /*slider_wrap*/
-.slider_wrap{}
+.slider_wrap{position: relative;}
 .slider_wrap ul li{height: 969px;}
 .slider_wrap li.first{
 	background: url(../img/slider01.jpg) no-repeat center;
@@ -69,7 +69,15 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
     border: 0 none;
     margin-bottom: 0;
 }
-.slider_wrap .bx-pager{bottom: 400px;}
+.slider_wrap .bx-pager{bottom: 380px;}
+.slider_wrap .bx-wrapper .bx-pager.bx-default-pager a{background: #fff;}
+.slider_wrap .bx-wrapper .bx-pager.bx-default-pager a.active{background: #fbd914;}
+
+.nextBtnMain,.prevBtnMain{position: absolute; top: 35%; margin-top: -50px;
+	cursor: pointer; text-shadow: 2px 2px 5px #6a6a6a;
+}
+.nextBtnMain{right: 200px;}
+.prevBtnMain{left: 200px;}
 
 
 
@@ -106,6 +114,33 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 
 
 /*box3----슬라이드넣기*/
+.content>ul>li.box03{width: 672px; height: 336px; background: #f4f4f4; position: relative;}
+.content>ul>li.box03 .sliderLi{height: 336px; position: relative;}
+
+.content>ul>li.box03 .card_img{width: 336px;height: 336px;position: absolute;top: 0;right: 0;}
+.content>ul>li.box03 .card_img:hover{background: yellow;}
+
+.content>ul>li.box03 .card_txt{position: absolute; left: 45px; top: 40px;}
+.content>ul>li.box03 .card_txt h4{text-align: left; font-size: 1.4em;
+	font-weight: 700; color:#000; 
+}
+.content>ul>li.box03 .card_txt h4:after{content:""; display: block; 
+	width: 50px; height: 3px; background: #000; margin:10px 0;
+}
+.content>ul>li.box03 .card_txt p.price{ font-size: 2em;
+	font-weight: 700; color:#000; }
+.btnSubWrap{position: absolute; left: 237px; bottom: 30px;}
+.content>ul>li.box03 .prevBtnSub{float:left; margin-right: 1px;}
+.content>ul>li.box03 .nextBtnSub{float: right;}
+.content>ul>li.box03 .bx-wrapper{
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+    box-shadow:none;
+    border:0 none;
+    margin-bottom:0;
+    background: none;
+    }
+
 
 /*box04------공간*/
 .content>ul>li.box04{background: #fbd914;position: relative;}
@@ -212,14 +247,19 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 
 
 /*------------section start--------------*/
-/*space------hover 할때 파란색 올라오는거 해야함*/
+/*space*/
 #section{position: relative;}
-#section .space{width:100%; height: 1080px; padding:150px 0; margin: 0 auto;}
-.space ul>li{width: 25%; height: 780px; float:left; position: relative;}
+#section .space{width:100%; padding:150px 0; margin: 0 auto;}
+.space ul>li{width: 25%; height: 780px; float:left; position: relative; overflow: hidden;}
 .space ul>li:last-child{margin-right:0;}
-.space ul>li>a{position: absolute; left: 45px; bottom: 40px;}
+.space ul>li>a{position: absolute; left: 45px; bottom: 40px; z-index: 1;}
+.space ul>li>div.bg{position: absolute; width: 100%; height: 100%;
+	background: rgba(0,88,171,0.7);transition: 0.3s; top:100%;
+}
+
+.space ul>li:hover div.bg{top: 76%;}
 .space ul>li>a>p{text-align: left; font-size: 1.4em;
-	font-weight: 500; color:#fff; position: relative;
+	font-weight: 500; color:#fff; position: relative; 
 }
 .space ul>li>a>h3{text-align: left; font-size: 2.5em;
 	font-weight: 700; color:#fff; margin-top: 10px;
@@ -228,12 +268,13 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 .space ul>li:nth-child(2){background: url(../img/space02.jpg) no-repeat;}
 .space ul>li:nth-child(3){background: url(../img/space03.jpg) no-repeat;}
 .space ul>li:nth-child(4){background: url(../img/space04.jpg) no-repeat;}
-/*hover 파란색 0058ab*/
 
 
 /*service*/
-#section .service{width: 1344px; height: 636px;
-	position: absolute; left: 50%; transform: translateX(-50%);}
+#section .service{width: 1344px; 
+	position: relative; left: 50%; transform: translateX(-50%);
+	padding-bottom: 150px;
+}
 .service .family{width: 50%; height: 336px; background: #fbd914; float:left; 
 	position: relative;
 }
