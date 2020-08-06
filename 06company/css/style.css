@@ -366,12 +366,14 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	left: 50%; top: 50%; transform: translate(-50%,-50%); color: #fff;
 	text-align: center; text-shadow: 2px 2px 5px #6a6a6a; font-size: 3em;
 }
-.sub01Visual .tab{position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+.sub01Visual .tab{width: 1334px; position: absolute; bottom: 0; left: 50%; 
+	transform: translateX(-50%); border: 1px solid #d1d1d1;
 }
 .sub01Visual .tab ul{width: 1344px;}
-.sub01Visual .tab ul>li{float: left;width: 190.57px; height: 65px; background: #eaeaea;
-	border: 1px solid #d1d1d1; 
+.sub01Visual .tab ul>li{float: left;width: 190.57px; height: 65px; 
+	background: #eaeaea; border-right: 1px solid #d1d1d1;
 }
+.sub01Visual .tab ul>li:last-child{border-right:0;}
 .sub01Visual .tab ul>li>a{display: block; text-align: center; line-height: 65px;
 	font-size: 1.2em; color:#58595b; font-weight: 500;
 }
@@ -389,8 +391,9 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 .sub01Content ul{}
 .sub01Content ul>li{float: left; width: 252.8px; margin-right: 20px; cursor: pointer;
 }
-
-.sub01Content ul>li>a>.mr0{margin-right: 0;}
+.sub01Content ul>li:nth-child(5),
+.sub01Content ul>li:nth-child(10),
+.sub01Content ul>li:nth-child(15){margin-right: 0;}
 
 .sub01Content ul>li>p{margin:15px auto 47px; color:#6a6a6a;}
 .sub01Content ul>li:hover p{color:#000; text-decoration:underline;}
