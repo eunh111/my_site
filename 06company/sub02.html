@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>ikea</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".tab>ul>li").click(function(){
+				var liNum = $(this).index();
+				$(".tab>ul>li").removeClass();
+				$(this).addClass("active");
+				$(".sub01Wrap>div").hide();
+				$(".sub01Wrap>div").eq(liNum).fadeIn();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="header">
+		<div id="header_top" class="clearfix">
+			<a href="index.html"><h1>logo</h1></a>
+			<nav id="main_menu">
+				<ul class="clearfix">
+					<li><a href="sub01.html">모든제품</a></li>
+					<li><a href="sub02.html" class="active">공간</a></li>
+					<li><a href="sub03.html">아이디어</a></li>
+					<li><a href="sub04.html">유용한 정보</a></li>
+				</ul>
+			</nav>
+			<div class="quick_menu">
+				<div class="cart"><a href="#">cart</a></div>
+				<div class="mypage"><a href="#">mypage</a></div>
+			</div>
+		</div> <!-- header_top end -->
+		
+		<div class="sub02Visual">
+			<h3>공간</h3>
+			<div class="tab">
+				<ul class="clearfix">
+					<li class="active"><a href="#">침실</a></li>
+					<li><a href="#">거실</a></li>
+					<li><a href="#">주방</a></li>
+					<li><a href="#">욕실</a></li>
+					<li><a href="#">홈오피스</a></li>
+					<li><a href="#">아웃도어</a></li>
+					<li><a href="#">어린이 Ikea</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>     <!-- header end -->
+	
+	<section>
+		<div class="sub02Wrap">
+			<div class="bedroom">
+				<div class="location">
+					<ul class="clearfix">
+						<li><a href="index.html">
+							<img src="img/icon-home.png" alt="main">
+						</a></li>
+						<li><img src="img/icon-home2.png" alt="next"></li>
+						<li><a href="#">공간</a></li>
+						<li><img src="img/icon-home2.png" alt="next"></li>
+						<li><a href="#" class="active">침실</a></li>
+					</ul>
+				</div>
+
+				<div class="sub02Content">
+					<h4>침실</h4>
+					<img src="img/sub02Content.jpg" alt="">
+				</div>
+			</div>
+			
+			</div>
+		</div>    <!-- sub02Wrap end -->
+	</section>
+
+
+	<footer id="footer">
+		<div class="wrap">
+			<div class="top">
+				<ul class="sns clearfix">
+					<li><a href="#">facebook</a></li>
+					<li><a href="#">instagram</a></li>
+					<li><a href="#">youtube</a></li>
+				</ul>	
+				<div class="language clearfix">
+					<div class="country">
+						<a class="#">
+							<img src="img/icon-country.png" alt="">
+							<p>국가 변경</p>
+						</a>
+					</div>
+					
+					<div class="switchLanguage">
+						<select aria-label="원하시는 언어를 선택하세요.">
+							<option value="https://www.ikea.com/kr/ko/">한국어</option>
+							<option value="https://www.ikea.com/kr/en/">English</option>
+						</select>
+					</div>
+				</div>
+			</div>   <!--  top end  줄 위쪽-->
+
+			<div class="bottomWrap">
+				<div class="middle clearfix">
+					<div class="copyright">
+						<p>© Inter IKEA Systems B.V 1999-2020</p>
+					</div>
+					<div class="legalLinks">
+						<ul class="clearfix">
+							<li><a href="#">개인정보처리방침</a></li>
+							<li><a href="#">웹사이트 이용약관</a></li>
+							<li><a href="#">Responsible disclosure</a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="bottom clearfix">
+					<div class="legalInformation">
+						<p>IKEA 코리아 <br>
+						주소 : (우) 14352  경기도 광명시 일직로 17 IKEA광명점<br>
+						사업자 등록번호 : 106-86-82871 <a href="#"> 사업자정보확인 </a><br>
+						대표자 : 프레드릭 요한손 <br>
+						통신판매업 신고 : 2018-경기광명-0209 <br>
+						TEL : 1670-4532</p>
+					</div>
+					<h1 class="logo">ikea</h1>
+				</div>
+			</div>  <!--  bottomWrap end -->
+		</div> <!--  wrap end -->
+	</footer>
+</body>
+</html>
