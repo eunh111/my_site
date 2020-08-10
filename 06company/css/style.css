@@ -392,7 +392,12 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 
 
 /*sub01 내용*/
-.sub01Wrap .organize{display: none;}
+.sub01Wrap .organize,
+.sub01Wrap .textile,
+.sub01Wrap .kitchen,
+.sub01Wrap .light,
+.sub01Wrap .machine,
+.sub01Wrap .children{display: none;}
 .sub01Wrap{width: 1344px; margin: 0 auto;}
 
 .location{margin:55px auto 55px;}
@@ -454,7 +459,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 /*------------------------------sub02------------------------------*/
 /*visual*/
 .sub02Visual {width: 100%;height: 490px;background: pink; position: relative;
-	background: url(../img/sub01/sub01-visual.jpg) no-repeat;
+	background: url(../img/sub02/sub02-visual.jpg) no-repeat;
 }
 .sub02Visual h3{width: 800px; position: absolute;
 	left: 50%; top: 50%; transform: translate(-50%,-50%); color: #fff;
@@ -475,6 +480,12 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 
 
 /*sub02 내용*/
+.sub02Wrap .livingroom,
+.sub02Wrap .kitchenroom,
+.sub02Wrap .bathroom,
+.sub02Wrap .homeOffice,
+.sub02Wrap .outdoor,
+.sub02Wrap .kidsroom{display: none;}
 .sub02Wrap{width: 1344px; margin: 0 auto;}
 
 .location{margin:55px auto 55px;}
@@ -486,3 +497,79 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 .sub02Wrap .sub02Content{width: 1344px; margin-bottom: 100px;}
 .sub02Content h4{font-size: 2em; color:#000; font-weight: 700; margin-bottom: 38px;}
 
+
+
+/*------------------------------sub03------------------------------*/
+/*visual*/
+.sub03Visual {width: 100%;height: 490px;background: pink; position: relative;
+	background: url(../img/sub03/sub03-visual.jpg) no-repeat;
+}
+.sub03Visual h3{width: 800px; position: absolute;
+	left: 50%; top: 50%; transform: translate(-50%,-50%); color: #fff;
+	text-align: center; text-shadow: 2px 2px 5px #6a6a6a; font-size: 3em;
+}
+.sub03Visual .tab{width: 1334px; position: absolute; bottom: 0; left: 50%; 
+	transform: translateX(-50%); border: 1px solid #d1d1d1;
+}
+.sub03Visual .tab ul{width: 1344px;}
+.sub03Visual .tab ul>li{float: left;width: 444.67px; height: 65px; 
+	background: #eaeaea; border-right: 1px solid #d1d1d1;
+}
+.sub03Visual .tab ul>li:last-child{border-right:0;}
+.sub03Visual .tab ul>li>a{display: block; text-align: center; line-height: 65px;
+	font-size: 1.2em; color:#58595b; font-weight: 500;
+}
+.sub03Visual .tab>ul>li.active{background: #fbd915; color:#000;}
+
+/*sub03 내용*/
+.sub03Wrap .catalogue,
+.sub03Wrap .myhome{display: none;}
+.sub03Wrap{width: 1344px; margin: 0 auto;}
+
+.location{margin:55px auto 55px;}
+.location li{float: left;padding-right:10px;}
+.location li img{padding-top:5px;}
+.location li a{display: block; color:#000; font-weight: 500;}
+.location li a.active{border-bottom: 2px solid #fbd915;}
+
+.sub03Wrap .sub03Content{width: 1344px; margin-bottom: 100px;}
+.sub03Content h4{font-size: 2em; color:#000; font-weight: 700; margin-bottom: 38px;}
+
+
+/*------------------------------sub04------------------------------*/
+/*visual*/
+
+.sub04Visual {width: 100%;height: 490px;background: pink; position: relative;
+	background: url(../img/sub04/sub04-visual.jpg) no-repeat;
+}
+.sub04Visual h3{width: 800px; position: absolute;
+	left: 50%; top: 50%; transform: translate(-50%,-50%); color: #fff;
+	text-align: center; text-shadow: 2px 2px 5px #6a6a6a; font-size: 3em;
+}
+.sub04Visual .tab{width: 1334px; position: absolute; bottom: 0; left: 50%; 
+	transform: translateX(-50%); border: 1px solid #d1d1d1;
+}
+.sub04Visual .tab ul{width: 1344px;}
+.sub04Visual .tab ul>li{float: left;width: 333.5px; height: 65px; 
+	background: #eaeaea; border-right: 1px solid #d1d1d1;
+}
+.sub04Visual .tab ul>li:last-child{border-right:0;}
+.sub04Visual .tab ul>li>a{display: block; text-align: center; line-height: 65px;
+	font-size: 1.2em; color:#58595b; font-weight: 500;
+}
+.sub04Visual .tab>ul>li.active{background: #fbd915; color:#000;}
+
+/*sub04 내용*/
+.sub04Wrap .benefit,
+.sub04Wrap .store,
+.sub04Wrap .ikeaFamily{display: none;}
+.sub04Wrap{width: 1344px; margin: 0 auto;}
+
+.location{margin:55px auto 55px;}
+.location li{float: left;padding-right:10px;}
+.location li img{padding-top:5px;}
+.location li a{display: block; color:#000; font-weight: 500;}
+.location li a.active{border-bottom: 2px solid #fbd915;}
+
+.sub04Wrap .sub04Content{width: 1344px; margin-bottom: 100px;}
+.sub04Content h4{font-size: 2em; color:#000; font-weight: 700; margin-bottom: 38px;}
