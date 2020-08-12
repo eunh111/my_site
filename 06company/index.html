@@ -6,10 +6,12 @@
 	<title>ikea</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/colorbox.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/jquery.bxslider.js"></script>
+	<script src="js/jquery.colorbox-min.js"></script>
 	<script>
 		$(document).ready(function(){
 			var mainSlider = $(".slider").bxSlider({
@@ -35,13 +37,22 @@
 			$(".prevBtnSub").click(function(){
 				slider02.goToPrevSlide();
 			});
+
+
+			$(".youtube").colorbox({
+				iframe:true,
+				innerWidth:600,
+				innerHeight:337
+			});
+
+
 		});
 
 	</script>
 </head>
 <body>
 	<div id="header" class="main">
-		<div id="header_top" class="clearfix">
+		<div id="header_top" class="topNav clearfix">
 			<a href="index.html"><h1>logo</h1></a>
 			<nav id="main_menu">
 				<ul class="clearfix">
@@ -54,6 +65,11 @@
 			<div class="quick_menu">
 				<div class="cart"><a href="#">cart</a></div>
 				<div class="mypage"><a href="#">mypage</a></div>
+			</div>
+			<div class="toggleMenu">  	<!-- div.bar$*3 -->
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
 			</div>
 		</div> <!-- header_top end -->
 		
@@ -92,10 +108,13 @@
 					</a>
 				</li>
 				<li class="box02">
-					<a href="#">
-						<img src="img/icon-play.png" alt="#">
-						<p>어느 가족의 숨겨진 침실,<br>그 비밀은?</p>
-					</a>
+					<p>어느 가족의 숨겨진 침실,<br>그 비밀은?</p>
+					<div class="playBtn">
+						<a href="https://s3.newideas.kr/event/2019/08/catalogue/video2.mp4" class="youtube" title="플레이">
+							<img src="img/icon-play.png" alt="#">
+						</a>
+					</div>
+					<div class="cover"></div>
 				</li>
 				<li class="box03 clearfix">
 					<ul class="sliderSub">
@@ -135,6 +154,7 @@
 							<img src="img/nextBtn.png" alt="">
 						</div>
 					</div>
+					<div class="box"></div>
 				</li>
 				<li class="box04">
 					<a href="sub02.html">
