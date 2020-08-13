@@ -8,49 +8,86 @@
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<style>
 		@media screen and (min-width:923px){
-			div.menuWrap{
-				width: 1200px;position: relative;margin: 0 auto;
-				background: #333;height: 45px;
+			.menuWrap{
+				width: 1334px;position: relative;margin: 0 auto;
+				background: #333;height: 98px;
 			}
-			div.menuWrap h1{width: 150px;text-align: center;}
-			div.menuWrap h1 a{color:white;}
-			div.menuWrap .myTopMenu{position: absolute;top:0;right:20px;}
-			.myTopMenu ul li{float: left;padding-right:20px;}
-			.myTopMenu ul li a{color:white;display: block;line-height:45px;}
+			.menuWrap h1{float: left; line-height: 98px;
+				position: relative; top: 38px; width: 123px; height: 22px;
+				background: url(img/logo.png) no-repeat; text-indent: -9999px; cursor: pointer;
+			}
+			.menuWrap .myTopMenu{position: absolute; left: 50%;
+			transform: translateX(-50%);
+			}
+			.myTopMenu ul li{float: left;}
+			.myTopMenu ul li a{display: block; text-align: center; 
+			line-height: 98px; padding:0 40px; font-weight: 500;
+			font-size:1.2em; color:#fff;
+			}
+			.myTopMenu ul li a:hover{color:#fbd915;}
+			.myTopMenu ul li a.active{color:#fbd915;}
+
+			.quick_menu{float: right; height: 98px; position: relative;}
+			.quick_menu .cart{float:left; width: 30px; height: 30px;
+			background: url(img/icon-cart.png) no-repeat; text-indent: -9999px;
+			position: absolute; top: 50%; transform: translateY(-50%); right: 50px;
+			cursor: pointer;
+			}
+			.quick_menu .mypage{float:right; width: 30px; height: 30px; 
+			background: url(img/icon-mypage.png) no-repeat; text-indent: -9999px;
+			position: absolute; top: 50%; transform: translateY(-50%); right: 0;
+			cursor: pointer;
+			}
 
 			.toggleMenu{display: none;}
 
 		}
 		@media screen and (min-width:577px) and (max-width:922px){
-			div.menuWrap{
+			.menuWrap{
 				width: 100%;position: relative;margin: 0 auto;
-				background: #333;height: 45px;
+				background: #333;height: 98px;
 			}
-			div.menuWrap h1{width: 150px;text-align: center;}
-			div.menuWrap h1 a{color:white;}
-			div.menuWrap .myTopMenu{position: absolute;top:0;left:200px;}
-			.topNav{position: absolute;width:500px;left:;}
-			.myTopMenu ul li{float: left;padding-right:20px;}
-			.myTopMenu ul li a{color:white;display: block;line-height:45px;}
+			.menuWrap h1{float: left; line-height: 98px;
+				position: relative; top: 38px; width: 123px; height: 22px;
+				background: url(img/logo.png) no-repeat; text-indent: -9999px; cursor: pointer;
+			}
+			.menuWrap .myTopMenu{position: absolute; left: 50%;
+			transform: translateX(-50%);
+			}
+			.myTopMenu ul li{float: left;}
+			.myTopMenu ul li a{display: block; text-align: center; 
+			line-height: 98px; padding:0 40px; font-weight: 500;
+			font-size:1.2em; color:#fff;
+			}
+			.myTopMenu ul li a:hover{color:#fbd915;}
+			.myTopMenu ul li a.active{color:#fbd915;}
 
 			.toggleMenu{display: none;}
 		}
 
 		@media screen and (max-width: 576px){
-
-			div.menuWrap{
+			.menuWrap{
 				width: 100%;position: relative;margin: 0 auto;
-				background: #333;height: 45px;
+				background: #333;height: 98px;
 			}
-			div.menuWrap h1{width: 150px;text-align: center;}
-			div.menuWrap h1 a{color:white;}
-			div.menuWrap .myTopMenu{
+			.menuWrap h1{float: left; line-height: 98px;
+				position: relative; top: 38px; width: 123px; height: 22px;
+				background: url(img/logo.png) no-repeat; text-indent: -9999px; cursor: pointer;
+			}
+
+			.menuWrap .myTopMenu{
 				position: fixed;width: 100%;height: 100%;
 				background:orange;top:-100%;
 			}
 			.topNav{position: absolute;left:50%;top:50%;transform:translate(-50%,-50%);}
-			.myTopMenu ul li{float:none}
-			.myTopMenu ul li a{color:white;display: block;line-height:45px;}
+			
+			.myTopMenu ul li{float: left;}
+			.myTopMenu ul li a{display: block; text-align: center; 
+			line-height: 98px; padding:0 40px; font-weight: 500;
+			font-size:1.2em; color:#fff;
+			}
+			.myTopMenu ul li a:hover{color:#fbd915;}
+			.myTopMenu ul li a.active{color:#fbd915;}
 
 			.toggleMenu{display: block;}
 		}
@@ -121,14 +158,15 @@
 				</ul>
 			</nav>
 		</div>
+		<div class="quick_menu">
+				<div class="cart"><a href="#">cart</a></div>
+				<div class="mypage"><a href="#">mypage</a></div>
+		</div>
 		<div class="toggleMenu">
 			<div class="bar1"></div>
 			<div class="bar2"></div>
 			<div class="bar3"></div>
 		</div>
-	</div>
-	<div class="visual">
-		<img src="../images/pc01.jpg" alt="">
 	</div>
 
 	 <!-- a태그 눌렀을때 메인으로 가지 않는 2가지 방법 -->

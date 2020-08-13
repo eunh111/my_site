@@ -4,6 +4,9 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 
 
 
+
+
+
 /*------------header start--------------*/
 /*header_top*/
 #header{position: relative;}
@@ -22,7 +25,10 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	transform: translateX(-50%);
 }
 
-.toggleMenu{width: 30px;height: 28px;border: 1px solid #fff;position: absolute;right: 20px;top: 8px;border-radius:5px;}
+.toggleMenu{width: 30px;height: 28px;border: 1px solid #fff;
+	position: absolute;right:0;top: 50%;
+	transform: translateY(-50%);
+	border-radius:5px;}
 .toggleMenu div{
 	width: 17px;height: 3px;background-color: #fff;
 	position: absolute;left:5.5px;border-radius:3px
@@ -198,8 +204,14 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 
 /*box06----더 낮은 가격*/
 .content>ul>li.box06{width: 672px; height: 336px; 
-	background:url(../img/box06.jpg) no-repeat; position: relative;}
-.content>ul>li.box06 a{position: absolute; left: 45px; top: 40px;
+	position: relative;overflow: hidden;}
+.box06 img{
+	width: 100%; height: 100%;
+	position: absolute; left: 50%; top: 50%;
+	transform:translate(-50%,-50%) scale(1.0);
+	transition: 0.3s;
+}
+.content>ul>li.box06 a{position: absolute; left: 45px; top: 40px; z-index: 1;
 }
 .content>ul>li.box06 a>p{text-align: left; font-size: 1.4em;
 	font-weight: 500; color:#fff;
@@ -210,6 +222,12 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 .content>ul>li.box06 a>h4{text-align: left; font-size: 2.5em;
 	font-weight: 700; color:#fff;
 }
+.box06 .bg{width: 100%; height: 100%; background: #000;
+	position: relative; opacity: 0; 
+}
+.box06:hover img{transform:translate(-50%,-50%) scale(1.2);}
+.box06:hover .bg{opacity: 0.2;}
+
 
 /*box07----라이프앳홈*/
 .content>ul>li.box07{width: 336px; height: 672px; 
@@ -228,8 +246,15 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 
 /*box08----청량함가득*/
 .content>ul>li.box08{width: 672px; height: 336px; 
-	background:url(../img/box08.jpg) no-repeat; position: relative;}
-.content>ul>li.box08 a{position: absolute; left: 45px; bottom: 40px;
+	position: relative;overflow: hidden;
+}
+.box08 img{
+	width: 100%; height: 100%;
+	position: absolute; left: 50%; top: 50%;
+	transform:translate(-50%,-50%) scale(1.0);
+	transition: 0.3s;
+}
+.content>ul>li.box08 a{position: absolute; left: 45px; bottom: 40px; z-index: 1;
 }
 .content>ul>li.box08 a>p{text-align: left; font-size: 1.4em;
 	font-weight: 500; color:#fff;
@@ -240,6 +265,11 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 .content>ul>li.box08 a>h4{text-align: left; font-size: 2.5em;
 	font-weight: 700; color:#fff;
 }
+.box08 .bg{width: 100%; height: 100%; background: #000;
+	position: relative; opacity: 0; 
+}
+.box08:hover img{transform:translate(-50%,-50%) scale(1.2);}
+.box08:hover .bg{opacity: 0.2;}
 
 /*box09----매장안내*/
 .content>ul>li.box09{background: #fbd914;position: relative;}
@@ -265,8 +295,15 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 
 /*box11----카탈로그*/
 .content>ul>li.box11{width: 672px; height: 336px; 
-	background:url(../img/box11.jpg) no-repeat; position: relative;}
-.content>ul>li.box11 a{position: absolute; right: 45px; bottom: 40px; 
+	position: relative; overflow: hidden;
+}
+.box11 img{
+	width: 100%; height: 100%;
+	position: absolute; left: 50%; top: 50%;
+	transform:translate(-50%,-50%) scale(1.0);
+	transition: 0.3s;
+}
+.content>ul>li.box11 a{position: absolute; right: 45px; bottom: 40px; z-index: 1; 
 }
 .content>ul>li.box11 a>p{text-align: right; font-size: 1.4em;
 	font-weight: 500; color:#fff; position: relative;
@@ -277,6 +314,11 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 .content>ul>li.box11 a>h4{text-align: right; font-size: 2.5em;
 	font-weight: 700; color:#fff; margin-top: 10px;
 }
+.box11 .bg{width: 100%; height: 100%; background: #000;
+	position: relative; opacity: 0; 
+}
+.box11:hover img{transform:translate(-50%,-50%) scale(1.2);}
+.box11:hover .bg{opacity: 0.2;}
 
 
 
@@ -284,7 +326,8 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 /*space*/
 #section{position: relative;}
 #section .space{width:100%; padding:150px 0; margin: 0 auto;}
-.space ul>li{width: 25%; height: 780px; float:left; position: relative; overflow: hidden;}
+.space ul>li{width: 25%; height: 780px; float:left; position: relative; 
+	overflow: hidden;}
 .space ul>li:last-child{margin-right:0;}
 .space ul>li>a{position: absolute; left: 45px; bottom: 40px; z-index: 1;}
 .space ul>li>div.bg{position: absolute; width: 100%; height: 100%;
@@ -298,11 +341,8 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 .space ul>li>a>h3{text-align: left; font-size: 2.5em;
 	font-weight: 700; color:#fff; margin-top: 10px;
 }
-.space ul>li:nth-child(1){background: url(../img/space01.jpg) no-repeat;}
-.space ul>li:nth-child(2){background: url(../img/space02.jpg) no-repeat;}
-.space ul>li:nth-child(3){background: url(../img/space03.jpg) no-repeat;}
-.space ul>li:nth-child(4){background: url(../img/space04.jpg) no-repeat;}
-
+.space ul>li>img{transition: 0.3s}
+.space ul>li:hover img{transform:scale(1.1);}
 
 /*service*/
 #section .service{width: 1344px; 
@@ -320,12 +360,14 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 .service .family p{text-align: left; font-size: 1.4em;
 	font-weight: 500; color:#000; margin-bottom: 40px;
 }
-.service .family a{display: block; width: 270px; height: 64px; background: #000;
-	text-align: center; line-height: 64px; border-radius: 32px; color: #fff;
+.service .family a{display: block; width: 270px; height: 64px; 
+	text-align: center; line-height: 64px; border-radius: 32px; 
+	background: #000; color: #fff;
 	font-weight: 500; 
-
 }
+.service .family a:hover{background: #0058ab;color: #fff;}
 .service .family img{position: absolute; bottom: 60px; right: 48px;}
+.service .family a:hover img{}
 
 /*customer*/
 .service .customer{width: 50%; height: 336px; background: url(../img/customer.jpg) no-repeat;
@@ -342,8 +384,8 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 .service .customer a{display: block; width: 170px; height: 64px; background: #000;
 	text-align: center; line-height: 64px; border-radius: 32px; color: #fff;
 	font-weight: 500; position: absolute; right: 0;
-
 }
+.service .customer a:hover{background: #0058ab;color: #fff;}
 
 /*footer*/
 #footer{width: 100%; height: 472px; background: #f5f5f5;}
@@ -409,11 +451,11 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	left: 50%; top: 50%; transform: translate(-50%,-50%); color: #fff;
 	text-align: center; text-shadow: 2px 2px 5px #6a6a6a; font-size: 3em;
 }
-.sub01Visual .tab{width: 1334px; position: absolute; bottom: 0; left: 50%; 
+.sub01Visual .tab{width: 1344px; position: absolute; bottom: 0; left: 50%; 
 	transform: translateX(-50%); border: 1px solid #d1d1d1;
 }
 .sub01Visual .tab ul{width: 1344px;}
-.sub01Visual .tab ul>li{float: left;width: 190.57px; height: 65px; 
+.sub01Visual .tab ul>li{float: left;width: 192px; height: 65px;
 	background: #eaeaea; border-right: 1px solid #d1d1d1;
 }
 .sub01Visual .tab ul>li:last-child{border-right:0;}
@@ -497,11 +539,11 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	left: 50%; top: 50%; transform: translate(-50%,-50%); color: #fff;
 	text-align: center; text-shadow: 2px 2px 5px #6a6a6a; font-size: 3em;
 }
-.sub02Visual .tab{width: 1334px; position: absolute; bottom: 0; left: 50%; 
+.sub02Visual .tab{width: 1344px; position: absolute; bottom: 0; left: 50%; 
 	transform: translateX(-50%); border: 1px solid #d1d1d1;
 }
 .sub02Visual .tab ul{width: 1344px;}
-.sub02Visual .tab ul>li{float: left;width: 190.57px; height: 65px; 
+.sub02Visual .tab ul>li{float: left;width: 192px; height: 65px; 
 	background: #eaeaea; border-right: 1px solid #d1d1d1;
 }
 .sub02Visual .tab ul>li:last-child{border-right:0;}
@@ -540,11 +582,11 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	left: 50%; top: 50%; transform: translate(-50%,-50%); color: #fff;
 	text-align: center; text-shadow: 2px 2px 5px #6a6a6a; font-size: 3em;
 }
-.sub03Visual .tab{width: 1334px; position: absolute; bottom: 0; left: 50%; 
+.sub03Visual .tab{width: 1344px; position: absolute; bottom: 0; left: 50%; 
 	transform: translateX(-50%); border: 1px solid #d1d1d1;
 }
 .sub03Visual .tab ul{width: 1344px;}
-.sub03Visual .tab ul>li{float: left;width: 444.67px; height: 65px; 
+.sub03Visual .tab ul>li{float: left;width: 448px; height: 65px;
 	background: #eaeaea; border-right: 1px solid #d1d1d1;
 }
 .sub03Visual .tab ul>li:last-child{border-right:0;}
@@ -578,11 +620,11 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	left: 50%; top: 50%; transform: translate(-50%,-50%); color: #fff;
 	text-align: center; text-shadow: 2px 2px 5px #6a6a6a; font-size: 3em;
 }
-.sub04Visual .tab{width: 1334px; position: absolute; bottom: 0; left: 50%; 
+.sub04Visual .tab{width: 1344px; position: absolute; bottom: 0; left: 50%; 
 	transform: translateX(-50%); border: 1px solid #d1d1d1;
 }
 .sub04Visual .tab ul{width: 1344px;}
-.sub04Visual .tab ul>li{float: left;width: 333.5px; height: 65px; 
+.sub04Visual .tab ul>li{float: left;width: 336px; height: 65px;
 	background: #eaeaea; border-right: 1px solid #d1d1d1;
 }
 .sub04Visual .tab ul>li:last-child{border-right:0;}
