@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>fullpage</title>
+	<link rel="stylesheet" href="css/fullpage.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.fullpage.js"></script>
+	
+<!----------- 스크립트 모음 ---------->
+	<script>
+		//풀페이지용		
+		$(function(){
+			$("#fullpage").fullpage({
+				anchors:["a1st","a2st","a3st","a4st","a5st","a6st"],
+				menu:"#topMenu",
+				navigation:true,
+				navigationPosition: 'right',
+				afterLoad:function(anchorslink,index){
+					console.log(anchorslink+", "+index);
+					if(index == 1){
+						$("#onViewOne").addClass("move");
+					}else{
+						$("#onViewOne").removeClass("move");
+					}
+
+					if(index == 2){
+						$("#onViewTwo").addClass("move");
+					}else{
+						$("#onViewTwo").removeClass("move");
+					}
+				}
+			});
+		});
+
+
+		//카이미지용
+		$(function(){
+			$(".pager>span").click(function(){
+				var i = $(this).index()*50;
+
+				$(".carImg").stop().animate({"background-position-x":i+"%"},300)
+				$(".pager>span").removeClass("active").eq($(this).index()).addClass("active");
+			});
+		})
+
+
+	</script>
+
+
+<!----------- 스타일 모음 ---------->
+	<style>
+		/*-----------------공통----------------*/
+		/*배경화면*/
+		#page1{_background-image: url(images/bg1.jpg);}
+		#page2{background-image: url(images/bg2.jpg);}
+		#page3{background-image: url(images/bg3.jpg);}
+		#page4{background-image: url(images/bg4.jpg);}
+		#page5{_background-image: url(images/bg5.jpg);}
+		#page6{background-image: url(images/bg6.jpg);}
+
+		.section{
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size:cover;
+		}
+
+
+		/*네비게이션*/
+		nav#navTop{
+			position: fixed;z-index:1;width: 100%;
+			background-color: #cdcdcd; opacity:0.5;
+		}
+		nav#navTop li{float: left;}
+		nav#navTop li a{display: block;line-height:50px;text-align: center;padding: 0 10px;}
+
+		nav#navTop li.active{background-color:skyblue;}
+
+
+		/*스크롤*/
+		.scroll{
+			position: absolute;left: 50%;transform:translateX(-50%);
+			bottom: 20px;animation:xScroll 0.8s infinite alternate;
+		}
+		@keyframes xScroll{
+			from{bottom: 20px;}
+			to{bottom: 40px;}
+		}
+
+
+		.main{
+			width: 400px;position: absolute;left: 50%;top:30%;transform: translateX(-50%);
+			color:white;text-align: center;
+		}
+		.main a{
+			display: block;width: 150px;
+			border: 1px solid #fff;line-height: 35px;
+			color:white;border-radius:18px;margin: 0 auto;
+		}
+		.main a:hover{background-color: #ffffff;color:#000;}
+
+		#onViewOne{top:10%;transition:0.3s;opacity:0;}
+		#onViewOne.move{top:30%;opacity:1;}
+
+		#onViewTwo{left:10%;transition:0.3s;opacity:0;}
+		#onViewTwo.move{left:50%;opacity:1;}
+
+
+		/*폰트사이즈*/
+		.f3em{font-size:3em !important}
+		.f25em{font-size:2.5em !important}
+		.f2em{font-size:2em !important}
+		.f15em{font-size:1.5em !important}
+		.mb20{margin-bottom: 20px !important;}
+
+		
+
+
+		/*-----------------1번째 페이지----------------*/
+		.carImg{
+			width: 100%;height: 100%;
+			background-image:url(images/main_hero_homepage_desktop.jpg);
+			background-position: 50% 60%;
+			background-repeat: no-repeat;
+			position: relative;
+		}
+		.carImg .pager{
+			position: absolute;
+			left:50%;transform: translateX(-50%);
+			bottom:200px;
+		}
+		.carImg .pager>span{display: inline-block;
+			width: 20px;height: 20px;border-radius:10px;text-indent: -9999px;
+			border: 1px solid #fff;cursor:pointer;
+		}
+		.carImg .pager span.active{background-color: #fff;}
+
+
+
+
+		/*-----------------2번째 페이지 about----------------*/
+		#video{
+			position: absolute;width: 100%;height: 100%;
+			object-fit:cover;top:0;
+		}
+
+
+		/*-----------------3번째 페이지 projects----------------*/
+
+
+
+		/*-----------------4번째 페이지 news----------------*/
+		.slide{position: relative;}
+		.slide div{position: absolute;width: 100%;height: 100%;left:0;top:0;}
+		.slide .view1{background-color: skyblue;}
+		.slide .view2{background-color: red;}
+		.slide .view3{background-color: blue;}
+		.slide .view4{background-color: yellow;}
+
+
+		/*-----------------5번째 페이지 shops----------------*/
+
+
+
+		/*-----------------6번째 페이지 contact----------------*/
+
+
+
+	</style>
+</head>
+
+
+<body>
+	<nav id="navTop" class="clearfix">
+		<!-- ul#topMenu>li*4>a[#a$st]>{MENu$} -->
+		<div class="logo"><a href="#">logo</a></div>
+		<ul id="topMenu" class="clearfix">
+			<li data-menuanchor="a1st"><a href="#a1st">main</a></li>
+			<li data-menuanchor="a2st"><a href="#a2st">about</a></li>
+			<li data-menuanchor="a3st"><a href="#a3st">projects</a></li>
+			<li data-menuanchor="a4st"><a href="#a4st">news</a></li>
+			<li data-menuanchor="a5st"><a href="#a5st">shops</a></li>
+			<li data-menuanchor="a6st"><a href="#a6st">contact</a></li>
+		</ul>
+	</nav>
+	
+	<div id="fullpage">
+		<!-- 1번째 페이지, 좌가운데오른쪽 -->
+		<div class="section" id="page1" data-anchor="a1st">
+			<div class="main" id="onViewOne">
+				<h3 class="f25em">Lorem ipsum.</h3>
+				<p class="f15em mb20">Lorem ipsum dolor sit.</p>
+				<a href="#">MORE</a>
+			</div>
+			<div class="carImg">
+				<div class="pager">
+					<span>1</span>
+					<span class="active">2</span>
+					<span>3</span>
+				</div>
+			</div>
+			<div class="scroll">
+				<a href="#a2st"><img src="images/btn_scroll.png" alt=""></a>
+			</div>
+		</div>
+
+
+		<!-- 2번째 페이지, 비디오 -->
+		<div class="section" id="page2" data-anchor="a2st">
+			<video id="video" autoplay muted data-autoplay loop>
+				<source src="video/video.mp4" type="video/mp4">
+			</video>
+			<div class="main" id="onViewTwo">
+				<h3 class="f25em">Lorem ipsum.</h3>
+				<p class="f15em mb20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, voluptas?	</p>
+				<a href="#">MORE</a>
+			</div>
+			<div class="scroll">
+				<a href="#a3st"><img src="images/btn_scroll.png" alt=""></a>
+			</div>
+		</div>
+
+
+		<!-- 3번째 페이지, projects bxslide를 넣어야할듯??? + 모달 -->
+
+		<div class="section" id="page3" data-anchor="a3st">
+			<h2>artworks</h2>
+
+
+			<div class="scroll">
+				<a href="#a4st"><img src="images/btn_scroll.png" alt=""></a>
+			</div>			
+		</div>
+	
+
+
+		<!-- 4번째 페이지, 지금 슬라이드 인데 뉴스넣을거임 -->    
+		
+		<div class="section" id="page4" data-anchor="a4st">
+			<div class="slide">
+				<div class="view1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis nobis rerum, rem dicta quisquam eveniet dolore provident pariatur est atque quis voluptatibus sit distinctio impedit voluptatum non, dignissimos modi facilis!</div>
+			</div>
+			<div class="slide">
+				<div class="view2">Voluptatum ex aperiam earum voluptates fugiat asperiores dolore a dolorem, ullam tempora, vero iure. Culpa quibusdam nisi nihil consequuntur, laudantium, possimus praesentium suscipit quo illum rem, quod eos distinctio dolor.</div>
+			</div>
+			<div class="slide">
+				<div class="view3">Libero necessitatibus tenetur, animi delectus accusamus! Labore commodi maxime ducimus, quibusdam laborum dignissimos placeat! Laborum a dolorum vero? Reiciendis modi repudiandae nobis, facere adipisci sapiente doloribus voluptate deserunt architecto assumenda.</div>
+			</div>
+		</div>
+
+
+		<style>
+			#page5{position: relative;}
+
+			#page5 .titleWrap{width: 100%; height: 312px; background-color: #fff;
+				position: relative; position: absolute; top: 0;
+			}
+			#page5 .title{width: 1182px; margin: 0 auto;
+				position: absolute; top: 185px; color:black;
+			}
+			.offOn{position: absolute;}
+			.offOn .offline{width: 960px; height: 768px; background: #dae3e2; 
+				position: relative; bottom: 0;left: 0;}
+			.offOn .offline p{color:#fff; text-align: center;}
+			.offOn .online{width: 960px; height: 768px; background: #fff; 
+				position: relative;bottom: 0;right: 0;}
+			.offOn .online p{color:#dae3e2; text-align: center;}
+
+		</style>
+
+
+		<!-- 5번째 페이지, shops -->
+		<div class="section" id="page5" data-anchor="a5st">
+			<div class="titleWrap">
+				<div class="title">
+					<h4>On sale products</h4>
+					<h2>shops</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat iusto quo, error omnis quia dolorem!</p>
+				</div>
+			</div>
+			<div class="offOn">
+				<div class="offline"><p>offline</p></div>
+				<div class="online"><p>online</p></div>
+			</div>
+		</div>
+
+
+		<!-- 6번째 페이지, contact -->
+		<div class="section" id="page6" data-anchor="a6st">
+			<div class="titleWrap">
+				<div class="title">
+					<h4>Get in touch</h4>
+					<h2>Contact us</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat iusto quo, error omnis quia dolorem!</p>
+				</div>
+				<div class="nl">
+					<h5>THE NETHERLANDS</h5>
+					<p>oostelijke handelskade 12m<br>
+						1019 bm Amsterdam<br>
+						m +31 (0)6 37172 862
+					</p>
+					<a href="#">map</a>
+				</div>
+				<div class="jp">
+					<h5>JAPAN</h5>
+					<p>5-4-4 Yakumo Meguro-ku Tokyo, 152-0023<br>
+						naoko.ikehara@samiraboon.com<br>
+						m: +81 (0) 90 9320 3449<br>
+						f: +81 (0) 3 4496 6418
+					</p>
+					<a href="#">map</a>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- 푸터!!!!! -->
+		<div class="section fp-auto-height" data-anchor="a7st">
+			<div class="footer" style="height:300px;background-color:skyblue; "></div>
+		</div>
+
+
+
+	</div>
+</body>
+</html>
