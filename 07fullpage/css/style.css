@@ -1,48 +1,19 @@
 @charset "utf-8";
-
-/*-----------------공통----------------*/
-/*배경화면*/
-#page1{_background-image: url(images/bg1.jpg);}
-#page2{background-image: url(images/bg2.jpg);}
-#page3{background-image: url(images/bg3.jpg);}
-#page4{background-image: url(images/bg4.jpg);}
-#page5{_background-image: url(images/bg5.jpg);}
-#page6{background-image: url(images/bg6.jpg);}
-
-.section{
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size:cover;
-}
+/*bg*/
+#page1{background-image: url(../images/bg1.jpg);}
+#page2{background-image: url(../images/bg2-1.jpg);} 
+#page3{background-image: url(../images/bg3.jpg);}
+#page4{background-image: url(../images/bg4.jpg);}
+#page5{_background-image: url(../images/bg5.jpg);}    /*샵 흰배경*/    
+#page6{background-image: url(../images/bg6.jpg);}
 
 
-/*네비게이션*/
-nav#navTop{position: fixed;z-index:1;width: 100%;
-	background-color: #fff; position: relative;
-}
-nav#navTop .logo{background: url(../images/logo.png) no-repeat;
-	text-indent: -9999px; position: absolute; left: 0;
-}
-nav#navTop li{float: left;}
-nav#navTop li a{display: block;line-height:50px;text-align: center;
-	padding: 0 10px;}
-
-nav#navTop li.active{background-color:skyblue;}
-
-
-/*스크롤*/
-.scroll{
-	position: absolute;left: 50%;transform:translateX(-50%);
-	bottom: 20px;animation:xScroll 0.8s infinite alternate;
-}
-@keyframes xScroll{
-	from{bottom: 20px;}
-	to{bottom: 40px;}
-}
-
-/*폰트*/
+/*font*/
 body{font-family: 'M PLUS Rounded 1c', sans-serif;}
 
+.f7em{font-size:7em !important}
+.f65em{font-size:6.5em !important}
+.f6em{font-size:6em !important}
 .f55em{font-size:5.5em !important}
 .f5em{font-size:5em !important}
 .f45em{font-size:4.5em !important}
@@ -52,48 +23,128 @@ body{font-family: 'M PLUS Rounded 1c', sans-serif;}
 .f25em{font-size:2.5em !important}
 .f2em{font-size:2em !important}
 .f15em{font-size:1.5em !important}
+.f13em{font-size:1.3em !important}
+
+.fw100{font-weight: 100;}
+.fw200{font-weight: 200;}
+.fw300{font-weight: 300;}
+.fw400{font-weight: 400;}
+.fw500{font-weight: 500;}
+.fw600{font-weight: 600;}
+.fw700{font-weight: 700;}
+.fw800{font-weight: 800;}
+.fw900{font-weight: 900;}
+
 .mb20{margin-bottom: 20px !important;}
+.mb40{margin-bottom: 40px !important;}
 
 
-/*-----------------1번째 페이지----------------*/
-#video{position: absolute;width: 100%;height: 100%;
-	object-fit:cover;top:0;
+
+/*section*/
+.section{
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size:cover;
 }
 
-.mainWrap{width: 1182px; height:20px; position: relative;}
-.main{position: absolute;left:0;top:30%;color:white; text-align: left;
+
+
+/*navigation*/
+nav#navTop{position: fixed;z-index:1;width: 100%;}
+nav#navTop .logo{position: absolute; top: 40px; left: 100px; text-indent: -9999px;}
+nav#navTop ul{position: absolute;top: 40px; right: 100px; }
+nav#navTop li{float: left;}
+nav#navTop li a{display: block; text-align: center;
+	padding: 0 20px; font-size: 1.5em; color:#636363;
 }
-.main a{display: block; width: 150px; border: 1px solid #fff;
-	line-height: 35px; color:white;border-radius:18px;
+nav#navTop li.active a{color:#000; font-weight: 500;}
+
+/*scroll*/
+.scroll{position: absolute;left: 50%;transform:translateX(-50%);
+	bottom: 20px;animation:xScroll 0.8s infinite alternate;
+}
+@keyframes xScroll{
+	from{bottom: 20px;}
+	to{bottom: 40px;}
+}
+
+
+/*-------------------------------------------------------------*/
+
+
+/*page1*/
+#onViewOne .viewTxt{position: absolute;left:300px; top: 50%; transform: translateY(-50%);
+	color:white; text-align: left; color:#000;}
+#onViewOne .viewTxt h2{line-height: 130px;}
+#onViewOne .viewTxt .des{color:#636363;}
+#onViewOne .viewTxt a{display: block; width: 150px; line-height: 50px;
+	background: #000;color:#fff; border-radius:25px; text-align: center;
+}
+#onViewOne .viewTxt a:hover{background-color: #fff;color:#000;}
+
+/*#onViewOne{top:10%; transition:0.3s; opacity:0;}
+#onViewOne.move{top:30%;opacity:1;}*/
+
+
+
+/*page2*/
+.slide{position: relative;}
+
+/*.slide div{position: absolute;width: 100%;height: 100%;left:0;top:0;}
+.slide .view1{background: url(../images/bg2-1.jpg);}
+.slide .view2{background: url(../images/bg2-2.jpg);}
+.slide .view3{background: url(../images/bg2-1.jpg);}*/
+
+.slide .view1 ul,
+.slide .view2 ul,
+.slide .view3 ul{width:80%;height: 600px;
+	position: absolute; left: 50%;top: 50%; transform:translate(-50%,-50%);
+}
+
+.slide .view1 ul li{float: left;}
+.slide .view1 ul li.left{width: 450px;
+	position: absolute; top: 0; _left: 100px;}
+.slide .view1 ul li.left .des{color:#636363;}
+
+.slide .view1 ul li.right{
+	float: right; width: 55%;height: 600px;
+	background-image: url(../images/about-01.jpg);
+	background-size:cover;
+}
+
+
+
+/*page3 artworks*/
+#page3{position: relative;}
+#onViewThree h2{
+	position: absolute; top: 15%; left: 50%; transform:translateX(-50%);
+
+}
+#onViewThree .artworksTitle{
+	position: absolute; top:30%; left: 50%; transform:translateX(-50%);
 	text-align: center;
 }
-.main a:hover{background-color: #ffffff;color:#000;}
 
-#onViewOne{top:10%; transition:0.3s; opacity:0;}
-#onViewOne.move{top:30%;opacity:1;}
+.artworks02,
+.artworks03,
+.artworks04,
+.artworks05{display: none;}
 
+#onViewThree ul.artworksImg{width: 1600px; height: 267px; overflow: hidden;
+	position: absolute; top: 40%; left: 50%; transform:translateX(-50%);
+}
+#onViewThree .artworksImg li{float: left;width: 267px;height: 267px; margin-right: 50px;}
 
-
-
-
-/*-----------------2번째 페이지 about----------------*/
-
-
-
-/*-----------------3번째 페이지 projects----------------*/
-
+#onViewThree .hoverCover{background: #dae3e2;opacity: 0.7;}
+	
 
 
-/*-----------------4번째 페이지 news----------------*/
-.slide{position: relative;}
-.slide div{position: absolute;width: 100%;height: 100%;left:0;top:0;}
-.slide .view1{background-color: skyblue;}
-.slide .view2{background-color: red;}
-.slide .view3{background-color: blue;}
-.slide .view4{background-color: yellow;}
+
+/*page4 news*/
 
 
-/*-----------------5번째 페이지 shops----------------*/
+
+/*page5 shop*/
 #page5{position: relative;}
 
 #page5 .titleWrap{width: 100%; height: 312px; background-color: #fff;
@@ -111,4 +162,12 @@ body{font-family: 'M PLUS Rounded 1c', sans-serif;}
 .offOn .online p{color:#dae3e2; text-align: center;}
 
 
-/*-----------------6번째 페이지 contact----------------*/
+/*page6 contact*/
+
+
+
+
+
+/*#video{position: absolute;width: 100%;height: 100%;
+	object-fit:cover;top:0;
+}*/

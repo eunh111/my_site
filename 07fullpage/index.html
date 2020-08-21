@@ -7,13 +7,10 @@
 	<link rel="stylesheet" href="css/fullpage.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/jquery.fullpage.js"></script>
-	<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">
-	
-<!----------- 스크립트 모음 ---------->
 	<script>
-		//풀페이지용		
 		$(function(){
 			$("#fullpage").fullpage({
 				anchors:["a1st","a2st","a3st","a4st","a5st","a6st"],
@@ -27,11 +24,25 @@
 					}else{
 						$("#onViewOne").removeClass("move");
 					}
-
 					if(index == 2){
 						$("#onViewTwo").addClass("move");
 					}else{
 						$("#onViewTwo").removeClass("move");
+					}
+					if(index == 3){
+						$("#onViewThree").addClass("move");
+					}else{
+						$("#onViewThree").removeClass("move");
+					}
+					if(index == 4){
+						$("#onViewFour").addClass("move");
+					}else{
+						$("#onViewFour").removeClass("move");
+					}
+					if(index == 5){
+						$("#onViewFive").addClass("move");
+					}else{
+						$("#onViewFive").removeClass("move");
 					}
 				}
 			});
@@ -44,11 +55,11 @@
 <body>
 	<nav id="navTop" class="clearfix">
 		<!-- ul#topMenu>li*4>a[#a$st]>{MENu$} -->
-		<div class="logo"><a href="index.html">logo</a></div>
+		<a href="#a1st"><img src="images/logo.png" alt="" class="logo"></a>
 		<ul id="topMenu" class="clearfix">
 			<li data-menuanchor="a1st"><a href="#a1st">main</a></li>
 			<li data-menuanchor="a2st"><a href="#a2st">about</a></li>
-			<li data-menuanchor="a3st"><a href="#a3st">projects</a></li>
+			<li data-menuanchor="a3st"><a href="#a3st">artworks</a></li>
 			<li data-menuanchor="a4st"><a href="#a4st">news</a></li>
 			<li data-menuanchor="a5st"><a href="#a5st">shops</a></li>
 			<li data-menuanchor="a6st"><a href="#a6st">contact</a></li>
@@ -56,66 +67,139 @@
 	</nav>
 
 	<div id="fullpage">
-		<!-- 1번째 페이지, 좌가운데오른쪽 -->
+		<!-- page1 -->
 		<div class="section" id="page1" data-anchor="a1st">
-			<video id="video" autoplay muted data-autoplay loop>
-				<source src="video/video.mp4" type="video/mp4">
-			</video>
-			<div class="mainWrap">
-				<div class="main" id="onViewOne">
-					<p class="f15em">Product and textile design studio</p>
-					<h2 class="f55em">studio<br>samira boon</h2>
-					<p class="f15em mb20">We’re team of designers and developers passion<br>about creative website unique</p>
-					<a href="#">MORE</a>
+			<div class="" id="onViewOne">
+				<div class="viewTxt">
+					<h4 class="f15em mb20">Product and textile design studio</h4>
+					<h2 class="f7em mb20">studio<br>samira boon</h2>
+					<p class="des f15em mb40">We’re team of designers and developers passion about<br> creative website unique</p>
+					<a href="#" class="fw600">MORE</a>
 				</div>
 			</div>
 			<div class="scroll">
 				<a href="#a2st"><img src="images/btn_scroll.png" alt=""></a>
 			</div>
-		</div>
+		</div>  <!-- page1 end -->
 
-
-		<!-- 2번째 페이지, 비디오 -->
+		<!-- page2 -->
 		<div class="section" id="page2" data-anchor="a2st">
-			<div class="main" id="onViewTwo">
-				ddd
-			</div>
+			<div class="slide" id="onViewTwo">
+				<div class="view1" >
+					<ul class="clearfix">
+						<li class="left">
+							<h4 class="f15em">who we are</h4>
+							<h2 class="f4em mb40">about</h2>
+							<p class="des fw400">
+							<strong>Collection</strong><br>
+							Samira Boon is a Dutch design studio that makes functional products and textiles with outstanding simplicity and tactility. Drawing inspiration from research into materials and production techniques Samira Boon has created a unique collection of products.<br><br>
+
+							<strong>Collaborations</strong><br>
+							Various artists, designers and architects have sought to tap into our insight and design skills, leading to a range of collaborations.<br><br>
+
+							<strong>Commissions</strong><br>
+							Our principles are applicable in a wide range of design fields. We are very interested in working with you to create unique solutions and look forward to entering into a dialogue with you.
+							</p>
+						</li>
+						<li class="right"></li>
+					</ul>					
+				</div>   <!-- view01 end -->
+			</div>  <!-- slide end -->
+			<div class="slide" id="onViewTwo">
+				<div class="view2" >
+					<ul class="clearfix">
+						<li class="left">
+							<h4 class="f15em">what we think</h4>
+							<h2 class="f4em mb40">principles</h2>
+							<p class="des fw400">
+							A journey of a thousand miles begins with a single step  —  Lao-Tzu, Tao Te Ching<br><br>
+
+							<strong>Collaborations</strong><br>
+							Various artists, designers and architects have sought to tap into our insight and design skills, leading to a range of collaborations.<br><br>
+
+							<strong>Commissions</strong><br>
+							Our principles are applicable in a wide range of design fields. We are very interested in working with you to create unique solutions and look forward to entering into a dialogue with you.
+							</p>
+						</li>
+						<li class="right"></li>
+					</ul>					
+				</div>   <!-- view01 end -->
+			</div>  <!-- slide end -->
+			<div class="slide" id="onViewTwo">
+				<div class="view3" >
+					<ul class="clearfix">
+						<li class="left">
+							<h4 class="f15em">Designer</h4>
+							<h2 class="f4em mb40">samira boon</h2>
+							<p class="des fw400">
+							<strong>Japan</strong><br>
+							After finishing her education as an architect, Samira Boon lived in Japan for four years, where she started her design studio. Her first success came in 2002 after designing the “get well soon masks”: regular masks printed with animal faces. Shortly afterwards, she developed the “furoshiki shiki” series; vinyl bags that were inspired on a Japanese folding technique.<br><br>
+
+							<strong>Netherlands</strong><br>
+							In recent years she transferred her focus on the development of 3 dimensional textiles at the Textile laboratory in the Netherlands. The technologically advanced textiles are applied on various interiors and result into a diversity of products. One of the most technologically advanced product series is the “instant collection”: pre-programmed different layers and seams, result into (nearly) finished 3D products straight out the machine, which hardly need any after treatment.<br><br>
+						</li>
+						<li class="right"></li>
+					</ul>					
+				</div>   <!-- view01 end -->
+			</div>  <!-- slide end -->
+
 			<div class="scroll">
 				<a href="#a3st"><img src="images/btn_scroll.png" alt=""></a>
 			</div>
-		</div>
+		</div>   <!-- page2 end -->
 
 
-		<!-- 3번째 페이지, projects bxslide를 넣어야할듯??? + 모달 -->
+		<!-- page3 -->
 
 		<div class="section" id="page3" data-anchor="a3st">
-			<h2>artworks</h2>
-			<div class="main" id="onViewThree">
-				ddd
+			<div class="" id="onViewThree">
+				<h2 class="f4em mb40">artworks</h2>
+				<ul class="artworksTitle">
+					<li class="artworks01">
+						<h4 class="f15em">paravent</h4>
+						<p>2016, Creative Industries Fund NL, Cordaan</p>
+					</li>
+					<li class="artworks02">
+						<h4 class="f15em">paravent</h4>
+						<p>2016, Creative Industries Fund NL, Cordaan</p>
+					</li>
+					<li class="artworks03">
+						<h4 class="f15em">paravent</h4>
+						<p>2016, Creative Industries Fund NL, Cordaan</p>
+					</li>
+					<li class="artworks04">
+						<h4 class="f15em">paravent</h4>
+						<p>2016, Creative Industries Fund NL, Cordaan</p>
+					</li>
+					<li class="artworks05">
+						<h4 class="f15em">paravent</h4>
+						<p>2016, Creative Industries Fund NL, Cordaan</p>
+					</li>
+				</ul>
+				<div class="hoverCover"></div>
+				<ul class="artworksImg clearfix">
+					<li data-anchor="artworks01"><img src="images/artwork-tmb-01.jpg" alt=""></li>
+					<li data-anchor="artworks02"><img src="images/artwork-tmb-02.jpg" alt=""></li>
+					<li data-anchor="artworks03"><img src="images/artwork-tmb-03.jpg" alt=""></li>
+					<li data-anchor="artworks04"><img src="images/artwork-tmb-04.jpg" alt=""></li>
+					<li data-anchor="artworks05"><img src="images/artwork-tmb-05.jpg" alt=""></li>
+					<li data-anchor="artworks06"><img src="images/artwork-tmb-01.jpg" alt=""></li>
+					<li data-anchor="artworks07"><img src="images/artwork-tmb-02.jpg" alt=""></li>
+					<li data-anchor="artworks08"><img src="images/artwork-tmb-03.jpg" alt=""></li>
+					<li data-anchor="artworks09"><img src="images/artwork-tmb-04.jpg" alt=""></li>
+					<li data-anchor="artworks10"><img src="images/artwork-tmb-05.jpg" alt=""></li>
+				</ul>
 			</div>
-			<div class="scroll">
-				<a href="#a4st"><img src="images/btn_scroll.png" alt=""></a>
-			</div>			
-		</div>
+		</div>  <!-- page3 end -->
 	
 
 
-		<!-- 4번째 페이지, 지금 슬라이드 인데 뉴스넣을거임 -->    
-		
-		<div class="section" id="page4" data-anchor="a4st">
-			<div class="slide">
-				<div class="view1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis nobis rerum, rem dicta quisquam eveniet dolore provident pariatur est atque quis voluptatibus sit distinctio impedit voluptatum non, dignissimos modi facilis!</div>
-			</div>
-			<div class="slide">
-				<div class="view2">Voluptatum ex aperiam earum voluptates fugiat asperiores dolore a dolorem, ullam tempora, vero iure. Culpa quibusdam nisi nihil consequuntur, laudantium, possimus praesentium suscipit quo illum rem, quod eos distinctio dolor.</div>
-			</div>
-			<div class="slide">
-				<div class="view3">Libero necessitatibus tenetur, animi delectus accusamus! Labore commodi maxime ducimus, quibusdam laborum dignissimos placeat! Laborum a dolorum vero? Reiciendis modi repudiandae nobis, facere adipisci sapiente doloribus voluptate deserunt architecto assumenda.</div>
-			</div>
+		<!-- page4 -->
+		<div class="section" id="page4" data-anchor="a4st">	
 		</div>
 
 
-		<!-- 5번째 페이지, shops -->
+		<!-- page5 -->
 		<div class="section" id="page5" data-anchor="a5st">
 			<div class="titleWrap">
 				<div class="title">
@@ -131,7 +215,7 @@
 		</div>
 
 
-		<!-- 6번째 페이지, contact -->
+		<!-- page6 -->
 		<div class="section" id="page6" data-anchor="a6st">
 			<div class="titleWrap">
 				<div class="title">
@@ -160,14 +244,27 @@
 		</div>
 
 
-
-		<!-- 푸터!!!!! -->
+		<!-- footer -->
 		<div class="section fp-auto-height" data-anchor="a7st">
 			<div class="footer" style="height:300px;background-color:skyblue; "></div>
 		</div>
 
-
-
 	</div>
 </body>
 </html>
+
+
+
+
+
+	<!-- <div class="videoWrap">
+			<video id="video" autoplay muted data-autoplay loop>
+				<source src="video/video.mp4" type="video/mp4">
+			</video>
+		</div> --> 
+
+
+
+
+
+		
