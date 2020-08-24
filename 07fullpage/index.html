@@ -8,8 +8,11 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/slick-theme.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/jquery.fullpage.js"></script>
+	<script src="js/slick.min.js"></script>
 	<script>
 		$(function(){
 			$("#fullpage").fullpage({
@@ -46,6 +49,30 @@
 					}
 				}
 			});
+
+			$(".slick").slick({
+				dots:true,
+				autoplay:true,
+				slidesToShow:5,
+				responsive:[{
+					breakpoint:960,
+					settings:{
+						arrows:false,
+						//centerMode:true,
+						slidesToShow:3
+					}
+				},
+				{
+					breakpoint:560,
+					settings:{
+						arrows:false,
+						//centerMode:true,
+						slidesToShow:1
+					}
+				}
+				]
+			});
+
 		});
 
 
@@ -55,6 +82,7 @@
 <body>
 	<nav id="navTop" class="clearfix">
 		<!-- ul#topMenu>li*4>a[#a$st]>{MENu$} -->
+		<div class="bg"></div>
 		<a href="#a1st"><img src="images/logo.png" alt="" class="logo"></a>
 		<ul id="topMenu" class="clearfix">
 			<li data-menuanchor="a1st"><a href="#a1st">main</a></li>
@@ -77,6 +105,13 @@
 					<a href="#" class="fw600">MORE</a>
 				</div>
 			</div>
+
+			<div class="videoWrap">
+				<video id="video" autoplay muted data-autoplay loop>
+					<source src="video/video.mp4" type="video/mp4">
+				</video>
+			</div>
+
 			<div class="scroll">
 				<a href="#a2st"><img src="images/btn_scroll.png" alt=""></a>
 			</div>
@@ -109,10 +144,11 @@
 				<div class="view2" >
 					<ul class="clearfix">
 						<li class="left">
-							<h4 class="f15em">what we think</h4>
-							<h2 class="f4em mb40">principles</h2>
+							<h4 class="f15em">who we are</h4>
+							<h2 class="f4em mb40">about</h2>
 							<p class="des fw400">
-							A journey of a thousand miles begins with a single step  —  Lao-Tzu, Tao Te Ching<br><br>
+							<strong>Collection</strong><br>
+							Samira Boon is a Dutch design studio that makes functional products and textiles with outstanding simplicity and tactility. Drawing inspiration from research into materials and production techniques Samira Boon has created a unique collection of products.<br><br>
 
 							<strong>Collaborations</strong><br>
 							Various artists, designers and architects have sought to tap into our insight and design skills, leading to a range of collaborations.<br><br>
@@ -129,20 +165,23 @@
 				<div class="view3" >
 					<ul class="clearfix">
 						<li class="left">
-							<h4 class="f15em">Designer</h4>
-							<h2 class="f4em mb40">samira boon</h2>
+							<h4 class="f15em">who we are</h4>
+							<h2 class="f4em mb40">about</h2>
 							<p class="des fw400">
-							<strong>Japan</strong><br>
-							After finishing her education as an architect, Samira Boon lived in Japan for four years, where she started her design studio. Her first success came in 2002 after designing the “get well soon masks”: regular masks printed with animal faces. Shortly afterwards, she developed the “furoshiki shiki” series; vinyl bags that were inspired on a Japanese folding technique.<br><br>
+							<strong>Collection</strong><br>
+							Samira Boon is a Dutch design studio that makes functional products and textiles with outstanding simplicity and tactility. Drawing inspiration from research into materials and production techniques Samira Boon has created a unique collection of products.<br><br>
 
-							<strong>Netherlands</strong><br>
-							In recent years she transferred her focus on the development of 3 dimensional textiles at the Textile laboratory in the Netherlands. The technologically advanced textiles are applied on various interiors and result into a diversity of products. One of the most technologically advanced product series is the “instant collection”: pre-programmed different layers and seams, result into (nearly) finished 3D products straight out the machine, which hardly need any after treatment.<br><br>
+							<strong>Collaborations</strong><br>
+							Various artists, designers and architects have sought to tap into our insight and design skills, leading to a range of collaborations.<br><br>
+
+							<strong>Commissions</strong><br>
+							Our principles are applicable in a wide range of design fields. We are very interested in working with you to create unique solutions and look forward to entering into a dialogue with you.
+							</p>
 						</li>
 						<li class="right"></li>
 					</ul>					
 				</div>   <!-- view01 end -->
 			</div>  <!-- slide end -->
-
 			<div class="scroll">
 				<a href="#a3st"><img src="images/btn_scroll.png" alt=""></a>
 			</div>
@@ -177,18 +216,20 @@
 					</li>
 				</ul>
 				<div class="hoverCover"></div>
-				<ul class="artworksImg clearfix">
-					<li data-anchor="artworks01"><img src="images/artwork-tmb-01.jpg" alt=""></li>
-					<li data-anchor="artworks02"><img src="images/artwork-tmb-02.jpg" alt=""></li>
-					<li data-anchor="artworks03"><img src="images/artwork-tmb-03.jpg" alt=""></li>
-					<li data-anchor="artworks04"><img src="images/artwork-tmb-04.jpg" alt=""></li>
-					<li data-anchor="artworks05"><img src="images/artwork-tmb-05.jpg" alt=""></li>
-					<li data-anchor="artworks06"><img src="images/artwork-tmb-01.jpg" alt=""></li>
-					<li data-anchor="artworks07"><img src="images/artwork-tmb-02.jpg" alt=""></li>
-					<li data-anchor="artworks08"><img src="images/artwork-tmb-03.jpg" alt=""></li>
-					<li data-anchor="artworks09"><img src="images/artwork-tmb-04.jpg" alt=""></li>
-					<li data-anchor="artworks10"><img src="images/artwork-tmb-05.jpg" alt=""></li>
-				</ul>
+				<div class="container">
+					<div class="slick">
+						<div><img src="images/artwork-tmb-01.jpg" alt=""></div>
+						<div><img src="images/artwork-tmb-02.jpg" alt=""></div>
+						<div><img src="images/artwork-tmb-03.jpg" alt=""></div>
+						<div><img src="images/artwork-tmb-04.jpg" alt=""></div>
+						<div><img src="images/artwork-tmb-05.jpg" alt=""></div>
+						<div><img src="images/artwork-tmb-01.jpg" alt=""></div>
+						<div><img src="images/artwork-tmb-02.jpg" alt=""></div>
+						<div><img src="images/artwork-tmb-03.jpg" alt=""></div>
+						<div><img src="images/artwork-tmb-04.jpg" alt=""></div>
+						<div><img src="images/artwork-tmb-05.jpg" alt=""></div>
+					</div>
+				</div>
 			</div>
 		</div>  <!-- page3 end -->
 	
@@ -196,6 +237,46 @@
 
 		<!-- page4 -->
 		<div class="section" id="page4" data-anchor="a4st">	
+			<div class="" id="onViewFour">
+				<div class="title">
+					<h4 class="f15em">what we do</h4>
+					<h2 class="f4em mb40">news</h2>
+					<p class="f13em des fw500">For our latest projects check out our Facebook, Twitter, Pinterest and Instagram.</p>
+				</div>
+				<ul class="text">
+					<li>
+						<h4>symposium</h4>
+						<p>On the 2nd of June, our research & motion bench movie will be part of “Building the Future of Health” International Conference in Groningen.</p>		
+					</li>
+					<li>
+						<h4>archi folds</h4>
+						<p>Our ARCHI FOLDS are now launched at the Co-Creation exhibition!<br>
+						Venue: Dutch Textile Museum<br>
+						Date: 2016-01-16 – 2017-03-17</p>
+					</li>
+					<li>
+						<h4>schiphol</h4>
+						<p>We are currently working on a very special project: Holland Boulevard @ Schiphol airport! To be disclosed later this year….!</p>
+					</li>
+				</ul>					
+				<ul class="img">
+					<li>
+						<img src="images/news-01.jpg" alt="">
+						<div class="hover"></div>
+						<a href="#">more</a>		
+					</li>
+					<li>
+						<img src="images/news-02.jpg" alt="">
+						<div class="hover"></div>
+						<a href="#">more</a>		
+					</li>
+					<li>
+						<img src="images/news-03.jpg" alt="">
+						<div class="hover"></div>
+						<a href="#">more</a>		
+					</li>
+				</ul>
+			</div>
 		</div>
 
 
@@ -257,11 +338,7 @@
 
 
 
-	<!-- <div class="videoWrap">
-			<video id="video" autoplay muted data-autoplay loop>
-				<source src="video/video.mp4" type="video/mp4">
-			</video>
-		</div> --> 
+	
 
 
 
