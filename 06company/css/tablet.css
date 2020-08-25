@@ -18,7 +18,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	background: url(../img/logo.png) no-repeat; text-indent: -9999px;
 	cursor: pointer;
 }
-#header_top #main_menu{position: absolute; left: 50%;
+#header_top .main_menu{position: absolute; left: 50%;
 	transform: translateX(-50%);
 }
 
@@ -42,14 +42,14 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 }
 
 
-#main_menu>ul{}
-#main_menu>ul>li{float: left;}
-#main_menu>ul>li>a{display: block; text-align: center; 
+.main_menu>ul{}
+.main_menu>ul>li{float: left;}
+.main_menu>ul>li>a{display: block; text-align: center; 
 	line-height: 98px; padding:0 40px; font-weight: 500;
 	font-size:1.2em; color:#fff;
 }
-#main_menu>ul>li>a:hover{color:#fbd915;}
-#main_menu>ul>li>a.active{color:#fbd915;}
+.main_menu>ul>li>a:hover{color:#fbd915;}
+.main_menu>ul>li>a.active{color:#fbd915;}
 
 .quick_menu{float: right; height: 98px; position: relative;}
 .quick_menu .cart{float:left; width: 30px; height: 30px;
@@ -63,6 +63,8 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	cursor: pointer;
 }
 
+
+.toggleMenu{display: none;}
 
 /*slider_wrap*/
 .slider_wrap{position: relative;}

@@ -1,15 +1,15 @@
 @charset "utf-8";
 
-body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-serif; min-width: 1344px;}
+body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-serif; min-width: 550px;}
 
 
 
 /*------------header start--------------*/
 /*header_top*/
 #header{position: relative;}
-#header.main{height: 1977px;}
+#header.main{height: 1900px;}
 #header_top{
-	width: 1344px; height: 98px; position: absolute; 
+	width: 550px; height: 98px; position: absolute; 
 	left: 50%; transform:translateX(-50%); z-index: 1;
 	z-index: 1;
 }
@@ -18,9 +18,9 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	background: url(../img/logo.png) no-repeat; text-indent: -9999px;
 	cursor: pointer;
 }
-#header_top #main_menu{position: absolute; left: 50%;
+/*#header_top .main_menu{position: absolute; left: 50%;
 	transform: translateX(-50%);
-}
+}*/
 
 .toggleMenu{width: 30px;height: 28px;border: 1px solid #fff;
 	position: absolute;right:0;top: 50%;
@@ -42,15 +42,26 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 }
 
 
-#main_menu>ul{}
-#main_menu>ul>li{float: left;}
-#main_menu>ul>li>a{display: block; text-align: center; 
+.main_menu{width: 100%;height: 100%;position: fixed;
+			background-color:#fbd914;right:-100%;
+}
+
+.main_menu ul{
+			position: absolute;width: 100px;
+			right:50%;top:50%;transform:translate(-50%,-50%);
+			text-align: center;
+}
+.main_menu ul li a{text-align: center;}
+
+/*.main_menu>ul{}
+.main_menu>ul>li{float: left;}
+.main_menu>ul>li>a{display: block; text-align: center; 
 	line-height: 98px; padding:0 40px; font-weight: 500;
 	font-size:1.2em; color:#fff;
 }
-#main_menu>ul>li>a:hover{color:#fbd915;}
-#main_menu>ul>li>a.active{color:#fbd915;}
-
+.main_menu>ul>li>a:hover{color:#fbd915;}
+.main_menu>ul>li>a.active{color:#fbd915;}
+*/
 .quick_menu{float: right; height: 98px; position: relative;}
 .quick_menu .cart{float:left; width: 30px; height: 30px;
 	background: url(../img/icon-cart.png) no-repeat; text-indent: -9999px;
@@ -64,9 +75,10 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 }
 
 
+
 /*slider_wrap*/
 .slider_wrap{position: relative;}
-.slider_wrap ul li{height: 969px;}
+.slider_wrap ul li{height: 600px;}
 .slider_wrap li.first{
 	background: url(../img/slider01.jpg) no-repeat center;
 	background-size: cover;
@@ -79,11 +91,11 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	background: url(../img/slider03.jpg) no-repeat center;
 	background-size: cover;
 }
-.slider_wrap .slider_txt{width: 800px; position: absolute;
+.slider_wrap .slider_txt{width: 550px; position: absolute;
 	left: 50%; transform: translateX(-50%); top: 25%; color: #fff;
 	text-align: center; text-shadow: 2px 2px 5px #6a6a6a;
 }
-.slider_wrap .slider .slider_txt h3{font-size: 4.2em;}
+.slider_wrap .slider .slider_txt h3{font-size: 2.5em;}
 .slider_wrap .slider .slider_txt p{}
 
 .slider_wrap .bx-wrapper{
@@ -93,26 +105,25 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
     border: 0 none;
     margin-bottom: 0;
 }
-.slider_wrap .bx-pager{bottom: 380px;}
+.slider_wrap .bx-pager{bottom: 290px;}
 .slider_wrap .bx-wrapper .bx-pager.bx-default-pager a{background: #fff;}
 .slider_wrap .bx-wrapper .bx-pager.bx-default-pager a.active{background: #fbd914;}
 
 .nextBtnMain,.prevBtnMain{position: absolute; top: 35%; margin-top: -50px;
 	cursor: pointer; text-shadow: 2px 2px 5px #6a6a6a;
 }
-.nextBtnMain{right: 200px;}
-.prevBtnMain{left: 200px;}
-
+.nextBtnMain{right: 15px;}
+.prevBtnMain{left: 15px;}
 
 
 
 /*------------content start--------------*/
-#header .content{width: 1344px; position: absolute;
+#header .content{width: 460px; position: absolute;
 	left: 50%; transform: translateX(-50%); background-color: #fff;
-	top: 633px; 
+	top: 370px; 
 }
 .content>ul{margin-bottom: 150px;}
-.content>ul>li{float: left; width: 25%; height: 336px;
+.content>ul>li{float: left; width: 50%; height: 230px;
 }
 
 /*box01------모든제품*/
@@ -121,18 +132,20 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	transform: translate(-50%,-50%);
 }
 .content>ul>li.box01 a>img{width: 123px; height: 123px; margin-bottom: 5px;}
-.content>ul>li.box01 a>p{text-align: center; font-size: 1.4em;
+.content>ul>li.box01 a>p{text-align: center; font-size: 1.2em;
 	font-weight: 500; color:#fff;
 }
 
 /*box02------영상*/
-.box02{background: url(../img/box02.jpg) no-repeat; position: relative;}
+.box02{background: url(../img/box02.jpg) no-repeat;
+	background-size: 100%;
+	position: relative;}
 
 .box02 .playBtn{position: absolute; top: 50%; left: 50%;
 	transform: translate(-50%,-50%); z-index: 1;
 }
-.box02 p{width: 336px; text-align: center; font-size: 1.4em;
-	font-weight: 500; color:#fff; position: absolute; bottom: 40px;
+.box02 p{width: 230px; text-align: center; font-size: 1.2em;
+	font-weight: 500; color:#fff; position: absolute; bottom: 30px;
 	text-shadow: 2px 2px 5px #6a6a6a; z-index: 1;
 }
 .box02 .cover{width: 100%; height: 100%; background: #000;
@@ -142,14 +155,14 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 
 
 /*box3------슬라이드*/
-.content>ul>li.box03{width: 672px; height: 336px; background: #f4f4f4; position: relative;}
-.content>ul>li.box03 .sliderLi{height: 336px; position: relative;}
+.content>ul>li.box03{width: 460px; height: 230px; background: #f4f4f4; position: relative;}
+.content>ul>li.box03 .sliderLi{height: 230px; position: relative;}
 
-.content>ul>li.box03 .card_img{width: 336px;height: 336px;position: absolute;top: 0;right: 0;}
+.content>ul>li.box03 .card_img{width: 230px;height: 230px;position: absolute;top: 0;right: 0;}
 .content>ul>li.box03 .card_img:hover{background: yellow;}
 
-.content>ul>li.box03 .card_txt{position: absolute; left: 45px; top: 40px;}
-.content>ul>li.box03 .card_txt h4{text-align: left; font-size: 1.4em;
+.content>ul>li.box03 .card_txt{position: absolute; left: 35px; top: 30px;}
+.content>ul>li.box03 .card_txt h4{text-align: left; font-size: 1.2em;
 	font-weight: 700; color:#000; 
 }
 .content>ul>li.box03 .card_txt h4:after{content:""; display: block; 
@@ -174,7 +187,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	border-style: solid;
 	border-color: transparent transparent transparent #f4f4f4;
 	position: absolute; top:50%; transform:translateY(-50%); 
-	right: 296px; z-index: 1;
+	right: 190px; z-index: 1;
 }
 
 
@@ -185,7 +198,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	transform: translate(-50%,-50%);
 }
 .content>ul>li.box04 a>img{width: 123px; height: 123px; margin-bottom: 5px;}
-.content>ul>li.box04 a>p{text-align: center; font-size: 1.4em;
+.content>ul>li.box04 a>p{text-align: center; font-size: 1.2em;
 	font-weight: 500; color:#000;
 }
 
@@ -195,12 +208,12 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	transform: translate(-50%,-50%);
 }
 .content>ul>li.box05 a>img{width: 123px; height: 123px; margin-bottom: 5px;}
-.content>ul>li.box05 a>p{text-align: center; font-size: 1.4em;
+.content>ul>li.box05 a>p{text-align: center; font-size: 1.2em;
 	font-weight: 500; color:#fff;
 }
 
 /*box06----더 낮은 가격*/
-.content>ul>li.box06{width: 672px; height: 336px; 
+.content>ul>li.box06{width: 460px; height: 230px; 
 	position: relative;overflow: hidden;}
 .box06 img{
 	width: 100%; height: 100%;
@@ -208,15 +221,15 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	transform:translate(-50%,-50%) scale(1.0);
 	transition: 0.3s;
 }
-.content>ul>li.box06 a{position: absolute; left: 45px; top: 40px; z-index: 1;
+.content>ul>li.box06 a{position: absolute; left: 35px; top: 30px; z-index: 1;
 }
-.content>ul>li.box06 a>p{text-align: left; font-size: 1.4em;
+.content>ul>li.box06 a>p{text-align: left; font-size: 1.2em;
 	font-weight: 500; color:#fff;
 }
 .content>ul>li.box06 a>p:after{content:""; display: block; 
 	width: 50px; height: 3px; background: #fff; margin:10px 0;
 }
-.content>ul>li.box06 a>h4{text-align: left; font-size: 2.5em;
+.content>ul>li.box06 a>h4{text-align: left; font-size: 2em;
 	font-weight: 700; color:#fff;
 }
 .box06 .bg{width: 100%; height: 100%; background: #000;
@@ -227,11 +240,11 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 
 
 /*box07----라이프앳홈*/
-.content>ul>li.box07{width: 336px; height: 672px; 
+/*.content>ul>li.box07{width: 230px; height: 460px; 
 	background:url(../img/box07.jpg) no-repeat; position: relative;}
-.content>ul>li.box07 a{position: absolute; left: 45px; top: 40px;
+.content>ul>li.box07 a{position: absolute; left: 35px; top: 30px;
 }
-.content>ul>li.box07 a>p{text-align: left; font-size: 1.4em;
+.content>ul>li.box07 a>p{text-align: left; font-size: 1.2em;
 	font-weight: 500; color:#fff;
 }
 .content>ul>li.box07 a>p:after{content:""; display: block; 
@@ -239,10 +252,12 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 }
 .content>ul>li.box07 a>h4{text-align: left; font-size: 2.5em;
 	font-weight: 700; color:#fff;
-}
+}*/
+.content>ul>li.box07{display: none;}
+
 
 /*box08----청량함가득*/
-.content>ul>li.box08{width: 672px; height: 336px; 
+.content>ul>li.box08{width: 460px; height: 230px; 
 	position: relative;overflow: hidden;
 }
 .box08 img{
@@ -251,16 +266,16 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	transform:translate(-50%,-50%) scale(1.0);
 	transition: 0.3s;
 }
-.content>ul>li.box08 a{position: absolute; left: 45px; bottom: 40px; z-index: 1;
+.content>ul>li.box08 a{position: absolute; left: 35px; bottom: 30px; z-index: 1;
 }
-.content>ul>li.box08 a>p{text-align: left; font-size: 1.4em;
-	font-weight: 500; color:#fff;
+.content>ul>li.box08 a>p{text-align: left; font-size: 1.2em;
+	font-weight: 500; color:#fff; position: relative;
 }
 .content>ul>li.box08 a>p:after{content:""; display: block; 
-	width: 50px; height: 3px; background: #fff; margin:10px 0;
+	width: 50px; height: 3px; background: #fff; margin:10px 0; 
 }
-.content>ul>li.box08 a>h4{text-align: left; font-size: 2.5em;
-	font-weight: 700; color:#fff;
+.content>ul>li.box08 a>h4{text-align: left; font-size: 2em;
+	font-weight: 700; color:#fff; margin-top: 10px;
 }
 .box08 .bg{width: 100%; height: 100%; background: #000;
 	position: relative; opacity: 0; 
@@ -268,22 +283,28 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 .box08:hover img{transform:translate(-50%,-50%) scale(1.2);}
 .box08:hover .bg{opacity: 0.2;}
 
+
+
 /*box09----매장안내*/
 .content>ul>li.box09{background: #fbd914;position: relative;}
 .content>ul>li.box09 a{position: absolute; top: 50%; left: 50%;
 	transform: translate(-50%,-50%);
 }
 .content>ul>li.box09 a>img{width: 123px; height: 123px; margin-bottom: 5px;}
-.content>ul>li.box09 a>p{text-align: center; font-size: 1.4em;
+.content>ul>li.box09 a>p{text-align: center; font-size: 1.2em;
 	font-weight: 500; color:#000;
 }
 
 /*box10----이케아 푸드*/
-.content>ul>li.box10{width: 336px; height: 336px; 
-	background:url(../img/box10.jpg) no-repeat; position: relative;}
-.content>ul>li.box10 a{position: absolute; left: 45px; top: 40px;
+.content>ul>li.box10{width: 230px; height: 230px; 
+	background:url(../img/box10.jpg) no-repeat; 
+	background-position: right bottom;
+	background-size: 100%;
+
+	position: relative;}
+.content>ul>li.box10 a{position: absolute; left: 35px; top: 30px;
 }
-.content>ul>li.box10 a>p{text-align: left; font-size: 1.4em;
+.content>ul>li.box10 a>p{text-align: left; font-size: 1.2em;
 	font-weight: 700; color:#000; 
 }
 .content>ul>li.box10 a>p:after{content:""; display: block; 
@@ -291,7 +312,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 }
 
 /*box11----카탈로그*/
-.content>ul>li.box11{width: 672px; height: 336px; 
+.content>ul>li.box11{width: 460px; height: 230px; 
 	position: relative; overflow: hidden;
 }
 .box11 img{
@@ -300,15 +321,16 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	transform:translate(-50%,-50%) scale(1.0);
 	transition: 0.3s;
 }
-.content>ul>li.box11 a{position: absolute; right: 45px; bottom: 40px; z-index: 1; 
+.content>ul>li.box11 a{position: absolute; right: 35px; bottom: 30px; z-index: 1; 
 }
-.content>ul>li.box11 a>p{text-align: right; font-size: 1.4em;
+.content>ul>li.box11 a>p{text-align: right; font-size: 1.2em;
 	font-weight: 500; color:#fff; position: relative;
 }
 .content>ul>li.box11 a>p:after{content:""; display: block; 
-	width: 50px; height: 3px; background: #fff; margin:10px 0; position: absolute; right: 0;
+	width: 50px; height: 3px; background: #fff; margin:10px 0; 
+	position: absolute; right: 0;
 }
-.content>ul>li.box11 a>h4{text-align: right; font-size: 2.5em;
+.content>ul>li.box11 a>h4{text-align: right; font-size: 2em;
 	font-weight: 700; color:#fff; margin-top: 10px;
 }
 .box11 .bg{width: 100%; height: 100%; background: #000;
@@ -323,30 +345,31 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 /*space*/
 #section{position: relative;}
 #section .space{width:100%; padding:150px 0; margin: 0 auto;}
-.space ul>li{width: 25%; height: 780px; float:left; position: relative; 
+.space ul>li{width: 50%; height: 460px; float:left; position: relative; 
 	overflow: hidden;}
+.space ul>li>img{width: 100%;height: 100%;}
 .space ul>li:last-child{margin-right:0;}
-.space ul>li>a{position: absolute; left: 45px; bottom: 40px; z-index: 1;}
+.space ul>li>a{position: absolute; left: 35px; bottom: 30px; z-index: 1;}
 .space ul>li>div.bg{position: absolute; width: 100%; height: 100%;
 	background: rgba(0,88,171,0.7);transition: 0.3s; top:100%;
 }
 
-.space ul>li:hover div.bg{top: 76%;}
-.space ul>li>a>p{text-align: left; font-size: 1.4em;
+.space ul>li:hover div.bg{top: 65%;}
+.space ul>li>a>p{text-align: left; font-size: 1.2em;
 	font-weight: 500; color:#fff; position: relative; 
 }
 .space ul>li>a>h3{text-align: left; font-size: 2.5em;
 	font-weight: 700; color:#fff; margin-top: 10px;
 }
-.space ul>li>img{transition: 0.3s}
+.space ul>li>img{transition: 0.3s;}
 .space ul>li:hover img{transform:scale(1.1);}
 
 /*service*/
-#section .service{width: 1344px; 
+#section .service{width: 100%;
 	position: relative; left: 50%; transform: translateX(-50%);
 	padding-bottom: 150px;
 }
-.service .family{width: 50%; height: 336px; background: #fbd914; float:left; 
+.service .family{width: 100%; height: 336px; background: #fbd914; float:left; 
 	position: relative;
 }
 .service .family .txt{position: absolute; left: 45px; top: 40px;}
@@ -354,7 +377,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	font-weight: 700; color:#000; margin-top: 10px; font-family: Montserrat;
 	margin-bottom: 10px;
 }
-.service .family p{text-align: left; font-size: 1.4em;
+.service .family p{text-align: left; font-size: 1.2em;
 	font-weight: 500; color:#000; margin-bottom: 40px;
 }
 .service .family a{display: block; width: 270px; height: 64px; 
@@ -367,7 +390,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 .service .family a:hover img{}
 
 /*customer*/
-.service .customer{width: 50%; height: 336px; background: url(../img/customer.jpg) no-repeat;
+.service .customer{width: 100%; height: 336px; background: url(../img/customer.jpg) no-repeat;
 	float:left; position: relative;
 }
 .service .customer .txt{position: absolute; right: 45px; top: 40px; position: relative;}
@@ -375,7 +398,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	font-weight: 700; color:#000; margin-top: 10px; font-family: 'Montserrat', 'Noto Sans KR';
 	margin-bottom: 10px;
 }
-.service .customer p{text-align: right; font-size: 1.4em;
+.service .customer p{text-align: right; font-size: 1.2em;
 	font-weight: 500; color:#000; margin-bottom: 40px;
 }
 .service .customer a{display: block; width: 170px; height: 64px; background: #000;
@@ -386,10 +409,10 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 
 /*footer*/
 #footer{width: 100%; height: 472px; background: #f5f5f5;}
-#footer .wrap{width: 1344px; margin: 0 auto; position: relative;}
+#footer .wrap{width: 550px; margin: 0 auto; position: relative;}
 
 
-.top{width: 1344px; height: 172px; }
+.top{width: 550px; height: 172px; }
 .top .sns{position: absolute; top: 100px;}
 .top .sns li{float: left; width: 38px; height: 38px; border: 1px solid #d1d3d4;
 	border-radius: 19px; margin-right: 10px;
@@ -413,7 +436,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	border-radius: 19px; text-align: center; line-height: 38px;
 	float: right; margin-left: 10px;
 }
-.top:after{content:""; display: block; width: 1344px; height: 1px; 
+.top:after{content:""; display: block; width: 550px; height: 1px; 
 	background: #bbbbbb; position: absolute; top: 172px;
 }
 
@@ -423,7 +446,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 
 
 
-.bottomWrap{width: 1344px; height: 300px; _background: skyblue;
+.bottomWrap{width: 550px; height: 300px; _background: skyblue;
 }
 .bottomWrap .middle{padding-top: 40px; padding-bottom: 30px;}
 .bottomWrap .middle .copyright{float: left;}
@@ -448,10 +471,10 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	left: 50%; top: 50%; transform: translate(-50%,-50%); color: #fff;
 	text-align: center; text-shadow: 2px 2px 5px #6a6a6a; font-size: 3em;
 }
-.sub01Visual .tab{width: 1344px; position: absolute; bottom: 0; left: 50%; 
+.sub01Visual .tab{width: 550px; position: absolute; bottom: 0; left: 50%; 
 	transform: translateX(-50%); border: 1px solid #d1d1d1;
 }
-.sub01Visual .tab ul{width: 1344px;}
+.sub01Visual .tab ul{width: 550px;}
 .sub01Visual .tab ul>li{float: left;width: 192px; height: 65px;
 	background: #eaeaea; border-right: 1px solid #d1d1d1;
 }
@@ -469,7 +492,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 .sub01Wrap .light,
 .sub01Wrap .machine,
 .sub01Wrap .children{display: none;}
-.sub01Wrap{width: 1344px; margin: 0 auto;}
+.sub01Wrap{width: 550px; margin: 0 auto;}
 
 .location{margin:55px auto 55px;}
 .location li{float: left;padding-right:10px;}
@@ -477,7 +500,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 .location li a{display: block; color:#000; font-weight: 500;}
 .location li a.active{border-bottom: 2px solid #fbd915;}
 
-.sub01Wrap .sub01Content{width: 1344px; margin-bottom: 100px;}
+.sub01Wrap .sub01Content{width: 550px; margin-bottom: 100px;}
 .sub01Content h4{font-size: 2em; color:#000; font-weight: 700; margin-bottom: 38px;}
 .sub01Content ul{}
 .sub01Content ul>li{float: left; width: 252.8px; margin-right: 20px; cursor: pointer;
@@ -536,10 +559,10 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	left: 50%; top: 50%; transform: translate(-50%,-50%); color: #fff;
 	text-align: center; text-shadow: 2px 2px 5px #6a6a6a; font-size: 3em;
 }
-.sub02Visual .tab{width: 1344px; position: absolute; bottom: 0; left: 50%; 
+.sub02Visual .tab{width: 550px; position: absolute; bottom: 0; left: 50%; 
 	transform: translateX(-50%); border: 1px solid #d1d1d1;
 }
-.sub02Visual .tab ul{width: 1344px;}
+.sub02Visual .tab ul{width: 550px;}
 .sub02Visual .tab ul>li{float: left;width: 192px; height: 65px; 
 	background: #eaeaea; border-right: 1px solid #d1d1d1;
 }
@@ -557,7 +580,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 .sub02Wrap .homeOffice,
 .sub02Wrap .outdoor,
 .sub02Wrap .kidsroom{display: none;}
-.sub02Wrap{width: 1344px; margin: 0 auto;}
+.sub02Wrap{width: 550px; margin: 0 auto;}
 
 .location{margin:55px auto 55px;}
 .location li{float: left;padding-right:10px;}
@@ -565,7 +588,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 .location li a{display: block; color:#000; font-weight: 500;}
 .location li a.active{border-bottom: 2px solid #fbd915;}
 
-.sub02Wrap .sub02Content{width: 1344px; margin-bottom: 100px;}
+.sub02Wrap .sub02Content{width: 550px; margin-bottom: 100px;}
 .sub02Content h4{font-size: 2em; color:#000; font-weight: 700; margin-bottom: 38px;}
 
 
@@ -579,10 +602,10 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	left: 50%; top: 50%; transform: translate(-50%,-50%); color: #fff;
 	text-align: center; text-shadow: 2px 2px 5px #6a6a6a; font-size: 3em;
 }
-.sub03Visual .tab{width: 1344px; position: absolute; bottom: 0; left: 50%; 
+.sub03Visual .tab{width: 550px; position: absolute; bottom: 0; left: 50%; 
 	transform: translateX(-50%); border: 1px solid #d1d1d1;
 }
-.sub03Visual .tab ul{width: 1344px;}
+.sub03Visual .tab ul{width: 550px;}
 .sub03Visual .tab ul>li{float: left;width: 448px; height: 65px;
 	background: #eaeaea; border-right: 1px solid #d1d1d1;
 }
@@ -595,7 +618,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 /*sub03 내용*/
 .sub03Wrap .catalogue,
 .sub03Wrap .myhome{display: none;}
-.sub03Wrap{width: 1344px; margin: 0 auto;}
+.sub03Wrap{width: 550px; margin: 0 auto;}
 
 .location{margin:55px auto 55px;}
 .location li{float: left;padding-right:10px;}
@@ -603,7 +626,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 .location li a{display: block; color:#000; font-weight: 500;}
 .location li a.active{border-bottom: 2px solid #fbd915;}
 
-.sub03Wrap .sub03Content{width: 1344px; margin-bottom: 100px;}
+.sub03Wrap .sub03Content{width: 550px; margin-bottom: 100px;}
 .sub03Content h4{font-size: 2em; color:#000; font-weight: 700; margin-bottom: 38px;}
 
 
@@ -617,10 +640,10 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	left: 50%; top: 50%; transform: translate(-50%,-50%); color: #fff;
 	text-align: center; text-shadow: 2px 2px 5px #6a6a6a; font-size: 3em;
 }
-.sub04Visual .tab{width: 1344px; position: absolute; bottom: 0; left: 50%; 
+.sub04Visual .tab{width: 550px; position: absolute; bottom: 0; left: 50%; 
 	transform: translateX(-50%); border: 1px solid #d1d1d1;
 }
-.sub04Visual .tab ul{width: 1344px;}
+.sub04Visual .tab ul{width: 550px;}
 .sub04Visual .tab ul>li{float: left;width: 336px; height: 65px;
 	background: #eaeaea; border-right: 1px solid #d1d1d1;
 }
@@ -634,7 +657,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 .sub04Wrap .benefit,
 .sub04Wrap .store,
 .sub04Wrap .ikeaFamily{display: none;}
-.sub04Wrap{width: 1344px; margin: 0 auto;}
+.sub04Wrap{width: 550px; margin: 0 auto;}
 
 .location{margin:55px auto 55px;}
 .location li{float: left;padding-right:10px;}
@@ -642,5 +665,5 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 .location li a{display: block; color:#000; font-weight: 500;}
 .location li a.active{border-bottom: 2px solid #fbd915;}
 
-.sub04Wrap .sub04Content{width: 1344px; margin-bottom: 100px;}
+.sub04Wrap .sub04Content{width: 550px; margin-bottom: 100px;}
 .sub04Content h4{font-size: 2em; color:#000; font-weight: 700; margin-bottom: 38px;}
