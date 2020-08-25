@@ -11,7 +11,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 #header_top{
 	width: 550px; height: 98px; position: absolute; 
 	left: 50%; transform:translateX(-50%); z-index: 1;
-	z-index: 1;
+	padding:0 50px;
 }
 #header_top h1{float: left; line-height: 98px;
 	position: relative; top: 38px; width: 123px; height: 22px;
@@ -23,9 +23,10 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 }*/
 
 .toggleMenu{width: 30px;height: 28px;border: 1px solid #fff;
-	position: absolute;right:0;top: 50%;
+	position: absolute;right:50px;top: 50%;
 	transform: translateY(-50%);
-	border-radius:5px;}
+	border-radius:5px; 
+}
 .toggleMenu div{
 	width: 17px;height: 3px;background-color: #fff;
 	position: absolute;left:5.5px;border-radius:3px
@@ -41,29 +42,21 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	left:50%;top:50%;transform:translate(-50%,-50%) rotate(45deg);
 }
 
-
 .main_menu{width: 100%;height: 100%;position: fixed;
 			background-color:#fbd914;right:-100%;
 }
-
-.main_menu ul{
-			position: absolute;width: 100px;
-			right:50%;top:50%;transform:translate(-50%,-50%);
-			text-align: center;
+.main_menu ul{position: absolute;width: 100px;
+	right:50%;top:50%;transform:translate(-50%,-50%);
+	text-align: center;
 }
 .main_menu ul li a{text-align: center;}
 
-/*.main_menu>ul{}
-.main_menu>ul>li{float: left;}
-.main_menu>ul>li>a{display: block; text-align: center; 
-	line-height: 98px; padding:0 40px; font-weight: 500;
-	font-size:1.2em; color:#fff;
+
+.quick_menu{position: absolute; 
+	top:50%; transform:translateY(-50%); right:50px;
+ 	height: 98px; position: relative;
 }
-.main_menu>ul>li>a:hover{color:#fbd915;}
-.main_menu>ul>li>a.active{color:#fbd915;}
-*/
-.quick_menu{float: right; height: 98px; position: relative;}
-.quick_menu .cart{float:left; width: 30px; height: 30px;
+.quick_menu .cart{width: 30px; height: 30px;
 	background: url(../img/icon-cart.png) no-repeat; text-indent: -9999px;
 	position: absolute; top: 50%; transform: translateY(-50%); right: 50px;
 	cursor: pointer;
@@ -73,7 +66,6 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	position: absolute; top: 50%; transform: translateY(-50%); right: 0;
 	cursor: pointer;
 }
-
 
 
 /*slider_wrap*/
@@ -92,7 +84,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	background-size: cover;
 }
 .slider_wrap .slider_txt{width: 550px; position: absolute;
-	left: 50%; transform: translateX(-50%); top: 25%; color: #fff;
+	left: 50%; transform: translateX(-50%); top: 22%; color: #fff;
 	text-align: center; text-shadow: 2px 2px 5px #6a6a6a;
 }
 .slider_wrap .slider .slider_txt h3{font-size: 2.5em;}
@@ -110,12 +102,12 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 .slider_wrap .bx-wrapper .bx-pager.bx-default-pager a.active{background: #fbd914;}
 
 .nextBtnMain,.prevBtnMain{position: absolute; top: 35%; margin-top: -50px;
-	cursor: pointer; text-shadow: 2px 2px 5px #6a6a6a;
-}
+	cursor: pointer; text-shadow: 2px 2px 5px #6a6a6a;}
 .nextBtnMain{right: 15px;}
 .prevBtnMain{left: 15px;}
 
-
+.nextBtnMain img,
+.prevBtnMain img{width: 50%;}
 
 /*------------content start--------------*/
 #header .content{width: 460px; position: absolute;
@@ -142,8 +134,9 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	position: relative;}
 
 .box02 .playBtn{position: absolute; top: 50%; left: 50%;
-	transform: translate(-50%,-50%); z-index: 1;
+	transform: translate(-33%,-72%); z-index: 1;
 }
+.box02 .playBtn img{width: 70%;}
 .box02 p{width: 230px; text-align: center; font-size: 1.2em;
 	font-weight: 500; color:#fff; position: absolute; bottom: 30px;
 	text-shadow: 2px 2px 5px #6a6a6a; z-index: 1;
@@ -168,9 +161,9 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 .content>ul>li.box03 .card_txt h4:after{content:""; display: block; 
 	width: 50px; height: 3px; background: #000; margin:10px 0;
 }
-.content>ul>li.box03 .card_txt p.price{ font-size: 2em;
+.content>ul>li.box03 .card_txt p.price{ font-size: 1.5em;
 	font-weight: 700; color:#000; }
-.btnSubWrap{position: absolute; left: 237px; bottom: 30px;}
+.btnSubWrap{position: absolute; left: 126px; bottom: 23px;}
 .content>ul>li.box03 .prevBtnSub{float:left; margin-right: 1px;}
 .content>ul>li.box03 .nextBtnSub{float: right;}
 .content>ul>li.box03 .bx-wrapper{
@@ -344,7 +337,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 /*------------section start--------------*/
 /*space*/
 #section{position: relative;}
-#section .space{width:100%; padding:150px 0; margin: 0 auto;}
+#section .space{width:100%; padding:150px 0 70px; margin: 0 auto;}
 .space ul>li{width: 50%; height: 460px; float:left; position: relative; 
 	overflow: hidden;}
 .space ul>li>img{width: 100%;height: 100%;}
@@ -365,15 +358,15 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 .space ul>li:hover img{transform:scale(1.1);}
 
 /*service*/
-#section .service{width: 100%;
+#section .service{width: 90%;
 	position: relative; left: 50%; transform: translateX(-50%);
-	padding-bottom: 150px;
+	padding-bottom: 60px;
 }
 .service .family{width: 100%; height: 336px; background: #fbd914; float:left; 
-	position: relative;
+	position: relative; margin-bottom: 30px;
 }
 .service .family .txt{position: absolute; left: 45px; top: 40px;}
-.service .family h4{text-align: left; font-size: 2.5em;
+.service .family h4{text-align: left; font-size: 2em;
 	font-weight: 700; color:#000; margin-top: 10px; font-family: Montserrat;
 	margin-bottom: 10px;
 }
@@ -394,7 +387,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	float:left; position: relative;
 }
 .service .customer .txt{position: absolute; right: 45px; top: 40px; position: relative;}
-.service .customer h4{text-align: right; font-size: 2.5em;
+.service .customer h4{text-align: right; font-size: 2em;
 	font-weight: 700; color:#000; margin-top: 10px; font-family: 'Montserrat', 'Noto Sans KR';
 	margin-bottom: 10px;
 }
