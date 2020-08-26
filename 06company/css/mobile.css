@@ -1,17 +1,16 @@
 @charset "utf-8";
 html,body{height:100% }
-body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-serif; min-width: 550px;}
+body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-serif; min-width: 100%px;}
 
 
 
 /*------------header start--------------*/
 /*header_top*/
 #header{position: relative;}
-#header.main{height: 1900px;}
+#header.main{height: 2300px;}
 #header_top{
-	width: 550px; height: 98px; position: absolute; 
-	left: 50%; transform:translateX(-50%); z-index: 1;
-	padding:0 50px;
+	width: 100%; height: 98px; background:#000;
+	position: relative;z-index: 999;
 }
 #header_top h1{float: left; line-height: 98px;
 	position: relative; top: 38px; width: 123px; height: 22px;
@@ -20,9 +19,9 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 }
 
 .toggleMenu{width: 30px;height: 28px;border: 1px solid #fff;
-	position: relative;right:50px;top: 50%;
-	transform: translateY(-50%);
-	border-radius:5px; 
+	position: absolute;right:50px;top:50px;
+	
+	border-radius:5px; z-index: 9999
 }
 .toggleMenu div{
 	width: 17px;height: 3px;background-color: #fff;
@@ -40,7 +39,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 }
 
 #main_menu{width: 100%;height: 100%;position: fixed;
-			background-color:#fbd914;_right:100%;bottom: 0;z-index: 999;
+			background-color:#fbd914;right:-100%;bottom: 0;z-index: 999;
 }
 #main_menu ul{position: absolute;width: 100px;
 	right:50%;top:50%;transform:translate(-50%,-50%);
@@ -67,7 +66,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 
 /*slider_wrap*/
 .slider_wrap{position: relative;}
-.slider_wrap ul li{height: 600px;}
+.slider_wrap ul li{height: 300px;}
 .slider_wrap li.first{
 	background: url(../img/slider01.jpg) no-repeat center;
 	background-size: cover;
@@ -80,7 +79,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	background: url(../img/slider03.jpg) no-repeat center;
 	background-size: cover;
 }
-.slider_wrap .slider_txt{width: 550px; position: absolute;
+.slider_wrap .slider_txt{width: 100%; position: absolute;
 	left: 50%; transform: translateX(-50%); top: 22%; color: #fff;
 	text-align: center; text-shadow: 2px 2px 5px #6a6a6a;
 }
@@ -399,10 +398,10 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 
 /*footer*/
 #footer{width: 100%; height: 472px; background: #f5f5f5;}
-#footer .wrap{width: 550px; margin: 0 auto; position: relative;}
+#footer .wrap{width: 100%px; margin: 0 auto; position: relative;}
 
 
-.top{width: 550px; height: 172px; }
+.top{width: 100%px; height: 172px; }
 .top .sns{position: absolute; top: 100px;}
 .top .sns li{float: left; width: 38px; height: 38px; border: 1px solid #d1d3d4;
 	border-radius: 19px; margin-right: 10px;
@@ -426,7 +425,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	border-radius: 19px; text-align: center; line-height: 38px;
 	float: right; margin-left: 10px;
 }
-.top:after{content:""; display: block; width: 550px; height: 1px; 
+.top:after{content:""; display: block; width: 100%px; height: 1px; 
 	background: #bbbbbb; position: absolute; top: 172px;
 }
 
@@ -436,7 +435,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 
 
 
-.bottomWrap{width: 550px; height: 300px; _background: skyblue;
+.bottomWrap{width: 100%px; height: 300px; _background: skyblue;
 }
 .bottomWrap .middle{padding-top: 40px; padding-bottom: 30px;}
 .bottomWrap .middle .copyright{float: left;}
@@ -461,10 +460,10 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	left: 50%; top: 50%; transform: translate(-50%,-50%); color: #fff;
 	text-align: center; text-shadow: 2px 2px 5px #6a6a6a; font-size: 3em;
 }
-.sub01Visual .tab{width: 550px; position: absolute; bottom: 0; left: 50%; 
+.sub01Visual .tab{width: 100%px; position: absolute; bottom: 0; left: 50%; 
 	transform: translateX(-50%); border: 1px solid #d1d1d1;
 }
-.sub01Visual .tab ul{width: 550px;}
+.sub01Visual .tab ul{width: 100%px;}
 .sub01Visual .tab ul>li{float: left;width: 192px; height: 65px;
 	background: #eaeaea; border-right: 1px solid #d1d1d1;
 }
@@ -482,7 +481,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 .sub01Wrap .light,
 .sub01Wrap .machine,
 .sub01Wrap .children{display: none;}
-.sub01Wrap{width: 550px; margin: 0 auto;}
+.sub01Wrap{width: 100%px; margin: 0 auto;}
 
 .location{margin:55px auto 55px;}
 .location li{float: left;padding-right:10px;}
@@ -490,7 +489,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 .location li a{display: block; color:#000; font-weight: 500;}
 .location li a.active{border-bottom: 2px solid #fbd915;}
 
-.sub01Wrap .sub01Content{width: 550px; margin-bottom: 100px;}
+.sub01Wrap .sub01Content{width: 100%px; margin-bottom: 100px;}
 .sub01Content h4{font-size: 2em; color:#000; font-weight: 700; margin-bottom: 38px;}
 .sub01Content ul{}
 .sub01Content ul>li{float: left; width: 252.8px; margin-right: 20px; cursor: pointer;
@@ -549,10 +548,10 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	left: 50%; top: 50%; transform: translate(-50%,-50%); color: #fff;
 	text-align: center; text-shadow: 2px 2px 5px #6a6a6a; font-size: 3em;
 }
-.sub02Visual .tab{width: 550px; position: absolute; bottom: 0; left: 50%; 
+.sub02Visual .tab{width: 100%px; position: absolute; bottom: 0; left: 50%; 
 	transform: translateX(-50%); border: 1px solid #d1d1d1;
 }
-.sub02Visual .tab ul{width: 550px;}
+.sub02Visual .tab ul{width: 100%px;}
 .sub02Visual .tab ul>li{float: left;width: 192px; height: 65px; 
 	background: #eaeaea; border-right: 1px solid #d1d1d1;
 }
@@ -570,7 +569,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 .sub02Wrap .homeOffice,
 .sub02Wrap .outdoor,
 .sub02Wrap .kidsroom{display: none;}
-.sub02Wrap{width: 550px; margin: 0 auto;}
+.sub02Wrap{width: 100%px; margin: 0 auto;}
 
 .location{margin:55px auto 55px;}
 .location li{float: left;padding-right:10px;}
@@ -578,7 +577,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 .location li a{display: block; color:#000; font-weight: 500;}
 .location li a.active{border-bottom: 2px solid #fbd915;}
 
-.sub02Wrap .sub02Content{width: 550px; margin-bottom: 100px;}
+.sub02Wrap .sub02Content{width: 100%px; margin-bottom: 100px;}
 .sub02Content h4{font-size: 2em; color:#000; font-weight: 700; margin-bottom: 38px;}
 
 
@@ -592,10 +591,10 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	left: 50%; top: 50%; transform: translate(-50%,-50%); color: #fff;
 	text-align: center; text-shadow: 2px 2px 5px #6a6a6a; font-size: 3em;
 }
-.sub03Visual .tab{width: 550px; position: absolute; bottom: 0; left: 50%; 
+.sub03Visual .tab{width: 100%px; position: absolute; bottom: 0; left: 50%; 
 	transform: translateX(-50%); border: 1px solid #d1d1d1;
 }
-.sub03Visual .tab ul{width: 550px;}
+.sub03Visual .tab ul{width: 100%px;}
 .sub03Visual .tab ul>li{float: left;width: 448px; height: 65px;
 	background: #eaeaea; border-right: 1px solid #d1d1d1;
 }
@@ -608,7 +607,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 /*sub03 내용*/
 .sub03Wrap .catalogue,
 .sub03Wrap .myhome{display: none;}
-.sub03Wrap{width: 550px; margin: 0 auto;}
+.sub03Wrap{width: 100%px; margin: 0 auto;}
 
 .location{margin:55px auto 55px;}
 .location li{float: left;padding-right:10px;}
@@ -616,7 +615,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 .location li a{display: block; color:#000; font-weight: 500;}
 .location li a.active{border-bottom: 2px solid #fbd915;}
 
-.sub03Wrap .sub03Content{width: 550px; margin-bottom: 100px;}
+.sub03Wrap .sub03Content{width: 100%px; margin-bottom: 100px;}
 .sub03Content h4{font-size: 2em; color:#000; font-weight: 700; margin-bottom: 38px;}
 
 
@@ -630,10 +629,10 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 	left: 50%; top: 50%; transform: translate(-50%,-50%); color: #fff;
 	text-align: center; text-shadow: 2px 2px 5px #6a6a6a; font-size: 3em;
 }
-.sub04Visual .tab{width: 550px; position: absolute; bottom: 0; left: 50%; 
+.sub04Visual .tab{width: 100%px; position: absolute; bottom: 0; left: 50%; 
 	transform: translateX(-50%); border: 1px solid #d1d1d1;
 }
-.sub04Visual .tab ul{width: 550px;}
+.sub04Visual .tab ul{width: 100%px;}
 .sub04Visual .tab ul>li{float: left;width: 336px; height: 65px;
 	background: #eaeaea; border-right: 1px solid #d1d1d1;
 }
@@ -647,7 +646,7 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 .sub04Wrap .benefit,
 .sub04Wrap .store,
 .sub04Wrap .ikeaFamily{display: none;}
-.sub04Wrap{width: 550px; margin: 0 auto;}
+.sub04Wrap{width: 100%px; margin: 0 auto;}
 
 .location{margin:55px auto 55px;}
 .location li{float: left;padding-right:10px;}
@@ -655,5 +654,5 @@ body{font-family: 'Montserrat', sans-serif; font-family: 'Noto Sans KR', sans-se
 .location li a{display: block; color:#000; font-weight: 500;}
 .location li a.active{border-bottom: 2px solid #fbd915;}
 
-.sub04Wrap .sub04Content{width: 550px; margin-bottom: 100px;}
+.sub04Wrap .sub04Content{width: 100%px; margin-bottom: 100px;}
 .sub04Content h4{font-size: 2em; color:#000; font-weight: 700; margin-bottom: 38px;}
