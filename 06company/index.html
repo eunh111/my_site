@@ -49,16 +49,13 @@
 
 
 			$(".toggleMenu").click(function(){
-				//console.log($(this).attr("class"));
-
 				var toggle = $(this).attr("class")
 				if(toggle == "toggleMenu"){
 					$(this).addClass("change");
-					$(".main_menu").stop().animate({right:0},300);
-					//300은 duration 0.3초. 안적어주면 0.4s 
+					$("#main_menu").stop().animate({right:0},300);
 				}else{
 					$(this).removeClass("change");
-					$(".main_menu").stop().animate({right:"-100%"},300);
+					$("#main_menu").stop().animate({right:"-100%"},300);
 				}
 
 			});
@@ -71,7 +68,7 @@
 	<div id="header" class="main">
 		<div id="header_top" class="topNav clearfix">
 			<a href="index.html"><h1>logo</h1></a>
-			<nav class="main_menu">
+			<nav id="main_menu">
 				<ul class="clearfix">
 					<li><a href="sub01.html">모든제품</a></li>
 					<li><a href="sub02.html">공간</a></li>
