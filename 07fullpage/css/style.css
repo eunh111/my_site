@@ -145,15 +145,22 @@ nav#navTop li.active a{color:#000; font-weight: 500;}
 #onViewFour{width:80%;height: 600px;
 	position: absolute; left: 50%;top: 50%; transform:translate(-50%,-50%);
 }
+#onViewFour .title{float: left; } 
+.title h4{} 
 .title h4,
 .title h2{position: absolute; left: 0;}
 .title p{position: absolute; right: 0; color:#636363; }
 
 
+#onViewFour .text{position: relative; top: 120px;}
+#onViewFour .text li{margin-bottom: 150px;}
+#onViewFour .text li h4,
+#onViewFour .text li p{float:left; display: block; }
+#onViewFour .text p{width: 500px;}
+#onViewFour .text li img{position: absolute; right: 0;}
 
-#onViewFour .title{float: left; width: 300px;}   
 
-#onViewFour .img{float:right; width: 787px;}
+
 
 /*page5 shop*/
 #page5{position: relative;}
