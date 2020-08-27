@@ -5,4 +5,4 @@
 * 04klass - https://eunh111.github.io/my_site/04klass
 * 05travel - https://eunh111.github.io/my_site/05travel
 * 06company - https://eunh111.github.io/my_site/06company
-* 07fullpage - https://eunh111.github.io/my_site/07fullpage
+* 07fullpage - https://eunh111.github.io/my_site/07fullpage/index.html
